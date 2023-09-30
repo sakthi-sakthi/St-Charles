@@ -2439,3 +2439,31 @@ margin-left: 50px;
     border: 3px solid #fff;
     border-radius: 50%;
 }
+
+/* Style for the PDF link container */
+.pdf-link {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    /* Adjust as needed for spacing between links */
+}
+
+/* Style for the PDF logo */
+.pdf-logo {
+    flex: 0 0 auto;
+    /* Prevent it from growing */
+    margin-right: 10px;
+    /* Adjust spacing between logo and text */
+}
+
+/* Style for PDF info (name and size) */
+.pdf-info {
+    flex-grow: 1;
+    /* Allow it to grow and take available space */
+}
+
+/* Style for the download button */
+.pdf-download {
+    flex: 0 0 auto;
+    /* Prevent it from growing */
+}

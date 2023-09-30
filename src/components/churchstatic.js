@@ -5,6 +5,24 @@ import { Modal } from "react-bootstrap";
 import { format } from "date-fns";
 
 function Churchstatic() {
+  const pdfLinks = [
+    {
+      name: "PDF 1",
+      url: "https://salemdiocese.org/wp-content/uploads/2023/09/News-Letter_compressed.pdf",
+      size: "2.5 MB",
+    },
+    {
+      name: "PDF 2",
+      url: "https://salemdiocese.org/wp-content/uploads/2023/09/News-Letter_compressed.pdf",
+      size: "3.2 MB",
+    },
+    {
+      name: "PDF 3",
+      url: "https://salemdiocese.org/wp-content/uploads/2023/09/News-Letter_compressed.pdf",
+      size: "1.8 MB",
+    },
+  ];
+
   const [date, setDate] = useState(new Date());
   const [events, setEvents] = useState([
     {
@@ -64,27 +82,39 @@ function Churchstatic() {
             </div>
             <div className="col-12 col-lg-6">
               <div className="cause-wrap d-flex flex-wrap justify-content-between">
-                <figure className="m-0">
-                  <img src="images/logos/house.jpg" alt="" />
-                </figure>
                 <div className="cause-content-wrap">
-                  <header className="entry-header d-flex flex-wrap align-items-center">
-                    <h3 className="entry-title w-100 m-0">
-                      <a href="#">Mother House</a>
-                    </h3>
-                  </header>
-                  <div className="entry-content">
-                    <p className="m-0">
-                      "This religious House was founded in 1682 by Adrien Bresy,
-                      parish priest of Wez. This vigilant pastor, wishing to
-                      procure for his parishioners the benefits of a Christian
-                      education, invited three pious girls from..."
-                    </p>
-                  </div>
-                  <div className="entry-footer mt-5">
-                    <a href="#" className="btn gradient-bg mr-2">
-                      Read More
-                    </a>
+                  <header className="entry-header d-flex flex-wrap align-items-center"></header>
+                  <div className="entry-content" id="calcont">
+                    {pdfLinks.map((pdf, index) => (
+                      <div
+                        key={index}
+                        className="pdf-link d-flex align-items-center"
+                      >
+                        <div className="pdf-logo">
+                          <i className="far fa-file-pdf mr-2"></i>
+                        </div>
+                        <div className="pdf-info">
+                          <a
+                            href={pdf.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {pdf.name}
+                          </a>
+                          <span className="pdf-size">{pdf.size}</span>
+                        </div>
+                        <div className="pdf-download ml-auto">
+                          <a
+                            href={pdf.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn btn-primary btn-sm"
+                          >
+                            <i className="fas fa-download"></i> Download
+                          </a>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
