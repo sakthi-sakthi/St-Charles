@@ -35,18 +35,19 @@ export default function App() {
               ></div>
               <div className="avatar mx-auto bg-white">
                 <img
-                  src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+                  src="images/logos/t1.png"
                   className="rounded-circle img-fluid"
-                  alt="Maria Smantha"
+                  alt="Ms. G.Abineya"
                 />
               </div>
               <MDBCardBody>
-                <h4 className="mb-4">Maria Smantha</h4>
+                <h4 className="mb-4">Ms. G.Abineya</h4>
                 <hr />
                 <p className="dark-grey-text mt-4">
                   <MDBIcon fas icon="quote-left" className="pe-2" />
-                  Lorem ipsum dolor sit amet eos adipisci, consectetur
-                  adipisicing elit.
+                  St. Charles College of Education is an amazing institute. The
+                  campus is extraordinarily beautiful; the professors are
+                  outstanding and professional. The alumni are very supportive.
                 </p>
               </MDBCardBody>
             </MDBCard>
@@ -61,18 +62,20 @@ export default function App() {
               ></div>
               <div className="avatar mx-auto bg-white">
                 <img
-                  src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp"
+                  src="images/logos/t2.png"
                   className="rounded-circle img-fluid"
-                  alt="Lisa Cudrow"
+                  alt="Ms.Jesintha"
                 />
               </div>
               <MDBCardBody>
-                <h4 className="mb-4">Lisa Cudrow</h4>
+                <h4 className="mb-4">Ms.Jesintha</h4>
                 <hr />
                 <p className="dark-grey-text mt-4">
-                  <MDBIcon fas icon="quote-left" className="pe-2" />
-                  Neque cupiditate assumenda in maiores repudi mollitia
-                  architecto.
+                  <MDBIcon fas icon="quote-left" className="pe-2" />I am very
+                  grateful to the Sisters of St Charles who were instrumental
+                  for the bright future that I am enjoying now. They brought me
+                  from lower level to the higher level in the society by giving
+                  education.
                 </p>
               </MDBCardBody>
             </MDBCard>
@@ -87,18 +90,20 @@ export default function App() {
               ></div>
               <div className="avatar mx-auto bg-white">
                 <img
-                  src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp"
+                  src="images/logos/t3.png"
                   className="rounded-circle img-fluid"
-                  alt="John Smith"
+                  alt="Ms.Betsy"
                 />
               </div>
               <MDBCardBody>
-                <h4 className="mb-4">John Smith</h4>
+                <h4 className="mb-4">Ms.Betsy</h4>
                 <hr />
                 <p className="dark-grey-text mt-4">
-                  <MDBIcon fas icon="quote-left" className="pe-2" />
-                  Delectus impedit saepe officiis ab aliquam repellat rem unde
-                  ducimus.
+                  <MDBIcon fas icon="quote-left" className="pe-2" />I am very
+                  grateful to the Sisters of St Charles who were instrumental
+                  for the bright future that I am enjoying now. They brought me
+                  from lower level to the higher level in the society by giving
+                  education.
                 </p>
               </MDBCardBody>
             </MDBCard>
@@ -113,18 +118,19 @@ export default function App() {
               ></div>
               <div className="avatar mx-auto bg-white">
                 <img
-                  src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp"
+                  src="images/logos/t1.png"
                   className="rounded-circle img-fluid"
-                  alt="Lisa Cudrow"
+                  alt="Ms. G.Abineya"
                 />
               </div>
               <MDBCardBody>
-                <h4 className="mb-4">Lisa Cudrow</h4>
+                <h4 className="mb-4">Ms. G.Abineya</h4>
                 <hr />
                 <p className="dark-grey-text mt-4">
                   <MDBIcon fas icon="quote-left" className="pe-2" />
-                  Neque cupiditate assumenda in maiores repudi mollitia
-                  architecto.
+                  St. Charles College of Education is an amazing institute. The
+                  campus is extraordinarily beautiful; the professors are
+                  outstanding and professional. The alumni are very supportive.
                 </p>
               </MDBCardBody>
             </MDBCard>
