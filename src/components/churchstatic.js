@@ -78,6 +78,7 @@ function Churchstatic() {
 
     if (event) {
       setSelectedEvent(event);
+      setEvents(event);
     }
   };
 
