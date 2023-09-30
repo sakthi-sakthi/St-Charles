@@ -1,7 +1,57 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
 
 function Upcoming() {
+  const birthData = [
+    {
+      title: "Fundraiser for Kids",
+      date: "Aug 25, 2018",
+      imageSrc: "images/logos/sisters1.png",
+    },
+    {
+      title: "Bring water to the children",
+      date: "Aug 25, 2018",
+      imageSrc: "images/logos/sisters1.png",
+    },
+    {
+      title: "Another Event",
+      date: "Aug 25, 2018",
+      imageSrc: "images/logos/sisters1.png",
+    },
+  ];
+  const eventsData = [
+    {
+      title: "Fundraiser for Kids",
+      date: "Aug 25, 2018",
+      imageSrc: "images/event-1.jpg",
+    },
+    {
+      title: "Bring water to the children",
+      date: "Aug 25, 2018",
+      imageSrc: "images/event-2.jpg",
+    },
+    {
+      title: "Another Event",
+      date: "Aug 25, 2018",
+      imageSrc: "images/event-3.jpg",
+    },
+  ];
+  const upcomeData = [
+    {
+      title: "Fundraiser for Kids",
+      date: "Aug 25, 2018",
+      imageSrc: "images/event-1.jpg",
+    },
+    {
+      title: "Bring water to the children",
+      date: "Aug 25, 2018",
+      imageSrc: "images/event-2.jpg",
+    },
+    {
+      title: "Another Event",
+      date: "Aug 25, 2018",
+      imageSrc: "images/event-3.jpg",
+    },
+  ];
   return (
     <>
       <div className="home-page-events">
@@ -12,60 +62,26 @@ function Upcoming() {
                 <div className="section-heading">
                   <h2 className="entry-title">Upcoming Events</h2>
                 </div>
-                <div className="event-wrap d-flex flex-wrap justify-content-between">
-                  <figure className="m-0" id="upcome">
-                    <img src="images/event-1.jpg" alt="" />
-                  </figure>
-                  <div className="event-content-wrap" id="upcevent">
-                    <header className="entry-header d-flex flex-wrap align-items-center">
-                      <h3 className="entry-title w-100 m-0">
-                        <a href="#">Fundraiser for Kids</a>
-                      </h3>
-                      <div className="posted-date">
-                        <a href="#">Aug 25, 2018 </a>
+                {upcomeData.map((upcomeevent, index) => (
+                  <div className="event-wrap d-flex flex-wrap justify-content-between">
+                    <figure className="m-0" id="upcome">
+                      <img src={upcomeevent.imageSrc} alt="" />
+                    </figure>
+                    <div className="event-content-wrap" id="upcevent">
+                      <header className="entry-header d-flex flex-wrap align-items-center">
+                        <h3 className="entry-title w-100 m-0">
+                          <a href="#">{upcomeevent.title}</a>
+                        </h3>
+                        <div className="posted-date">
+                          <a href="#">{upcomeevent.date}</a>
+                        </div>
+                      </header>
+                      <div className="entry-footer">
+                        <a href="#">Read More</a>
                       </div>
-                    </header>
-                    <div className="entry-footer">
-                      <a href="#">Read More</a>
                     </div>
                   </div>
-                </div>
-                <div className="event-wrap d-flex flex-wrap justify-content-between">
-                  <figure className="m-0" id="upcome">
-                    <img src="images/event-2.jpg" alt="" />
-                  </figure>
-                  <div className="event-content-wrap" id="upcevent">
-                    <header className="entry-header d-flex flex-wrap align-items-center">
-                      <h3 className="entry-title w-100 m-0">
-                        <a href="#">Bring water to the childrens</a>
-                      </h3>
-                      <div className="posted-date">
-                        <a href="#">Aug 25, 2018 </a>
-                      </div>
-                    </header>
-                    <div className="entry-footer">
-                      <a href="#">Read More</a>
-                    </div>
-                  </div>
-                </div>
-                <div className="event-wrap d-flex flex-wrap justify-content-between">
-                  <figure className="m-0" id="upcome">
-                    <img src="images/event-3.jpg" alt="" />
-                  </figure>
-                  <div className="event-content-wrap" id="upcevent">
-                    <header className="entry-header d-flex flex-wrap align-items-center">
-                      <h3 className="entry-title w-100 m-0">
-                        <a href="#">Bring water to the childrens</a>
-                      </h3>
-                      <div className="posted-date">
-                        <a href="#">Aug 25, 2018 </a>
-                      </div>
-                    </header>
-                    <div className="entry-footer">
-                      <a href="#">Read More</a>
-                    </div>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
 
@@ -74,60 +90,26 @@ function Upcoming() {
                 <div className="section-heading">
                   <h2 className="entry-title">Upcoming Events</h2>
                 </div>
-                <div className="event-wrap d-flex flex-wrap justify-content-between">
-                  <figure className="m-0" id="upcome">
-                    <img src="images/event-1.jpg" alt="" />
-                  </figure>
-                  <div className="event-content-wrap" id="upcevent">
-                    <header className="entry-header d-flex flex-wrap align-items-center">
-                      <h3 className="entry-title w-100 m-0">
-                        <a href="#">Fundraiser for Kids</a>
-                      </h3>
-                      <div className="posted-date">
-                        <a href="#">Aug 25, 2018 </a>
+                {eventsData.map((event, index) => (
+                  <div className="event-wrap d-flex flex-wrap justify-content-between">
+                    <figure className="m-0" id="upcome">
+                      <img src={event.imageSrc} alt="" />
+                    </figure>
+                    <div className="event-content-wrap" id="upcevent">
+                      <header className="entry-header d-flex flex-wrap align-items-center">
+                        <h3 className="entry-title w-100 m-0">
+                          <a href="#">{event.title}</a>
+                        </h3>
+                        <div className="posted-date">
+                          <a href="#">{event.date}</a>
+                        </div>
+                      </header>
+                      <div className="entry-footer">
+                        <a href="#">Read More</a>
                       </div>
-                    </header>
-                    <div className="entry-footer">
-                      <a href="#">Read More</a>
                     </div>
                   </div>
-                </div>
-                <div className="event-wrap d-flex flex-wrap justify-content-between">
-                  <figure className="m-0" id="upcome">
-                    <img src="images/event-2.jpg" alt="" />
-                  </figure>
-                  <div className="event-content-wrap" id="upcevent">
-                    <header className="entry-header d-flex flex-wrap align-items-center">
-                      <h3 className="entry-title w-100 m-0">
-                        <a href="#">Bring water to the childrens</a>
-                      </h3>
-                      <div className="posted-date">
-                        <a href="#">Aug 25, 2018 </a>
-                      </div>
-                    </header>
-                    <div className="entry-footer">
-                      <a href="#">Read More</a>
-                    </div>
-                  </div>
-                </div>
-                <div className="event-wrap d-flex flex-wrap justify-content-between">
-                  <figure className="m-0" id="upcome">
-                    <img src="images/event-3.jpg" alt="" />
-                  </figure>
-                  <div className="event-content-wrap" id="upcevent">
-                    <header className="entry-header d-flex flex-wrap align-items-center">
-                      <h3 className="entry-title w-100 m-0">
-                        <a href="#">Bring water to the childrens</a>
-                      </h3>
-                      <div className="posted-date">
-                        <a href="#">Aug 25, 2018 </a>
-                      </div>
-                    </header>
-                    <div className="entry-footer">
-                      <a href="#">Read More</a>
-                    </div>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
 
@@ -136,54 +118,25 @@ function Upcoming() {
                 <div className="section-heading">
                   <h2 className="entry-title">Birthday / Feast</h2>
                 </div>
-                <div className="event-wrap d-flex flex-wrap justify-content-between">
-                  <figure className="m-0" id="upcome">
-                    <img src="images/logos/sisters1.png" alt="" />
-                  </figure>
-                  <div className="event-content-wrap" id="upcevent">
-                    <header className="entry-header d-flex flex-wrap align-items-center">
-                      <h3 className="entry-title w-100 m-0">
-                        <a href="#">Fundraiser for Kids</a>
-                      </h3>
-                      <div className="posted-date">
-                        <a href="#">Aug 25, 2018 </a>
-                      </div>
-                    </header>
+                {birthData.map((birth, index) => (
+                  <div className="event-wrap d-flex flex-wrap justify-content-between">
+                    <figure className="m-0" id="upcome">
+                      <img src={birth.imageSrc} alt="" />
+                    </figure>
+                    <div className="event-content-wrap" id="upcevent">
+                      <header className="entry-header d-flex flex-wrap align-items-center">
+                        <h3 className="entry-title w-100 m-0">
+                          <a href="#">{birth.title}</a>
+                        </h3>
+                        <div className="posted-date">
+                          <a href="#">{birth.date}</a>
+                        </div>
+                      </header>
+                    </div>
                   </div>
-                </div>
-                <div className="event-wrap d-flex flex-wrap justify-content-between">
-                  <figure className="m-0" id="upcome">
-                    <img src="images/logos/sisters1.png" alt="" />
-                  </figure>
-                  <div className="event-content-wrap" id="upcevent">
-                    <header className="entry-header d-flex flex-wrap align-items-center">
-                      <h3 className="entry-title w-100 m-0">
-                        <a href="#">Bring water to the childrens</a>
-                      </h3>
-                      <div className="posted-date">
-                        <a href="#">Aug 25, 2018 </a>
-                      </div>
-                    </header>
-                  </div>
-                </div>
-                <div className="event-wrap d-flex flex-wrap justify-content-between">
-                  <figure className="m-0" id="upcome">
-                    <img src="images/logos/sisters1.png" alt="" />
-                  </figure>
-                  <div className="event-content-wrap" id="upcevent">
-                    <header className="entry-header d-flex flex-wrap align-items-center">
-                      <h3 className="entry-title w-100 m-0">
-                        <a href="#">Bring water to the childrens</a>
-                      </h3>
-                      <div className="posted-date">
-                        <a href="#">Aug 25, 2018 </a>
-                      </div>
-                    </header>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
-            
           </div>
         </div>
       </div>

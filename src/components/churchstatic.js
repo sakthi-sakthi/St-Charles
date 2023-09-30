@@ -7,21 +7,46 @@ import { format } from "date-fns";
 function Churchstatic() {
   const pdfLinks = [
     {
-      name: "PDF 1",
+      name: "Salem Diocese",
       url: "https://salemdiocese.org/wp-content/uploads/2023/09/News-Letter_compressed.pdf",
       size: "2.5 MB",
     },
     {
-      name: "PDF 2",
+      name: "Chengai Diocese",
       url: "https://salemdiocese.org/wp-content/uploads/2023/09/News-Letter_compressed.pdf",
       size: "3.2 MB",
     },
     {
-      name: "PDF 3",
+      name: "De La Salle Brothers",
+      url: "https://salemdiocese.org/wp-content/uploads/2023/09/News-Letter_compressed.pdf",
+      size: "1.8 MB",
+    },
+    {
+      name: "Ascension Church",
+      url: "https://salemdiocese.org/wp-content/uploads/2023/09/News-Letter_compressed.pdf",
+      size: "1.8 MB",
+    },
+    {
+      name: "Ascension Church",
+      url: "https://salemdiocese.org/wp-content/uploads/2023/09/News-Letter_compressed.pdf",
+      size: "1.8 MB",
+    },
+    {
+      name: "Ascension Church",
       url: "https://salemdiocese.org/wp-content/uploads/2023/09/News-Letter_compressed.pdf",
       size: "1.8 MB",
     },
   ];
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 4;
+
+
+  // Calculate the index range for the current page
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+
+  // Filter pdfLinks to only show items for the current page
+  const pdfsToShow = pdfLinks.slice(startIndex, endIndex);
 
   const [date, setDate] = useState(new Date());
   const [events, setEvents] = useState([
@@ -69,7 +94,9 @@ function Churchstatic() {
             <div className="col-12 col-lg-6">
               <div className="cause-wrap d-flex flex-wrap justify-content-between">
                 <div className="cause-content-wrap">
-                  <header className="entry-header d-flex flex-wrap align-items-center"></header>
+                  <header className="entry-header d-flex flex-wrap align-items-center">
+                    {/* <h2 className="entry-title">Calendar</h2> */}
+                  </header>
                   <div className="entry-content" id="calcont">
                     <Calendar
                       onChange={onChange}
@@ -83,15 +110,23 @@ function Churchstatic() {
             <div className="col-12 col-lg-6">
               <div className="cause-wrap d-flex flex-wrap justify-content-between">
                 <div className="cause-content-wrap">
-                  <header className="entry-header d-flex flex-wrap align-items-center"></header>
-                  <div className="entry-content" id="calcont">
-                    {pdfLinks.map((pdf, index) => (
+                  <header className="entry-header d-flex flex-wrap align-items-center">
+                    {/* <h2 className="entry-title">News Letter</h2> */}
+                  </header>
+                  <div
+                    className="entry-content"
+                    id="calcont"
+                  >
+                    {pdfsToShow.map((pdf, index) => (
                       <div
                         key={index}
-                        className="pdf-link d-flex align-items-center"
+                        className="pdf-display d-flex flex-wrap align-items-center pdffree"
                       >
                         <div className="pdf-logo">
-                          <i className="far fa-file-pdf mr-2"></i>
+                          <i
+                            className="fa fa-file-pdf-o"
+                            style={{ fontSize: "35px", color: "red" }}
+                          ></i>
                         </div>
                         <div className="pdf-info">
                           <a
@@ -101,6 +136,7 @@ function Churchstatic() {
                           >
                             {pdf.name}
                           </a>
+                          <br />
                           <span className="pdf-size">{pdf.size}</span>
                         </div>
                         <div className="pdf-download ml-auto">
@@ -110,12 +146,32 @@ function Churchstatic() {
                             rel="noopener noreferrer"
                             className="btn btn-primary btn-sm"
                           >
-                            <i className="fas fa-download"></i> Download
+                            <i className="fas fa-download"></i>
                           </a>
                         </div>
                       </div>
                     ))}
                   </div>
+                  {/* Bootstrap Pagination */}
+                  <ul className="pagination" style={{marginTop:"7px"}}>
+                    {Array.from({
+                      length: Math.ceil(pdfLinks.length / itemsPerPage),
+                    }).map((_, index) => (
+                      <li
+                        key={index}
+                        className={`page-item ${
+                          currentPage === index + 1 ? "active" : ""
+                        }`}
+                      >
+                        <button
+                          className="page-link"
+                          onClick={() => setCurrentPage(index + 1)}
+                        >
+                          {index + 1}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </div>
