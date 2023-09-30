@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import About from './components/about';
+import Churchstatic from './components/churchstatic';
+import Footer from './components/footer';
+import Header from './components/header';
+import Latestevent from './components/latestevent';
+import Ourstatic from './components/ourstatic';
+import Scrollbar from './components/scrollbar';
+import Slider from './components/slider';
+import Testimonials from './components/testimonials';
+import Upcoming from './components/upcoming';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Slider />
+      <Scrollbar />
+      <About />
+      <Ourstatic />
+      <Upcoming />
+      <Churchstatic />
+      <Testimonials />
+      <Footer />
+    </>
   );
 }
 
