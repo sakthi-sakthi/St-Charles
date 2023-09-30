@@ -29,10 +29,11 @@ function Footer() {
                     width={250}
                     height={150}
                     style={{ border: 0 }}
+                    title="boscosoft"
                     allowFullScreen=""
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                  />
+                  ></iframe>
                 </div>
               </div>
 

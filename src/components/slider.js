@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import Swiper from "swiper";
 
 function Slider() {
@@ -30,7 +30,7 @@ function Slider() {
   ];
 
   useEffect(() => {
-    const slides = slideshowRef.current.querySelectorAll(".swiper-slide");
+    // const slides = slideshowRef.current.querySelectorAll(".swiper-slide");
 
     const swiper = new Swiper(slideshowRef.current, {
       loop: true,

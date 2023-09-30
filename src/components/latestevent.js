@@ -5,7 +5,7 @@ import "swiper/css";
 
 function Latestevent() {
   const slideshowRef = useRef(null);
-  const [currentSlide, setCurrentSlide] = useState(0);
+  // const [currentSlide, setCurrentSlide] = useState(0);
 
   const data = [
     {
@@ -74,7 +74,7 @@ function Latestevent() {
   ];
 
   useEffect(() => {
-    const slides = slideshowRef.current.querySelectorAll(".swiper-slide");
+    // const slides = slideshowRef.current.querySelectorAll(".swiper-slide");
 
     const swiper = new Swiper(slideshowRef.current, {
       loop: true,
@@ -86,7 +86,7 @@ function Latestevent() {
       spaceBetween: 20,
       on: {
         slideChange: () => {
-          setCurrentSlide(swiper.realIndex);
+          // setCurrentSlide(swiper.realIndex);
         },
       },
       breakpoints: {

@@ -1,14 +1,12 @@
-import About from './components/about';
-import Churchstatic from './components/churchstatic';
-import Footer from './components/footer';
-import Header from './components/header';
-import Latestevent from './components/latestevent';
-import Ourstatic from './components/ourstatic';
-import Scrollbar from './components/scrollbar';
-import Slider from './components/slider';
-import Testimonials from './components/testimonials';
-import Upcoming from './components/upcoming';
-
+import About from "./components/about";
+import Churchstatic from "./components/churchstatic";
+import Footer from "./components/footer";
+import Header from "./components/header";
+import Ourstatic from "./components/ourstatic";
+import Scrollbar from "./components/scrollbar";
+import Slider from "./components/slider";
+import Testimonials from "./components/testimonials";
+import Upcoming from "./components/upcoming";
 
 function Home() {
   return (

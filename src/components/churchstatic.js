@@ -40,7 +40,6 @@ function Churchstatic() {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 4;
 
-
   // Calculate the index range for the current page
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
@@ -102,6 +101,7 @@ function Churchstatic() {
                       onChange={onChange}
                       value={date}
                       onClickDay={handleDayClick}
+                      setEvents={date}
                     />
                   </div>
                 </div>
@@ -113,10 +113,7 @@ function Churchstatic() {
                   <header className="entry-header d-flex flex-wrap align-items-center">
                     {/* <h2 className="entry-title">News Letter</h2> */}
                   </header>
-                  <div
-                    className="entry-content"
-                    id="calcont"
-                  >
+                  <div className="entry-content" id="calcont">
                     {pdfsToShow.map((pdf, index) => (
                       <div
                         key={index}
@@ -153,7 +150,7 @@ function Churchstatic() {
                     ))}
                   </div>
                   {/* Bootstrap Pagination */}
-                  <ul className="pagination" style={{marginTop:"7px"}}>
+                  <ul className="pagination" style={{ marginTop: "7px" }}>
                     {Array.from({
                       length: Math.ceil(pdfLinks.length / itemsPerPage),
                     }).map((_, index) => (

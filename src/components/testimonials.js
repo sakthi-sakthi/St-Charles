@@ -7,7 +7,7 @@ export default function App() {
   const swiperRef = React.createRef();
 
   useEffect(() => {
-    const swiper = new Swiper(swiperRef.current, {
+    new Swiper(swiperRef.current, {
       slidesPerView: 3, // Set the number of slides to display at once
       spaceBetween: 20, // Optional: Add space between slides
       autoplay: {
@@ -17,7 +17,7 @@ export default function App() {
         enabled: true,
       },
     });
-  }, []);
+  }, [swiperRef]);
 
   return (
     <MDBContainer className="py-5">
