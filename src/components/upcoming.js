@@ -70,14 +70,14 @@ function Upcoming() {
                     <div className="event-content-wrap" id="upcevent">
                       <header className="entry-header d-flex flex-wrap align-items-center">
                         <h3 className="entry-title w-100 m-0">
-                          <a href="#">{upcomeevent.title}</a>
+                          <a href="/">{upcomeevent.title}</a>
                         </h3>
                         <div className="posted-date">
-                          <a href="#">{upcomeevent.date}</a>
+                          <a href="/">{upcomeevent.date}</a>
                         </div>
                       </header>
                       <div className="entry-footer">
-                        <a href="#">Read More</a>
+                        <a href="/">Read More</a>
                       </div>
                     </div>
                   </div>
@@ -98,14 +98,14 @@ function Upcoming() {
                     <div className="event-content-wrap" id="upcevent">
                       <header className="entry-header d-flex flex-wrap align-items-center">
                         <h3 className="entry-title w-100 m-0">
-                          <a href="#">{event.title}</a>
+                          <a href="/">{event.title}</a>
                         </h3>
                         <div className="posted-date">
-                          <a href="#">{event.date}</a>
+                          <a href="/">{event.date}</a>
                         </div>
                       </header>
                       <div className="entry-footer">
-                        <a href="#">Read More</a>
+                        <a href="/">Read More</a>
                       </div>
                     </div>
                   </div>
@@ -126,10 +126,10 @@ function Upcoming() {
                     <div className="event-content-wrap" id="upcevent">
                       <header className="entry-header d-flex flex-wrap align-items-center">
                         <h3 className="entry-title w-100 m-0">
-                          <a href="#">{birth.title}</a>
+                          <a href="/">{birth.title}</a>
                         </h3>
                         <div className="posted-date">
-                          <a href="#">{birth.date}</a>
+                          <a href="/">{birth.date}</a>
                         </div>
                       </header>
                     </div>

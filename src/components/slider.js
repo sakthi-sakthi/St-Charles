@@ -3,7 +3,7 @@ import Swiper from "swiper";
 
 function Slider() {
   const slideshowRef = useRef(null);
-  const [currentSlide, setCurrentSlide] = useState(0);
+  // const [currentSlide, setCurrentSlide] = useState(0);
 
   const data = [
     {
@@ -42,7 +42,7 @@ function Slider() {
       spaceBetween: 20,
       on: {
         slideChange: () => {
-          setCurrentSlide(swiper.realIndex);
+          // setCurrentSlide(swiper.realIndex);
         },
       },
     });

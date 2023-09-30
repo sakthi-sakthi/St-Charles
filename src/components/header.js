@@ -30,17 +30,17 @@ function Header() {
               <div className="col-12 col-lg-4 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
                 <div className="social-icons">
                   <div className="social-icon">
-                    <a href="#">
+                    <a href="/">
                       <i className="fab fa-facebook" />
                     </a>
                   </div>
                   <div className="social-icon">
-                    <a href="#">
+                    <a href="/">
                       <i className="fab fa-youtube" />
                     </a>
                   </div>
                   <div className="social-icon">
-                    <a href="#">
+                    <a href="/">
                       <i className="fab fa-instagram" />
                     </a>
                   </div>
@@ -94,7 +94,7 @@ function Header() {
                             Eastern province
                           </h1>
                           <h2 className="site-description">
-                            Adrien Villa, # 28 Surappatu Main Road,
+                            Adrien Villa, / 28 Surappatu Main Road,
                             Vinayagapuram,
                             <br />
                             Kolathur P.O Chennai 600 099
@@ -134,7 +134,7 @@ function Header() {
             class="navbar-toggler"
             type="button"
             data-toggle="collapse"
-            data-target="#navbarNav"
+            data-target="/navbarNav"
             aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation"
@@ -144,14 +144,14 @@ function Header() {
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav" id="commonNavbar">
               <li class="nav-item active">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/">
                   Home
                 </a>
               </li>
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
-                  href="#"
+                  href="/"
                   id="navbarDropdownMenuLink"
                   role="button"
                   data-toggle="dropdown"
@@ -164,10 +164,10 @@ function Header() {
                   class="dropdown-menu"
                   aria-labelledby="navbarDropdownMenuLink"
                 >
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     Mother House
                   </a>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     Founder
                   </a>
                 </div>
@@ -175,7 +175,7 @@ function Header() {
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
-                  href="#"
+                  href="/"
                   id="navbarDropdownMenuLink2"
                   role="button"
                   data-toggle="dropdown"
@@ -188,26 +188,26 @@ function Header() {
                   class="dropdown-menu"
                   aria-labelledby="navbarDropdownMenuLink2"
                 >
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     Provincial Council
                   </a>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     History
                   </a>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     The Motto of the Province
                   </a>
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/">
                   General Administration
                 </a>
               </li>
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
-                  href="#"
+                  href="/"
                   id="navbarDropdownMenuLink3"
                   role="button"
                   data-toggle="dropdown"
@@ -220,16 +220,16 @@ function Header() {
                   class="dropdown-menu"
                   aria-labelledby="navbarDropdownMenuLink3"
                 >
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     Cosaf
                   </a>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     Fac
                   </a>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     Msp
                   </a>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     Ecep
                   </a>
                 </div>
@@ -237,7 +237,7 @@ function Header() {
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
-                  href="#"
+                  href="/"
                   id="navbarDropdownMenuLink4"
                   role="button"
                   data-toggle="dropdown"
@@ -250,83 +250,83 @@ function Header() {
                   class="dropdown-menu"
                   aria-labelledby="navbarDropdownMenuLink4"
                 >
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     Ranipet
                   </a>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     Jolarpet
                   </a>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     Yercaud
                   </a>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     Chilakaluripet
                   </a>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     Yelagiri
                   </a>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     Madurai
                   </a>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     Thirupattur
                   </a>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     Perambur
                   </a>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     Kanapparu
                   </a>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     Kadakkal
                   </a>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     Perumon
                   </a>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     Vilathikulam
                   </a>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     Vinayagapuram
                   </a>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     Ammoor
                   </a>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     Puliyampatty
                   </a>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     Gummidipoondi
                   </a>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     Mugandanu
                   </a>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     Kizhakkambalam
                   </a>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     Ponnapally
                   </a>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     Periakottai
                   </a>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     Dindigul
                   </a>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     Muttom
                   </a>
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/">
                   Gallery
                 </a>
               </li>
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
-                  href="#"
+                  href="/"
                   id="navbarDropdownMenuLink5"
                   role="button"
                   data-toggle="dropdown"
@@ -339,30 +339,30 @@ function Header() {
                   class="dropdown-menu"
                   aria-labelledby="navbarDropdownMenuLink5"
                 >
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     Formation
                   </a>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     Candidacy
                   </a>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     Posultancy
                   </a>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     Novitiate
                   </a>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="/">
                     Juniorate
                   </a>
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/">
                   Vocation Promotion
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/">
                   Contact Us
                 </a>
               </li>

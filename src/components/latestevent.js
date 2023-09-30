@@ -143,7 +143,7 @@ function Latestevent() {
                         <div className="cause-content-wrap">
                           <header className="entry-header d-flex flex-wrap align-items-center">
                             <h3 className="entry-title w-100 m-0">
-                              <a href="#">{data.title}</a>
+                              <a href="/">{data.title}</a>
                             </h3>
                           </header>
                           <div className="entry-content">

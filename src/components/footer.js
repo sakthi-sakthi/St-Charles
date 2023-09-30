@@ -10,9 +10,7 @@ function Footer() {
               <div className="col-12 col-md-6 col-lg-4">
                 <div className="foot-about">
                   <h2>About Us</h2>
-                  {/* <a class="foot-logo" href="#"
-              ><img src="" style="width: 7rem;" alt
-            /></a> */}
+
                   <p>
                     "This religious House was founded in 1682 by Adrien Bresy,
                     parish priest of wez. This vigilant pastor, wishing to
