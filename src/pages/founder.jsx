@@ -67,7 +67,7 @@ function Founder() {
             </p>
           </div>
           <div className="col-lg-3">
-            <img src="/images/subpage/rip.png" alt="" />
+            <img src="/images/subpage/founder_fr_adrien.png" alt="" />
           </div>
         </div>
         <div className="row">
@@ -94,7 +94,7 @@ function Founder() {
             </div>
           </div>
           <div className="col-lg-3">
-            <img src="/images/subpage/founder_fr_adrien.png" alt="" />
+            <img src="/images/subpage/rip.png" alt="" />
           </div>
         </div>
       </div>

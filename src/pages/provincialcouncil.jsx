@@ -13,14 +13,7 @@ function ProvincialCouncil() {
         return res.json();
       })
       .then((resp) => {
-        // console.log(resp.data);
-        // const ProvincialData = resp.data.filter(
-        //   (item) => item.title === "Provincial"
-        // );
-        // if (ProvincialData) {
         setProvincialData(resp.data);
-        // } else {
-        // }
       })
       .catch((err) => {
         console.log(err.message);
@@ -73,8 +66,6 @@ function ProvincialCouncil() {
                   </center>
                 </div>
               ))}
-              {/* <div className="col-6"></div>
-              <div className="col-6"></div> */}
             </div>
           </div>
           <div className="col-lg-3 sidebar">

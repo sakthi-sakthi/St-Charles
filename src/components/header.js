@@ -166,7 +166,7 @@ function Header() {
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
-                  href="/"
+                  href="/history"
                   id="navbarDropdownMenuLink2"
                   role="button"
                   data-toggle="dropdown"
@@ -180,16 +180,16 @@ function Header() {
                   <a class="dropdown-item" href="/provincial-council">
                     Provincial Council
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/history">
                     History
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/the-motto-of-the-province">
                     The Motto of the Province
                   </a>
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/">
+                <a class="nav-link" href="/general-administration">
                   General Administration
                 </a>
               </li>
