@@ -12,16 +12,13 @@ function Header() {
                   <a href="mailto:scbprovincialatechennai@gmail.com">
                     <span
                       className="__cf_email__"
-                      data-cfemail="2b4844455f4a485f6b445e5948434a59425f5205484446"
-                    >
+                      data-cfemail="2b4844455f4a485f6b445e5948434a59425f5205484446">
                       scbprovincialatechennai@gmail.com
                     </span>
                   </a>
                 </div>
                 <div className="header-bar-text">
-                  <a href="tel:+919865910951">
-                    Mobile : +91 98659 10951
-                  </a>
+                  <a href="tel:+919865910951">Mobile : +91 98659 10951</a>
                 </div>
               </div>
               <div className="col-12 col-lg-4 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
@@ -134,8 +131,7 @@ function Header() {
             data-target="/navbarNav"
             aria-controls="navbarNav"
             aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
@@ -153,18 +149,16 @@ function Header() {
                   role="button"
                   data-toggle="dropdown"
                   aria-haspopup="true"
-                  aria-expanded="false"
-                >
+                  aria-expanded="false">
                   Foundation
                 </a>
                 <div
                   class="dropdown-menu"
-                  aria-labelledby="navbarDropdownMenuLink"
-                >
-                  <a class="dropdown-item" href="/">
+                  aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="/motherhouse">
                     Mother House
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/founder">
                     Founder
                   </a>
                 </div>
@@ -177,15 +171,13 @@ function Header() {
                   role="button"
                   data-toggle="dropdown"
                   aria-haspopup="true"
-                  aria-expanded="false"
-                >
+                  aria-expanded="false">
                   Eastern Province
                 </a>
                 <div
                   class="dropdown-menu"
-                  aria-labelledby="navbarDropdownMenuLink2"
-                >
-                  <a class="dropdown-item" href="/">
+                  aria-labelledby="navbarDropdownMenuLink2">
+                  <a class="dropdown-item" href="/provincial-council">
                     Provincial Council
                   </a>
                   <a class="dropdown-item" href="/">
@@ -209,14 +201,12 @@ function Header() {
                   role="button"
                   data-toggle="dropdown"
                   aria-haspopup="true"
-                  aria-expanded="false"
-                >
+                  aria-expanded="false">
                   Commission
                 </a>
                 <div
                   class="dropdown-menu"
-                  aria-labelledby="navbarDropdownMenuLink3"
-                >
+                  aria-labelledby="navbarDropdownMenuLink3">
                   <a class="dropdown-item" href="/">
                     Cosaf
                   </a>
@@ -239,14 +229,12 @@ function Header() {
                   role="button"
                   data-toggle="dropdown"
                   aria-haspopup="true"
-                  aria-expanded="false"
-                >
+                  aria-expanded="false">
                   Community
                 </a>
                 <div
                   class="dropdown-menu"
-                  aria-labelledby="navbarDropdownMenuLink4"
-                >
+                  aria-labelledby="navbarDropdownMenuLink4">
                   <a class="dropdown-item" href="/">
                     Ranipet
                   </a>
@@ -328,14 +316,12 @@ function Header() {
                   role="button"
                   data-toggle="dropdown"
                   aria-haspopup="true"
-                  aria-expanded="false"
-                >
+                  aria-expanded="false">
                   Formation
                 </a>
                 <div
                   class="dropdown-menu"
-                  aria-labelledby="navbarDropdownMenuLink5"
-                >
+                  aria-labelledby="navbarDropdownMenuLink5">
                   <a class="dropdown-item" href="/">
                     Formation
                   </a>
