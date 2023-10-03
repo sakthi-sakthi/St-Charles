@@ -17,6 +17,11 @@ function Upcoming() {
       date: "Aug 25, 2018",
       imageSrc: "images/logos/sisters1.png",
     },
+    {
+      title: "Another Event",
+      date: "Aug 25, 2018",
+      imageSrc: "images/logos/sisters1.png",
+    },
   ];
   const eventsData = [
     {
@@ -28,6 +33,11 @@ function Upcoming() {
       title: "Bring water to the children",
       date: "Aug 25, 2018",
       imageSrc: "images/event-2.jpg",
+    },
+    {
+      title: "Another Event",
+      date: "Aug 25, 2018",
+      imageSrc: "images/event-3.jpg",
     },
     {
       title: "Another Event",
@@ -51,6 +61,11 @@ function Upcoming() {
       date: "Aug 25, 2018",
       imageSrc: "images/event-3.jpg",
     },
+    {
+      title: "Another Event",
+      date: "Aug 25, 2018",
+      imageSrc: "images/event-3.jpg",
+    },
   ];
   return (
     <>
@@ -58,9 +73,9 @@ function Upcoming() {
         <div className="container">
           <div className="row">
             <div className="col-12 col-md-6 col-lg-4">
-              <div className="upcoming-events">
+              <div className="upcoming-events" id="provinceprog">
                 <div className="section-heading">
-                  <h2 className="entry-title">Upcoming Events</h2>
+                  <h2 className="entry-title">Province News</h2>
                 </div>
                 {upcomeData.map((upcomeevent, index) => (
                   <div className="event-wrap d-flex flex-wrap justify-content-between">
@@ -86,9 +101,9 @@ function Upcoming() {
             </div>
 
             <div className="col-12 col-md-6 col-lg-4">
-              <div className="upcoming-events">
+              <div className="upcoming-events" id="provincialprog">
                 <div className="section-heading">
-                  <h2 className="entry-title">Upcoming Events</h2>
+                  <h2 className="entry-title">Provincial Program</h2>
                 </div>
                 {eventsData.map((event, index) => (
                   <div className="event-wrap d-flex flex-wrap justify-content-between">
@@ -114,7 +129,7 @@ function Upcoming() {
             </div>
 
             <div className="col-12 col-md-6 col-lg-4">
-              <div className="upcoming-events">
+              <div className="upcoming-events" id="birthfeast">
                 <div className="section-heading">
                   <h2 className="entry-title">Birthday / Feast</h2>
                 </div>

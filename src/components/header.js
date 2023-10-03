@@ -19,12 +19,9 @@ function Header() {
                   </a>
                 </div>
                 <div className="header-bar-text">
-                  <p>
-                    PHONE:{" "}
-                    <a href="tel:+919865910951">
-                      <span>+91 98659 10951</span>
-                    </a>
-                  </p>
+                  <a href="tel:+919865910951">
+                    Mobile : +91 98659 10951
+                  </a>
                 </div>
               </div>
               <div className="col-12 col-lg-4 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
@@ -236,7 +233,7 @@ function Header() {
               </li>
               <li class="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle"
+                  class="nav-link dropdown-toggle community"
                   href="/"
                   id="navbarDropdownMenuLink4"
                   role="button"

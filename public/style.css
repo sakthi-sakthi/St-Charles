@@ -47,7 +47,7 @@ a:hover, a:active {
 # Header Bar
 --------------------------------*/
 .top-header-bar {
-    background: #172440;
+    background: #6b1d2f;
     color: #fff;
     font-family: unset;
 }
@@ -829,7 +829,7 @@ ul.tabs-nav .tab-nav.active {
 .section-heading .entry-title {
     position: relative;
     padding-bottom: 24px;
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 600;
 }
 
@@ -939,7 +939,7 @@ ul.tabs-nav .tab-nav.active {
     padding: 13px 25px 0px 21px;
     background: #edf3f5;
     box-shadow: 7px 7px 10px 0px rgba(0, 0, 0, 0.5);
-    height: 23rem;
+    height: 28rem;
 }
 
 .featured-cause .featured-cause .cause-wrap figure {
@@ -2303,22 +2303,45 @@ ul.tabs-nav .tab-nav.active {
     background: rgba(232,237,238,.8);
 }
 /* Style for the container div */
+/* Add this CSS code to your stylesheet */
+
 .social-icons {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  /* Style for each individual social icon div */
-  .social-icon {
-    margin: 10px; /* Adjust spacing between icons as needed */
-  }
+/* Style for each individual social icon div */
+.social-icon {
+    margin: 10px;
+    /* Adjust spacing between icons as needed */
+}
 
-  /* Style for the social media icons */
-  .social-icon i {
-    font-size: 19px; /* Adjust the size of the icons as needed */
-    color: #fff; /* Adjust the color of the icons */
-  }
+/* Style for the social media icons */
+.social-icon i {
+    font-size: 19px;
+    /* Adjust the size of the icons as needed */
+    color: #fff;
+    /* Adjust the default color of the icons */
+
+    /* Set hover colors for each individual icon */
+}
+
+.social-icon i.fa-facebook:hover {
+    color: #1877f2;
+    /* Facebook icon hover color (blue) */
+}
+
+.social-icon i.fa-youtube:hover {
+    color: #ff0000;
+    /* YouTube icon hover color (red) */
+}
+
+.social-icon i.fa-instagram:hover {
+    color: #bc2a8d;
+    /* Instagram icon hover color (purple) */
+}
+  /* end */
   #birthday{
     width:72px;
   }
@@ -2343,7 +2366,7 @@ ul.tabs-nav .tab-nav.active {
 
 /* Style the main navigation bar */
 .navbar {
-    background-color: #172440;
+    background-color: #6b1d2f;
     font-family: 'Roboto', sans-serif !important;
     color: white !important;
 }
@@ -2365,7 +2388,7 @@ margin-left: 50px;
 
 .dropdown-menu {
     font-family: 'Roboto', sans-serif !important;
-    background-color: #172440 !important;
+    background-color: #6b1d2f !important;
     margin-top: 0px !important;
 }
 
@@ -2378,8 +2401,9 @@ margin-left: 50px;
 
 .dropdown-item:hover{
     font-family: 'Roboto', sans-serif;
-    background-color: #B69000 !important;
+    background-color: #035196 !important;
     color: rgb(255, 255, 255) !important;
+    /* #035196 */
 }
 .navbar ul li a {
     font-family: 'Poppins' !important;
@@ -2396,25 +2420,15 @@ margin-left: 50px;
     display: block;
 }
 
-
-  /* Add CSS for the dropdown menu */
-    .nav-item.dropdown .dropdown-menu {
-      max-height: 0;
-      overflow-y: hidden;
-      overflow-x: hidden;
-      transition: max-height 0.3s ease-in-out;
-    }
-
-    /* Apply styles on hover */
-    .nav-item.dropdown:hover .dropdown-menu {
-      max-height: 300px; /* Adjust the maximum height as needed */
-      overflow-y: auto; /* Enable vertical scrolling when content overflows */
-      overflow-x: hidden;
-    }
 /* Default styles for all screen sizes */
 #calcont {
-    width: 22rem;
-    margin-left: 4rem;
+    width: 29rem;
+        margin-left: 5rem;
+}
+
+#newscont {
+    width: 26rem;
+    margin-left: 3rem;
 }
 
 /* Responsive styles for screens with a maximum width of 768px (typical for mobile devices) */
@@ -2424,6 +2438,11 @@ margin-left: 50px;
             margin-left: -30px;
             padding: 0.5rem;
     }
+        #newscont {
+            width: 19rem;
+            margin-left: -30px;
+            padding: 0.5rem;
+        }
 }
 
 
@@ -2452,3 +2471,201 @@ margin-left: 50px;
 .pdf-info{
     margin-left: 17px;
 }
+
+/* For system responsive design (screens wider than a certain breakpoint) */
+#btnnext {
+    position: absolute;
+    top: 27rem;
+}
+
+/* For mobile responsive design (screens narrower than a certain breakpoint) */
+@media (max-width: 767px) {
+    #btnnext {
+        /* position: absolute; */
+        top: 32rem;
+        /* right: 6rem; */
+    }
+}
+
+#birthfeast{
+    max-height: 400px;
+    overflow-y: hidden;
+}
+
+#birthfeast:hover {
+    overflow-y: auto;
+}
+
+#provincialprog{
+    max-height: 400px;
+    overflow-y: hidden;
+}
+
+#provincialprog:hover {
+    overflow-y: auto;
+
+}
+
+#provinceprog {
+    max-height: 400px;
+    overflow-y: hidden;
+}
+
+#provinceprog:hover {
+    overflow-y: auto;
+
+}
+
+/* Hide the default scrollbar */
+#provinceprog::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track styles */
+#provinceprog::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle styles */
+#provinceprog::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+#provinceprog::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* 2nd */
+
+/* Hide the default scrollbar */
+#provincialprog::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track styles */
+#provincialprog::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle styles */
+#provincialprog::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+#provincialprog::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* 1st */
+
+/* Hide the default scrollbar */
+#birthfeast::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track styles */
+#birthfeast::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle styles */
+#birthfeast::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+#birthfeast::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+  /* Add CSS for the dropdown menu */
+  .nav-item.dropdown .dropdown-menu {
+    max-height: 320px;
+    overflow-y: hidden;
+  }
+
+  /* Apply styles on hover */
+  .nav-item.dropdown:hover .dropdown-menu {
+    overflow-y: auto;
+  }
+
+  /* 4th */
+
+  /* Hide the default scrollbar */
+ .nav-item.dropdown .dropdown-menu::-webkit-scrollbar {
+      width: 5px;
+  }
+
+  /* Track styles */
+ .nav-item.dropdown .dropdown-menu::-webkit-scrollbar-track {
+      background: #f1f1f1;
+  }
+
+  /* Handle styles */
+ .nav-item.dropdown .dropdown-menu::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 5px;
+  }
+
+  /* Handle on hover */
+ .nav-item.dropdown .dropdown-menu::-webkit-scrollbar-thumb:hover {
+      background: #555;
+  }
+
+  /* Scrollbar.css */
+  .marquee {
+      white-space: nowrap;
+      overflow: hidden;
+      position: relative;
+  }
+
+  .marquee p {
+      animation: marquee-scroll 40s linear infinite;
+  }
+
+  @keyframes marquee-scroll {
+      0% {
+          transform: translateX(100%);
+      }
+
+      100% {
+          transform: translateX(-100%);
+      }
+  }
+
+   /* Style for the email link */
+   .header-bar-email a {
+       color: inherit;
+       /* Inherit the default text color */
+       text-decoration: none;
+       /* Remove underline */
+       transition: color 0.3s ease;
+       /* Add a smooth transition effect */
+   }
+
+   /* Hover style for the email link */
+   .header-bar-email a:hover {
+       color:#d73875;
+       /* Change the text color to pink on hover */
+   }
+
+   /* Style for the phone link */
+   .header-bar-text a {
+       color: inherit;
+       /* Inherit the default text color */
+       text-decoration: none;
+       /* Remove underline */
+       transition: color 0.3s ease;
+       /* Add a smooth transition effect */
+   }
+
+   /* Hover style for the phone link */
+   .header-bar-text a:hover {
+       color:#d73875;
+       /* Change the text color to pink on hover */
+   }
