@@ -37,23 +37,23 @@ function Administration() {
         </div>
       </div>
 
-      <div className="container subpage">
+      <div className="container">
         <h3 className="heading">General Administration</h3>
         <div className="row">
           <div className="col-lg-9">
-            <div className="row">
+            <div className="row adminpage">
               <h3>SISTERS OF ST. CHARLES BORROMEO - THE DAWN OF A NEW ERA</h3>
               <div className="col-lg-6">
                 <img
                   src="images/subpage/sunrises.jpg"
-                  style={{ height: "250px", width: "350px" }}
+                  style={{ borderRadius: " 50%" }}
                   alt=""
                 />
               </div>
               <div className="col-lg-6">
                 <img
                   src="images/subpage/sunrises.jpg"
-                  style={{ height: "250px", width: "350px" }}
+                  style={{ borderRadius: " 50%" }}
                   alt=""
                 />
               </div>
@@ -138,6 +138,63 @@ function Administration() {
                 missionaries, is today sending her daughters to the foreign
                 lands to serve in the Lord’s vineyard. ‘Go and teach all nations
               </p>
+            </div>
+            <h2>Superior General and Councillors</h2>
+            <br />
+            <div className="Container General">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>
+                      <img src="/images/subpage/Sr.preethy.png" alt="" />
+                      <center>
+                        <strong>Sr. Preethy Joseph</strong>
+                        <p>
+                          Chair person of Medico, Social and Pastoral Commission
+                        </p>
+                      </center>
+                      &nbsp;
+                    </td>
+                    <td>
+                      <img src="/images/subpage/Sr.Christine.png" alt="" />
+                      <center>
+                        <strong>Sr.Christine Vas</strong>
+                        <p>
+                          Assistant Superior General and chair person of
+                          Education commission
+                        </p>
+                      </center>
+                      &nbsp;
+                    </td>
+                    <td>
+                      <img src="/images/subpage/Sr.Alena.png" alt="" />
+                      <center>
+                        <strong>Alena Fernandez</strong>
+                        <p>Superior General</p>
+                      </center>
+                      &nbsp;
+                    </td>
+                    <td>
+                      <img src="/images/subpage/Sr.Virgy.png" alt="" />
+                      <center>
+                        <strong>Sr. Virgy</strong>
+                        <p>
+                          Chair person of Spirituality and Formation Commission
+                        </p>
+                      </center>
+                      &nbsp;
+                    </td>
+                    <td>
+                      <img src="/images/subpage/Sr.josephine.png" alt="" />
+                      <center>
+                        <strong>Sr. Josephine Nirmala</strong>
+                        <p>Chair person of Financial and Advisory Commission</p>
+                      </center>
+                      &nbsp;
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
           <div className="col-lg-3 sidebar">

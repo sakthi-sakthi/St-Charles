@@ -2820,3 +2820,35 @@ div.main-tile-text h2 {
   background-color: #dff0d8;
   border-color: #c5e8b6;
 }
+.adminpage img {
+  height: 200px;
+  width: 200px;
+}
+.M-flex {
+  display: flex !important;
+}
+.General {
+  margin-left: -75px;
+}
+@media (max-width: 600px) {
+  td {
+    text-align: center;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  img {
+    margin-bottom: 10px;
+  }
+  .subpage img {
+    width: 100%;
+    margin: 10px;
+  }
+  .M-flex {
+    display: block !important;
+  }
+  .General {
+    margin-left: 0;
+  }
+}
