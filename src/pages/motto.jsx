@@ -10,7 +10,6 @@ function Motto() {
         return res.json();
       })
       .then((resp) => {
-        // console.log(resp.data);
         setslider(resp.data);
       })
       .catch((err) => {
@@ -43,7 +42,7 @@ function Motto() {
           <div className="col-lg-9">
             <div>
               <h2>Provincial Superiors</h2>
-              <div className="d-flex">
+              <div className="M-flex">
                 <img
                   src="images/subpage/sunrises.jpg"
                   style={{
@@ -63,7 +62,7 @@ function Motto() {
               </div>
             </div>
             <div>
-              <div className="d-flex mt-5">
+              <div className="M-flex mt-5">
                 <p style={{ marginTop: "20px" }}>
                   As the rising sun announces the dawn of a new day the
                   Resurrection of Christ marks the new era in the life of the
