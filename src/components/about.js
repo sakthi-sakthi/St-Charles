@@ -10,10 +10,11 @@ function About() {
               <div className="welcome-content">
                 <header className="entry-header">
                   <h2 className="entry-title">
-                    Welcome to St Charles Borromeo - Eastern Province
+                    Welcome to St Charles Borromeo <br />
+                    Eastern Province
                   </h2>
                 </header>
-                <div className="entry-content mt-5">
+                <div className="entry-content mt-2">
                   "This religious House was founded in 1682 by Adrien Bresy,
                   parish priest of wez. This vigilant pastor, wishing to procure
                   for his parishioners the benefits of a Christian education,

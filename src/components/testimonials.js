@@ -1,23 +1,45 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Swiper from "swiper/bundle";
 import "swiper/swiper-bundle.css";
 import { MDBCard, MDBCardBody, MDBContainer, MDBIcon } from "mdb-react-ui-kit";
 
 export default function App() {
-  const swiperRef = React.createRef();
+  const swiperRef = useRef(null);
+  let mySwiper = null;
 
   useEffect(() => {
-    new Swiper(swiperRef.current, {
-      slidesPerView: 3, // Set the number of slides to display at once
-      spaceBetween: 20, // Optional: Add space between slides
-      autoplay: {
-        delay: 5000,
-      },
-      keyboard: {
-        enabled: true,
-      },
-    });
-  }, [swiperRef]);
+    if (swiperRef.current) {
+      mySwiper = new Swiper(swiperRef.current, {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        autoplay: {
+          delay: 5000,
+        },
+        keyboard: {
+          enabled: true,
+        },
+      });
+    }
+
+    // Clean up the Swiper instance when the component unmounts
+    return () => {
+      if (mySwiper) {
+        mySwiper.destroy(true, true);
+      }
+    };
+  }, []);
+
+  const pauseSwiper = () => {
+    if (mySwiper) {
+      mySwiper.autoplay.stop();
+    }
+  };
+
+  const resumeSwiper = () => {
+    if (mySwiper) {
+      mySwiper.autoplay.start();
+    }
+  };
 
   return (
     <MDBContainer className="py-5">
@@ -27,7 +49,11 @@ export default function App() {
       <div className="swiper-container" ref={swiperRef}>
         <div className="swiper-wrapper">
           {/* Slide 1 */}
-          <div className="swiper-slide">
+          <div
+            className="swiper-slide"
+            onMouseEnter={pauseSwiper}
+            onMouseLeave={resumeSwiper}
+          >
             <MDBCard className="testimonial-card">
               <div
                 className="card-up"
@@ -54,7 +80,11 @@ export default function App() {
           </div>
 
           {/* Slide 2 */}
-          <div className="swiper-slide">
+          <div
+            className="swiper-slide"
+            onMouseEnter={pauseSwiper}
+            onMouseLeave={resumeSwiper}
+          >
             <MDBCard className="testimonial-card">
               <div
                 className="card-up"
@@ -74,7 +104,7 @@ export default function App() {
                   <MDBIcon fas icon="quote-left" className="pe-2" />I am very
                   grateful to the Sisters of St Charles who were instrumental
                   for the bright future that I am enjoying now. They brought me
-                  from lower level to the higher level in the society by giving
+                  from a lower level to a higher level in society by giving
                   education.
                 </p>
               </MDBCardBody>
@@ -82,7 +112,11 @@ export default function App() {
           </div>
 
           {/* Slide 3 */}
-          <div className="swiper-slide">
+          <div
+            className="swiper-slide"
+            onMouseEnter={pauseSwiper}
+            onMouseLeave={resumeSwiper}
+          >
             <MDBCard className="testimonial-card">
               <div
                 className="card-up"
@@ -102,7 +136,7 @@ export default function App() {
                   <MDBIcon fas icon="quote-left" className="pe-2" />I am very
                   grateful to the Sisters of St Charles who were instrumental
                   for the bright future that I am enjoying now. They brought me
-                  from lower level to the higher level in the society by giving
+                  from a lower level to a higher level in society by giving
                   education.
                 </p>
               </MDBCardBody>
@@ -110,11 +144,15 @@ export default function App() {
           </div>
 
           {/* Slide 4 */}
-          <div className="swiper-slide">
+          <div
+            className="swiper-slide"
+            onMouseEnter={pauseSwiper}
+            onMouseLeave={resumeSwiper}
+          >
             <MDBCard className="testimonial-card">
               <div
                 className="card-up"
-                style={{ backgroundColor: "#7a81a8" }}
+                style={{ backgroundColor: "#9d789b" }}
               ></div>
               <div className="avatar mx-auto bg-white">
                 <img
@@ -136,10 +174,6 @@ export default function App() {
             </MDBCard>
           </div>
         </div>
-        {/* 
-        <div className="swiper-pagination"></div>
-        <div className="swiper-button-prev"></div>
-        <div className="swiper-button-next"></div> */}
       </div>
     </MDBContainer>
   );

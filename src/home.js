@@ -16,8 +16,8 @@ function Home() {
       <Scrollbar />
       <About />
       <Ourstatic />
-      <Upcoming />
       <Churchstatic />
+      <Upcoming />
       <Testimonials />
       <Footer />
     </>

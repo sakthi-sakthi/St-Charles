@@ -8,17 +8,28 @@ function Header() {
           <div className="container">
             <div className="row flex-wrap justify-content-center justify-content-lg-between align-items-lg-center">
               <div className="col-12 col-lg-8 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
-                <div className="header-bar-email">
+                <div className="header-bar-email" style={{ fontSize: "15px" }}>
+                  <i
+                    className="fa fa-envelope"
+                    style={{ color: "#f6c93f" }}
+                  ></i>
                   <a href="mailto:scbprovincialatechennai@gmail.com">
                     <span
                       className="__cf_email__"
-                      data-cfemail="2b4844455f4a485f6b445e5948434a59425f5205484446">
+                      style={{ marginLeft: "0.5rem" }}
+                    >
                       scbprovincialatechennai@gmail.com
                     </span>
                   </a>
                 </div>
-                <div className="header-bar-text">
-                  <a href="tel:+919865910951">Mobile : +91 98659 10951</a>
+                <div
+                  className="header-bar-text align-items-center justify-content-center"
+                  style={{ fontSize: "15px" }}
+                >
+                  <i className="fa fa-phone" style={{ color: "#f6c93f" }}></i>
+                  <a href="tel:+919865910951" style={{ marginLeft: "0.3rem" }}>
+                    +91 98659 10951
+                  </a>
                 </div>
               </div>
               <div className="col-12 col-lg-4 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
@@ -85,7 +96,7 @@ function Header() {
                           <h1 style={{ textAlign: "center" }}>
                             The Sisters of St. Charles Borromeo
                             <br />
-                            Eastern province
+                            Eastern Province
                           </h1>
                           <h2 className="site-description">
                             Adrien Villa, / 28 Surappatu Main Road,
@@ -131,7 +142,8 @@ function Header() {
             data-target="/navbarNav"
             aria-controls="navbarNav"
             aria-expanded="false"
-            aria-label="Toggle navigation">
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
@@ -149,12 +161,14 @@ function Header() {
                   role="button"
                   data-toggle="dropdown"
                   aria-haspopup="true"
-                  aria-expanded="false">
+                  aria-expanded="false"
+                >
                   Foundation
                 </a>
                 <div
                   class="dropdown-menu"
-                  aria-labelledby="navbarDropdownMenuLink">
+                  aria-labelledby="navbarDropdownMenuLink"
+                >
                   <a class="dropdown-item" href="/motherhouse">
                     Mother House
                   </a>
@@ -171,12 +185,14 @@ function Header() {
                   role="button"
                   data-toggle="dropdown"
                   aria-haspopup="true"
-                  aria-expanded="false">
+                  aria-expanded="false"
+                >
                   Eastern Province
                 </a>
                 <div
                   class="dropdown-menu"
-                  aria-labelledby="navbarDropdownMenuLink2">
+                  aria-labelledby="navbarDropdownMenuLink2"
+                >
                   <a class="dropdown-item" href="/provincial-council">
                     Provincial Council
                   </a>
@@ -201,12 +217,14 @@ function Header() {
                   role="button"
                   data-toggle="dropdown"
                   aria-haspopup="true"
-                  aria-expanded="false">
+                  aria-expanded="false"
+                >
                   Commission
                 </a>
                 <div
                   class="dropdown-menu"
-                  aria-labelledby="navbarDropdownMenuLink3">
+                  aria-labelledby="navbarDropdownMenuLink3"
+                >
                   <a class="dropdown-item" href="/">
                     Cosaf
                   </a>
@@ -229,12 +247,14 @@ function Header() {
                   role="button"
                   data-toggle="dropdown"
                   aria-haspopup="true"
-                  aria-expanded="false">
+                  aria-expanded="false"
+                >
                   Community
                 </a>
                 <div
                   class="dropdown-menu"
-                  aria-labelledby="navbarDropdownMenuLink4">
+                  aria-labelledby="navbarDropdownMenuLink4"
+                >
                   <a class="dropdown-item" href="/">
                     Ranipet
                   </a>
@@ -316,12 +336,14 @@ function Header() {
                   role="button"
                   data-toggle="dropdown"
                   aria-haspopup="true"
-                  aria-expanded="false">
+                  aria-expanded="false"
+                >
                   Formation
                 </a>
                 <div
                   class="dropdown-menu"
-                  aria-labelledby="navbarDropdownMenuLink5">
+                  aria-labelledby="navbarDropdownMenuLink5"
+                >
                   <a class="dropdown-item" href="/">
                     Formation
                   </a>

@@ -4,7 +4,7 @@ body {
   color: #000;
   font-size: 16px;
   line-height: 1.8;
-  font-family: Roboto, sans-serif, poppins;
+  font-family: "Poppins", Sans-serif;
 }
 
 img {
@@ -328,12 +328,10 @@ a:active {
 
 .hero-slider .swiper-button-next,
 .hero-slider .swiper-button-prev {
-  width: 70px;
-  height: 70px;
+  width: 30px;
+  height: 30px;
   margin-top: -35px;
   border-radius: 50%;
-
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5a00', endColorstr='#ff3600',GradientType=1 ); /* ie6-9 */
   transition: all 0.35s;
 }
 
@@ -355,7 +353,7 @@ a:active {
 
 .hero-slider .swiper-button-next path,
 .hero-slider .swiper-button-prev path {
-  fill: #fff;
+  fill: #ffd700;
 }
 
 .hero-slider .swiper-button-next.swiper-button-disabled,
@@ -829,16 +827,22 @@ ul.tabs-nav .tab-nav.active {
   z-index: -1;
   width: 100%;
   height: 100%;
-  background: rgba(232, 237, 238, 0.8);
+  background: rgba(250, 250, 250, 0.8);
 }
 
 .welcome-content .entry-title {
   position: relative;
   padding-bottom: 24px;
-  font-size: 40px;
-  font-weight: 700;
-  color: #f00;
+  font-size: 45px;
+  font-weight: bold;
+  color: #6b1d2f;
   text-align: center;
+  font-family: "poppins";
+  padding: 20px; /* Padding around the text */
+  border-radius: 10px; /* Rounded corners */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 2px; /* Letter spacing */
+  margin: 0 auto; /* Center the text horizontally */
 }
 
 .welcome-content .entry-title::before {
@@ -853,12 +857,14 @@ ul.tabs-nav .tab-nav.active {
 }
 
 .welcome-content .entry-content {
-  font-size: 20px;
+  font-size: 22px;
   line-height: 2;
-  color: #000;
+  color: #262626;
   font-family: unset;
   font-weight: 600;
   text-align: center;
+  padding: 20px; /* Padding around the content */
+  border-radius: 10px; /* Rounded corners */
 }
 
 .home-page-welcome img {
@@ -882,7 +888,7 @@ ul.tabs-nav .tab-nav.active {
 .section-heading .entry-title {
   position: relative;
   padding-bottom: 24px;
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 600;
 }
 
@@ -981,7 +987,7 @@ ul.tabs-nav .tab-nav.active {
 # Featured Cause
 --------------------------------*/
 .home-page-events {
-  padding: 0px 0;
+  padding: 41px 0;
 }
 
 .cause-wrap {
@@ -1006,9 +1012,9 @@ ul.tabs-nav .tab-nav.active {
   height: 15rem;
 }
 
-.featured-cause .cause-content-wrap {
+/* .featured-cause .cause-content-wrap {
   width: calc(100% - 280px);
-}
+} */
 
 .cause-content-wrap .entry-title a {
   font-size: 20px;
@@ -2125,7 +2131,7 @@ ul.tabs-nav .tab-nav.active {
   z-index: -1;
   width: 100%;
   height: 101%;
-  background: #172440;
+  background: #6b1d2f;
 }
 
 .footer-widgets h2 {
@@ -2151,7 +2157,7 @@ ul.tabs-nav .tab-nav.active {
 }
 
 .footer-widgets ul li a:hover {
-  color: #d73875;
+  color: #ffd904;
 }
 
 .foot-about p {
@@ -2170,7 +2176,7 @@ ul.tabs-nav .tab-nav.active {
 
 .foot-latest-news ul li {
   display: block;
-  margin-bottom: 36px;
+  margin-bottom: 30px;
 }
 
 .foot-latest-news ul li h3 {
@@ -2193,7 +2199,7 @@ ul.tabs-nav .tab-nav.active {
   margin-right: 10px;
   font-size: 18px;
   text-align: center;
-  color: #d73875;
+  color: #f6c93f;
 }
 
 .foot-contact ul li span {
@@ -2262,7 +2268,7 @@ ul.tabs-nav .tab-nav.active {
 }
 
 .marqueenews {
-  padding: 20px 0;
+  padding: 6px 0px 0px 1px;
   font-size: 15px;
   line-height: 1;
   color: white;
@@ -2483,16 +2489,16 @@ div.main-tile-text h2 {
 
 .dropdown-item:hover {
   font-family: "Roboto", sans-serif;
-  background-color: #035196 !important;
+  background-color: #e0ab08 !important;
   color: rgb(255, 255, 255) !important;
   /* #035196 */
 }
 .navbar ul li a {
-  font-family: "Poppins" !important;
+  font-family: "Poppins", Sans-serif !important;
   color: white !important;
-  letter-spacing: 0.8px;
+  letter-spacing: 1px;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 14px;
 }
 .navbar-nav .nav-item.active .nav-link {
   font-family: "Roboto", sans-serif;
@@ -2704,6 +2710,7 @@ div.main-tile-text h2 {
 }
 
 .marquee p {
+  margin-top: 10px;
   animation: marquee-scroll 40s linear infinite;
 }
 
@@ -2729,7 +2736,7 @@ div.main-tile-text h2 {
 
 /* Hover style for the email link */
 .header-bar-email a:hover {
-  color: #d73875;
+  color: #f6c93f;
   /* Change the text color to pink on hover */
 }
 
@@ -2745,7 +2752,7 @@ div.main-tile-text h2 {
 
 /* Hover style for the phone link */
 .header-bar-text a:hover {
-  color: #d73875;
+  color: #f6c93f;
   /* Change the text color to pink on hover */
 }
 
@@ -2813,10 +2820,52 @@ div.main-tile-text h2 {
   margin-right: 20px;
   width: -webkit-fill-available;
 }
+
 .bs-callout {
   margin: 20px 0;
   padding: 20px;
   border-left: 3px solid #eee;
   background-color: #dff0d8;
   border-color: #c5e8b6;
+}
+
+/* CSS */
+.quick-links {
+  list-style: none;
+  /* Remove default list styles */
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.quick-links li {
+  flex: 1 0 calc(50% - 10px);
+  /* Each item takes up 50% of the container width with spacing */
+  margin: 5px;
+  /* Add some spacing between list items */
+  color: white;
+  /* Set the text color to white */
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.quick-links li a:hover {
+  color: #ffd700;
+  /* Set the hover text color to gold (adjust as needed) */
+}
+.quick-links li i {
+  color: #ffd700;
+  /* Set the hover text color to gold (adjust as needed) */
+}
+
+.quick-links i {
+  margin-right: 10px;
+  /* Add spacing between the icon and text */
+}
+/* Add this CSS in your stylesheet or <style> tag in HTML */
+.birthday-gif {
+    max-width: 40%;
+    margin-left: 168px;
+    margin-top: -4rem;
 }
