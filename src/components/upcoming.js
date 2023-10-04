@@ -5,7 +5,7 @@ function Upcoming() {
   const [birthdayData, setBirthdayData] = useState([]);
 
   useEffect(() => {
-    axios.get("/member/province/birthday/this_month/2").then((response) => {
+    axios.get("http://172.104.57.118:7025/api/member/province/birthday/this_month/2").then((response) => {
       if (response?.data?.data != null) {
         const extractedData = response?.data?.data.map((item) => ({
           membername: item.member_name,
