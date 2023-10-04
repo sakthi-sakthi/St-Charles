@@ -11,6 +11,11 @@ import Cosaf from "./pages/cosaf";
 import Fac from "./pages/fac";
 import Msp from "./pages/msp";
 import Ecep from "./pages/ecep";
+import Formation from "./pages/formation";
+import Candidacy from "./pages/candidacy";
+import Postulancy from "./pages/postulancy";
+import Novitiate from "./pages/novitiate";
+import Juniorate from "./pages/juniorate";
 
 function App() {
   return (
@@ -27,6 +32,11 @@ function App() {
         <Route path="/fac" element={<Fac />} />
         <Route path="/msp" element={<Msp />} />
         <Route path="/ecep" element={<Ecep />} />
+        <Route path="/formation" element={<Formation />} />
+        <Route path="/candidacy" element={<Candidacy />} />
+        <Route path="/postulancy" element={<Postulancy />} />
+        <Route path="/novitiate" element={<Novitiate />} />
+        <Route path="/juniorate" element={<Juniorate />} />
       </Routes>
     </>
   );

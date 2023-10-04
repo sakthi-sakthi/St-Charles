@@ -322,19 +322,19 @@ function Header() {
                 <div
                   class="dropdown-menu"
                   aria-labelledby="navbarDropdownMenuLink5">
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/formation">
                     Formation
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/candidacy">
                     Candidacy
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/postulancy">
                     Posultancy
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/novitiate">
                     Novitiate
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/juniorate">
                     Juniorate
                   </a>
                 </div>
