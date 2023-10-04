@@ -1,6 +1,7 @@
 {
   "name": "borromeo",
   "version": "0.1.0",
+  "proxy":"http://172.104.57.118:7025/api",
   "private": true,
   "dependencies": {
     "@fullcalendar/daygrid": "^6.1.9",
