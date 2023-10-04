@@ -2813,3 +2813,10 @@ div.main-tile-text h2 {
   margin-right: 20px;
   width: -webkit-fill-available;
 }
+.bs-callout {
+  margin: 20px 0;
+  padding: 20px;
+  border-left: 3px solid #eee;
+  background-color: #dff0d8;
+  border-color: #c5e8b6;
+}

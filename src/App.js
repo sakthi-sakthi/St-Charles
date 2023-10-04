@@ -6,6 +6,7 @@ import Founder from "./pages/founder";
 import ProvincialCouncil from "./pages/provincialcouncil";
 import History from "./pages/history";
 import Motto from "./pages/motto";
+import Administration from "./pages/administration";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         <Route path="/provincial-council" element={<ProvincialCouncil />} />
         <Route path="/history" element={<History />} />
         <Route path="/the-motto-of-the-province" element={<Motto />} />
-        <Route path="/general-administration" element={<Motto />} />
+        <Route path="/general-administration" element={<Administration />} />
       </Routes>
     </>
   );

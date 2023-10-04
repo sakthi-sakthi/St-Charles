@@ -2,7 +2,6 @@ import Footer from "../components/footer";
 import Header from "../components/header";
 import { useEffect, useState } from "react";
 import ApiUrl from "../Api/Api";
-import { logDOM } from "@testing-library/react";
 function ProvincialCouncil() {
   const [Provincial, setProvincialData] = useState([]);
   const [slider, setslider] = useState([]);
