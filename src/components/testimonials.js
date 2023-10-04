@@ -4,42 +4,42 @@ import "swiper/swiper-bundle.css";
 import { MDBCard, MDBCardBody, MDBContainer, MDBIcon } from "mdb-react-ui-kit";
 
 export default function App() {
-  const swiperRef = useRef(null);
-  let mySwiper = null;
+   const swiperRef = useRef(null);
+   const mySwiperRef = useRef(null); // Create a ref to store the Swiper instance
 
-  useEffect(() => {
-    if (swiperRef.current) {
-      mySwiper = new Swiper(swiperRef.current, {
-        slidesPerView: 3,
-        spaceBetween: 20,
-        autoplay: {
-          delay: 5000,
-        },
-        keyboard: {
-          enabled: true,
-        },
-      });
-    }
+   useEffect(() => {
+     if (swiperRef.current) {
+       mySwiperRef.current = new Swiper(swiperRef.current, {
+         slidesPerView: 3,
+         spaceBetween: 20,
+         autoplay: {
+           delay: 5000,
+         },
+         keyboard: {
+           enabled: true,
+         },
+       });
+     }
 
-    // Clean up the Swiper instance when the component unmounts
-    return () => {
-      if (mySwiper) {
-        mySwiper.destroy(true, true);
-      }
-    };
-  }, []);
+     // Clean up the Swiper instance when the component unmounts
+     return () => {
+       if (mySwiperRef.current) {
+         mySwiperRef.current.destroy(true, true);
+       }
+     };
+   }, []);
 
-  const pauseSwiper = () => {
-    if (mySwiper) {
-      mySwiper.autoplay.stop();
-    }
-  };
+   const pauseSwiper = () => {
+     if (mySwiperRef.current) {
+       mySwiperRef.current.autoplay.stop();
+     }
+   };
 
-  const resumeSwiper = () => {
-    if (mySwiper) {
-      mySwiper.autoplay.start();
-    }
-  };
+   const resumeSwiper = () => {
+     if (mySwiperRef.current) {
+       mySwiperRef.current.autoplay.start();
+     }
+   };
 
   return (
     <MDBContainer className="py-5">
