@@ -223,18 +223,22 @@ function Header() {
                 </a>
                 <div
                   class="dropdown-menu"
+
                   aria-labelledby="navbarDropdownMenuLink3"
                 >
                   <a class="dropdown-item" href="/">
+                    </a>
+                  <a class="dropdown-item" href="/cosaf">
+
                     Cosaf
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/fac">
                     Fac
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/msp">
                     Msp
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/ecep">
                     Ecep
                   </a>
                 </div>
@@ -342,21 +346,25 @@ function Header() {
                 </a>
                 <div
                   class="dropdown-menu"
+
                   aria-labelledby="navbarDropdownMenuLink5"
                 >
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/"></a>
+
+                  <a class="dropdown-item" href="/formation">
+
                     Formation
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/candidacy">
                     Candidacy
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/postulancy">
                     Posultancy
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/novitiate">
                     Novitiate
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/juniorate">
                     Juniorate
                   </a>
                 </div>

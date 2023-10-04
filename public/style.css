@@ -2865,7 +2865,90 @@ div.main-tile-text h2 {
 }
 /* Add this CSS in your stylesheet or <style> tag in HTML */
 .birthday-gif {
-    max-width: 40%;
-    margin-left: 168px;
-    margin-top: -4rem;
+  max-width: 40%;
+  margin-left: 168px;
+  margin-top: -4rem;
+}
+.adminpage img {
+  height: 200px;
+  width: 200px;
+}
+.M-flex {
+  display: flex !important;
+}
+.General {
+  margin-left: -75px;
+}
+.bs-call {
+  margin: 20px 0;
+  padding: 20px;
+  border-left: 3px solid #952e2e;
+  background-color: #d8e9f0;
+  border-color: #aed2e1;
+}
+
+.bs-objective {
+  margin: 20px 0;
+  padding: 20px;
+  border-left: 3px solid #952e2e;
+  background-color: #d7abb961;
+  border-color: #a5686861;
+}
+.bs-exercis {
+  margin: 20px 0;
+  padding: 20px;
+  border-left: 3px solid #952e2e;
+  background-color: #a392bd61;
+  border-color: #7f68a561;
+}
+.bs-ecep {
+  margin: 20px 0;
+  padding: 20px;
+  border-left: 3px solid #952e2e;
+  background-color: #a3abab1f;
+  border-color: #7f68a561;
+}
+.bs-vision {
+  margin: 20px 0;
+  padding: 20px;
+  border-left: 3px solid #952e2e;
+  background-color: #26afafc2;
+  border-color: #7f68a561;
+}
+.bs-objective ul li {
+  line-height: 30px;
+}
+.bs-exercis ul li {
+  line-height: 30px;
+  /* list-style: none; */
+}
+.ecep ul li {
+  list-style: none;
+  padding: 5px;
+}
+@media (max-width: 600px) {
+  td {
+    text-align: center;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  img {
+    margin-bottom: 10px;
+  }
+  .subpage img {
+    width: 100%;
+    margin: 10px;
+  }
+  .M-flex {
+    display: block !important;
+  }
+  .General {
+    margin-left: 0;
+  }
+  .lastdiv {
+    max-width: 50%;
+    margin-left: 0px;
+  }
 }
