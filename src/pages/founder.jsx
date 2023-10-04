@@ -22,7 +22,7 @@ function Founder() {
         <div className="row">
           <div className="col-lg-9">
             <h3>FR.ADRIEN BREZY</h3>
-            <table class="table ">
+            <table className="table ">
               <thead></thead>
               <tbody>
                 <tr>

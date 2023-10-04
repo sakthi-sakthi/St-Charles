@@ -207,16 +207,16 @@ function Header() {
                 <div
                   class="dropdown-menu"
                   aria-labelledby="navbarDropdownMenuLink3">
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/cosaf">
                     Cosaf
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/fac">
                     Fac
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/msp">
                     Msp
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/ecep">
                     Ecep
                   </a>
                 </div>
