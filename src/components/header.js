@@ -349,7 +349,6 @@ function Header() {
 
                   aria-labelledby="navbarDropdownMenuLink5"
                 >
-                  <a class="dropdown-item" href="/"></a>
 
                   <a class="dropdown-item" href="/formation">
 

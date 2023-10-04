@@ -52,10 +52,7 @@ const containerStyles = {
   display: "flex",
   justifyContent: "center", // Center align horizontally
   gap: "2rem",
-};
-const boxContainerStyles = {
-  display: "flex",
-  flexDirection: "row", // Side by side arrangement
+  flexDirection: "row",
 };
 
 const VerticalTabs2 = () => {
@@ -100,8 +97,7 @@ const VerticalTabs2 = () => {
                           fontWeight: "bold",
                           transition: "color 0.3s ease",
                         }}
-                        // onMouseEnter={(e) => (e.target.style.color = "#FFD700")}
-                        // onMouseLeave={(e) => (e.target.style.color = "#6b1d2f")}
+
                       >
                         {key}
                       </Nav.Link>
@@ -112,7 +108,7 @@ const VerticalTabs2 = () => {
               <div className="tab-image" style={{ marginLeft: "3rem" }}>
                 <img
                   src={tabImages1[activeTab1]}
-                  alt={`${activeTab1} Image`}
+                  alt={`${activeTab1}`}
                   style={imageStyles}
                 />
                 <p
@@ -164,8 +160,6 @@ const VerticalTabs2 = () => {
                           fontWeight: "bold",
                           transition: "color 0.3s ease",
                         }}
-                        // onMouseEnter={(e) => (e.target.style.color = "#FFD700")}
-                        //onMouseLeave={(e) => (e.target.style.color = "#6b1d2f")}
                       >
                         {key}
                       </Nav.Link>
@@ -176,7 +170,7 @@ const VerticalTabs2 = () => {
               <div className="tab-image" style={{ marginLeft: "3rem" }}>
                 <img
                   src={tabImages2[activeTab2]}
-                  alt={`${activeTab2} Image`}
+                  alt={`${activeTab2}`}
                   style={imageStyles}
                 />
                 <p
