@@ -7,12 +7,14 @@ import Footer from '../components/footer';
 import Header from '../components/header';
 import { useLocation } from 'react-router-dom';
 import { Button, Modal } from 'react-bootstrap';
+import axios from 'axios';
 
 function CalendarComponent() {
     const calendarRef = useRef(null);
     const [showModal, setShowModal] = useState(false);
     const [eventData, setEventData] = useState({ title: '', date: '' });
     const location = useLocation();
+    const [eventCalendarData, setEventcalendarData] = useState()
 
     useEffect(() => {
         const searchParams = new URLSearchParams(location.search);
@@ -23,24 +25,51 @@ function CalendarComponent() {
             setEventData({ title, date });
             setShowModal(true);
         } else {
-            setShowModal(false); 
+            setShowModal(false);
         }
     }, [location]);
 
-    useEffect(() => {
-        if (calendarRef.current && eventData.date) {
-            const calendarApi = calendarRef.current.getApi();
-            const parsedDate = new Date(eventData.date);
 
-            if (!isNaN(parsedDate.getTime())) {
-                calendarApi.gotoDate(parsedDate);
-            }
+    useEffect(() => {
+        if (calendarRef.current) {
+            axios.get('/member/province/birthday/this_month/2')
+                .then(response => {
+                    const data = response.data;
+                    if (Array.isArray(data?.data)) {
+                        const events = data?.data?.map(item => {
+                            // Parse the "04 - October" format date
+                            const parts = item.dob.split(' - ');
+                            const day = parts[0];
+                            const monthName = parts[1];
+
+                            // Convert month name to month number (1-based index)
+                            const monthNumber = new Date(Date.parse(monthName + ' 1, 2000')).getMonth() + 1;
+
+                            // Create a date string in "yyyy-mm-dd" format
+                            const year = new Date().getFullYear(); // You may need to replace this with the actual year
+                            const date = `${year}-${monthNumber.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
+
+                            return {
+                                title: item.member_name,
+                                date: date,
+                                editable: true,
+                                eventResizableFromStart: true,
+                            };
+                        });
+                        setEventcalendarData(events)
+                    }
+
+                })
+                .catch(error => {
+                    console.error('Error fetching events from API', error);
+                });
         }
-    }, [eventData.date]);
+    }, []);
 
     const handleCloseModal = () => {
         setShowModal(false);
     };
+    
 
     return (
         <>
@@ -51,18 +80,10 @@ function CalendarComponent() {
                 </h1>
                 <div id="calendar">
                     <FullCalendar
+                        events={eventCalendarData}
                         ref={calendarRef}
                         plugins={[dayGridPlugin, timeGridPlugin, listPlugin]}
                         initialView="dayGridMonth"
-                        events={[
-                            {
-                                title: "Church Event 1",
-                                start: "2023-09-15",
-                                end: "2023-09-16",
-                                editable: true,
-                                eventResizableFromStart: true,
-                            },
-                        ]}
                         headerToolbar={{
                             start: 'prev,next today',
                             center: 'title',
@@ -87,24 +108,9 @@ function CalendarComponent() {
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleCloseModal}>
                         Close
-                    </Button> 
-                </Modal.Footer>
-            </Modal>
-            <Modal show={showModal} onHide={handleCloseModal}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Birthday Details</Modal.Title>
-                </Modal.Header>
-            <Modal.Body>
-                <p>Member Name: {eventData.title}</p>
-                <p>Date of Birth: {eventData.date}</p>
-            </Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={handleCloseModal}>
-                        Close
                     </Button>
                 </Modal.Footer>
             </Modal>
-
         </>
     );
 }
