@@ -25,6 +25,17 @@ import NewsLetter from "./pages/NewsLetter";
 import VocationPromotion from "./pages/vocationpromotion";
 import Contact from "./pages/contact";
 import Gallery from "./pages/gallery";
+import Ranipet from "./pages/community/Ranipet";
+import Jolarpet from "./pages/community/Jolarpet";
+import Yercaud from "./pages/community/Yercaud";
+import Chilakaluripet from "./pages/community/Chilakaluripet";
+import Yelagiri from "./pages/community/Yelagiri";
+import Madurai from "./pages/community/Madurai";
+import Thirupattur from "./pages/community/Thirupattur";
+import Perambur from "./pages/community/Perambur";
+import Kanapparu from "./pages/community/Kanapparu";
+import Kadakkal from "./pages/community/Kadakkal";
+import Perumon from "./pages/community/Perumon";
 
 function App() {
   return (
@@ -39,6 +50,18 @@ function App() {
         <Route path="/the-motto-of-the-province" element={<Motto />} />
         <Route path="/newsletter" element={<NewsLetter />} />
         <Route path="/general-administration" element={<Administration />} />
+
+        <Route path="/ranipet" element={<Ranipet />} />
+        <Route path="/jolarpet" element={<Jolarpet />} />
+        <Route path="/yercaud" element={<Yercaud />} />
+        <Route path="/chilakaluripet" element={<Chilakaluripet />} />
+        <Route path="/yelagiri" element={<Yelagiri />} />
+        <Route path="/madurai" element={<Madurai />} />
+        <Route path="/thirupattur" element={<Thirupattur />} />
+        <Route path="/perambur" element={<Perambur />} />
+        <Route path="/kanapparu" element={<Kanapparu />} />
+        <Route path="/kadakkal" element={<Kadakkal />} />
+        <Route path="/perumon" element={<Perumon />} />
 
         <Route path="/calendar" element={<Calendar />} />
 
