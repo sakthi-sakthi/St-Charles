@@ -279,37 +279,37 @@ function Header() {
                   <a class="dropdown-item" href="/">
                     Perumon
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/vilathikulam">
                     Vilathikulam
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/vinayagapuram">
                     Vinayagapuram
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/ammoor">
                     Ammoor
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/puliampatty">
                     Puliyampatty
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/gummidipoondi">
                     Gummidipoondi
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/mugandanur">
                     Mugandanu
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/kizhakkambalam">
                     Kizhakkambalam
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/ponnapally">
                     Ponnapally
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/periakottai">
                     Periakottai
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/dindigul">
                     Dindigul
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/muttom">
                     Muttom
                   </a>
                 </div>
