@@ -11,7 +11,9 @@ function NewsLetter() {
         axios
             .get(`${ApiUrl}/get/Newsletter`)
             .then((response) => {
-                setPdfLinks(response.data);
+                // Sort the PDFs by id in descending order
+                const sortedPdfLinks = response.data.data.sort((a, b) => b.id - a.id);
+                setPdfLinks(sortedPdfLinks);
             })
             .catch((error) => {
                 console.error("Error fetching data:", error);
@@ -31,8 +33,8 @@ function NewsLetter() {
                 </div>
 
                 <div className="row">
-                    {pdfLinks.data && pdfLinks.data.length > 0 ? (
-                        pdfLinks.data.map((pdf, index) => (
+                    {pdfLinks.length > 0 ? (
+                        pdfLinks.map((pdf, index) => (
                             <div key={index} className="col-12 col-md-6 col-lg-4 mb-4">
                                 <div className="card" style={{ border: "1px solid #e4d7c6", boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)", backgroundColor: "#fffcf6" }} >
                                     <div className="card-body">
@@ -46,9 +48,7 @@ function NewsLetter() {
                                             </a>
                                         </h5>
                                         <p className="card-text">
-                                            <small className="text-muted">
-                                                {pdf.file_id}
-                                            </small>
+                                            <b> {pdf.date}</b>
                                         </p>
                                         <a
                                             href={pdf.file_url}
