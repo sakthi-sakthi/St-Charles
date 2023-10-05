@@ -25,6 +25,17 @@ import NewsLetter from "./pages/NewsLetter";
 import VocationPromotion from "./pages/vocationpromotion";
 import Contact from "./pages/contact";
 import Gallery from "./pages/gallery";
+import Vilathikulam from "./pages/community/vilathikulam";
+import Vinayagapuram from "./pages/community/vinayagapuram";
+import Ammoor from "./pages/community/ammoor";
+import Puliampatty from "./pages/community/puliampatty";
+import Gummidipoondi from "./pages/community/gummidipoondi";
+import Mugandanur from "./pages/community/mugandanur";
+import Kizhakkambalam from "./pages/community/kizhakkambalam";
+import Ponnapally from "./pages/community/ponnapally";
+import Periakottai from "./pages/community/periakottai";
+import Dindigul from "./pages/community/dindigul";
+import Muttom from "./pages/community/muttom";
 
 function App() {
   return (
@@ -54,6 +65,17 @@ function App() {
         <Route path="/vocation-promotion" element={<VocationPromotion />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/vilathikulam" element={<Vilathikulam />} />
+        <Route path="/vinayagapuram" element={<Vinayagapuram />} />
+        <Route path="/ammoor" element={<Ammoor />} />
+        <Route path="/puliampatty" element={<Puliampatty />} />
+        <Route path="/gummidipoondi" element={<Gummidipoondi />} />
+        <Route path="/mugandanur" element={<Mugandanur />} />
+        <Route path="/kizhakkambalam" element={<Kizhakkambalam />} />
+        <Route path="/ponnapally" element={<Ponnapally />} />
+        <Route path="/periakottai" element={<Periakottai />} />
+        <Route path="/dindigul" element={<Dindigul />} />
+        <Route path="/muttom" element={<Muttom />} />
       </Routes>
     </>
   );
