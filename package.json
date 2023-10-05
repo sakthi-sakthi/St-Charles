@@ -1,7 +1,7 @@
 {
   "name": "borromeo",
   "version": "0.1.0",
-  "proxy":"http://172.104.57.118:7025/api",
+  "proxy": "http://172.104.57.118:7025/api",
   "private": true,
   "dependencies": {
     "@fullcalendar/daygrid": "^6.1.9",
@@ -27,6 +27,7 @@
     "react-dom": "^18.2.0",
     "react-fullcalendar": "^1.0.0",
     "react-helmet": "^6.1.0",
+    "react-hook-form": "^7.47.0",
     "react-modal": "^3.16.1",
     "react-pdf": "^7.4.0",
     "react-responsive-carousel": "^3.2.23",
@@ -35,6 +36,7 @@
     "react-slick": "^0.29.0",
     "react-tooltip": "^5.21.5",
     "slick-carousel": "^1.8.1",
+    "sweetalert2": "^11.7.31",
     "swiper": "^10.3.1",
     "web-vitals": "^2.1.4"
   },

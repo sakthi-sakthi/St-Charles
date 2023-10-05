@@ -19,6 +19,8 @@ import Novitiate from "./pages/novitiate";
 import Juniorate from "./pages/juniorate";
 
 import Calendar from "./pages/Calendar";
+import VocationPromotion from "./pages/vocationpromotion";
+import Contact from "./pages/contact";
 
 function App() {
   return (
@@ -44,6 +46,8 @@ function App() {
         <Route path="/postulancy" element={<Postulancy />} />
         <Route path="/novitiate" element={<Novitiate />} />
         <Route path="/juniorate" element={<Juniorate />} />
+        <Route path="/vocation-promotion" element={<VocationPromotion />} />
+        <Route path="/contact-us" element={<Contact />} />
       </Routes>
     </>
   );

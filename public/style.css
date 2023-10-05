@@ -2926,6 +2926,22 @@ div.main-tile-text h2 {
   list-style: none;
   padding: 5px;
 }
+.jcall {
+  text-align: center;
+  margin-top: 16rem;
+}
+.buttonjs {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
 @media (max-width: 600px) {
   td {
     text-align: center;
@@ -2950,5 +2966,9 @@ div.main-tile-text h2 {
   .lastdiv {
     max-width: 50%;
     margin-left: 0px;
+  }
+  .jcall {
+    text-align: center;
+    margin-top: 0px;
   }
 }
