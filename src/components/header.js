@@ -215,7 +215,6 @@ function Header() {
                 <div
                   class="dropdown-menu"
                   aria-labelledby="navbarDropdownMenuLink3">
-                  <a class="dropdown-item" href="/"></a>
                   <a class="dropdown-item" href="/cosaf">
                     Cosaf
                   </a>
