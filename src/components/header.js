@@ -202,6 +202,9 @@ function Header() {
                   <a class="dropdown-item" href="/the-motto-of-the-province">
                     The Motto of the Province
                   </a>
+                  <a class="dropdown-item" href="/newsletter">
+                    News Letter / Circular
+                  </a>
                 </div>
               </li>
               <li class="nav-item">
@@ -223,13 +226,10 @@ function Header() {
                 </a>
                 <div
                   class="dropdown-menu"
-
                   aria-labelledby="navbarDropdownMenuLink3"
                 >
-                  <a class="dropdown-item" href="/">
-                    </a>
+                  <a class="dropdown-item" href="/"></a>
                   <a class="dropdown-item" href="/cosaf">
-
                     Cosaf
                   </a>
                   <a class="dropdown-item" href="/fac">
@@ -346,12 +346,9 @@ function Header() {
                 </a>
                 <div
                   class="dropdown-menu"
-
                   aria-labelledby="navbarDropdownMenuLink5"
                 >
-
                   <a class="dropdown-item" href="/formation">
-
                     Formation
                   </a>
                   <a class="dropdown-item" href="/candidacy">

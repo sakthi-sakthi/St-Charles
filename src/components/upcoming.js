@@ -10,6 +10,7 @@ function Upcoming() {
         const extractedData = response?.data?.data.map((item) => ({
           membername: item.member_name,
           dob: item.dob,
+          image: item.image,
         }));
         setBirthdayData(extractedData);
       }
@@ -159,6 +160,11 @@ function Upcoming() {
                       const isBirthdayToday =
                         dobDay === currentDay && dobMonth === currentMonth;
 
+                      // Define the image source based on API data or static image
+                      const imageSrc = item.image
+                        ? item.image
+                        : "/images/sisters/NoImage.png";
+
                       return (
                         <div
                           className="event-wrap d-flex flex-wrap justify-content-flex-start"
@@ -171,7 +177,7 @@ function Upcoming() {
                                 width: "48px",
                                 height: "48px",
                               }}
-                              src={"/images/sisters/NoImage.png"}
+                              src={imageSrc}
                               alt=""
                             />
                           </figure>

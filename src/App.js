@@ -19,6 +19,7 @@ import Novitiate from "./pages/novitiate";
 import Juniorate from "./pages/juniorate";
 
 import Calendar from "./pages/Calendar";
+import NewsLetter from "./pages/NewsLetter";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
 
         <Route path="/history" element={<History />} />
         <Route path="/the-motto-of-the-province" element={<Motto />} />
+        <Route path="/newsletter" element={<NewsLetter />} />
         <Route path="/general-administration" element={<Administration />} />
 
         <Route path="/calendar" element={<Calendar />} />
