@@ -2942,6 +2942,19 @@ div.main-tile-text h2 {
   margin: 4px 2px;
   cursor: pointer;
 }
+.buttonflash {
+  background-color: #f6c93f;
+  border: none;
+  color: #31151c;
+  font-weight: 800;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 50%;
+  margin: 4px 2px;
+}
 @media (max-width: 600px) {
   td {
     text-align: center;
