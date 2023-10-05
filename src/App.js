@@ -24,6 +24,7 @@ import NewsLetter from "./pages/NewsLetter";
 
 import VocationPromotion from "./pages/vocationpromotion";
 import Contact from "./pages/contact";
+import Gallery from "./pages/gallery";
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
         <Route path="/juniorate" element={<Juniorate />} />
         <Route path="/vocation-promotion" element={<VocationPromotion />} />
         <Route path="/contact-us" element={<Contact />} />
+        <Route path="/gallery" element={<Gallery />} />
       </Routes>
     </>
   );

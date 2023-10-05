@@ -217,10 +217,7 @@ function Header() {
                 </a>
                 <div
                   class="dropdown-menu"
-
-                  aria-labelledby="navbarDropdownMenuLink3"
-                >
-
+                  aria-labelledby="navbarDropdownMenuLink3">
                   <a class="dropdown-item" href="/cosaf">
                     Cosaf
                   </a>
@@ -318,7 +315,7 @@ function Header() {
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/">
+                <a class="nav-link" href="/gallery">
                   Gallery
                 </a>
               </li>
@@ -335,9 +332,7 @@ function Header() {
                 </a>
                 <div
                   class="dropdown-menu"
-                  aria-labelledby="navbarDropdownMenuLink5"
-                >
-
+                  aria-labelledby="navbarDropdownMenuLink5">
                   <a class="dropdown-item" href="/formation">
                     Formation
                   </a>
