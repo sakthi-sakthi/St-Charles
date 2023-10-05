@@ -11,13 +11,42 @@ function Footer() {
                 <div className="section-heading">
                   <h2 className="entry-title">About Us</h2>
                 </div>
-                <p style={{ color: "white" }}>
-                  "This religious House was founded in 1682 by Adrien Bresy,
-                  parish priest of wez. This vigilant pastor, wishing to procure
-                  for his parishioners the benefits of a Christian education,
-                  invited three pious girls from Lille to whom he added two
-                  young persons of his parish"
-                </p>
+                <div className="row">
+                  <div className="col-4">
+                    <img
+                      src="images/logos/leftlogo.png"
+                      alt=""
+                      style={{
+                        display: "block",
+                        marginLeft: "0",
+                        maxWidth: "103px",
+                        marginRight: "auto",
+                      }}
+                    />
+                  </div>
+                  <div className="col-8">
+                    <p
+                      style={{
+                        color: "white",
+                        textAlign: "justify ",
+                        fontSize: "14px",
+                      }}>
+                      "This religious House was founded in 1682 by Adrien Bresy,
+                      parish priest of wez. This vigilant pastor, wishing to
+                      procure for his parishioners the benefits of a Christian
+                      education,
+                    </p>
+                  </div>
+                  <p
+                    style={{
+                      color: "white",
+                      textAlign: "justify",
+                      fontSize: "14px",
+                    }}>
+                    invited three pious girls from Lille to whom he added two
+                    young persons of his parish".
+                  </p>
+                </div>
               </div>
 
               <div className="col-12 col-md-6 col-lg-4">
@@ -88,6 +117,20 @@ function Footer() {
                   </ul>
                 </div>
               </div>
+            </div>
+            <div>
+              <p
+                className="text-center"
+                style={{ fontSize: "14px", color: "white" }}>
+                Copyright © 2023 St Charles Borromeo Eastern Province, All
+                rights reserved. Powered by
+                <a
+                  class="tech"
+                  style={{ color: "#ffd700" }}
+                  href="https://www.boscosofttech.com/">
+                  &nbsp;Boscosofttech
+                </a>
+              </p>
             </div>
           </div>
         </div>
