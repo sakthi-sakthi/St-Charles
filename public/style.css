@@ -2865,9 +2865,9 @@ div.main-tile-text h2 {
 }
 /* Add this CSS in your stylesheet or <style> tag in HTML */
 .birthday-gif {
-    max-width: 40%;
-    margin-left: 186px;
-    margin-top: -5rem;
+  max-width: 40%;
+  margin-left: 186px;
+  margin-top: -5rem;
 }
 .adminpage img {
   height: 200px;
@@ -2942,6 +2942,19 @@ div.main-tile-text h2 {
   margin: 4px 2px;
   cursor: pointer;
 }
+.buttonflash {
+  background-color: #f6c93f;
+  border: none;
+  color: #31151c;
+  font-weight: 800;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 50%;
+  margin: 4px 2px;
+}
 @media (max-width: 600px) {
   td {
     text-align: center;
@@ -2972,4 +2985,3 @@ div.main-tile-text h2 {
     margin-top: 0px;
   }
 }
-
