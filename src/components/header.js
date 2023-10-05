@@ -11,18 +11,21 @@ function Header() {
                 <div className="header-bar-email" style={{ fontSize: "15px" }}>
                   <i
                     className="fa fa-envelope"
-                    style={{ color: "#f6c93f" }}></i>
+                    style={{ color: "#f6c93f" }}
+                  ></i>
                   <a href="mailto:scbprovincialatechennai@gmail.com">
                     <span
                       className="__cf_email__"
-                      style={{ marginLeft: "0.5rem" }}>
+                      style={{ marginLeft: "0.5rem" }}
+                    >
                       scbprovincialatechennai@gmail.com
                     </span>
                   </a>
                 </div>
                 <div
                   className="header-bar-text align-items-center justify-content-center"
-                  style={{ fontSize: "15px" }}>
+                  style={{ fontSize: "15px" }}
+                >
                   <i className="fa fa-phone" style={{ color: "#f6c93f" }}></i>
                   <a href="tel:+919865910951" style={{ marginLeft: "0.3rem" }}>
                     +91 98659 10951
@@ -139,7 +142,8 @@ function Header() {
             data-target="/navbarNav"
             aria-controls="navbarNav"
             aria-expanded="false"
-            aria-label="Toggle navigation">
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
@@ -157,12 +161,14 @@ function Header() {
                   role="button"
                   data-toggle="dropdown"
                   aria-haspopup="true"
-                  aria-expanded="false">
+                  aria-expanded="false"
+                >
                   Foundation
                 </a>
                 <div
                   class="dropdown-menu"
-                  aria-labelledby="navbarDropdownMenuLink">
+                  aria-labelledby="navbarDropdownMenuLink"
+                >
                   <a class="dropdown-item" href="/motherhouse">
                     Mother House
                   </a>
@@ -179,12 +185,14 @@ function Header() {
                   role="button"
                   data-toggle="dropdown"
                   aria-haspopup="true"
-                  aria-expanded="false">
+                  aria-expanded="false"
+                >
                   Eastern Province
                 </a>
                 <div
                   class="dropdown-menu"
-                  aria-labelledby="navbarDropdownMenuLink2">
+                  aria-labelledby="navbarDropdownMenuLink2"
+                >
                   <a class="dropdown-item" href="/provincial-council">
                     Provincial Council
                   </a>
@@ -212,12 +220,14 @@ function Header() {
                   role="button"
                   data-toggle="dropdown"
                   aria-haspopup="true"
-                  aria-expanded="false">
+                  aria-expanded="false"
+                >
                   Commission
                 </a>
                 <div
                   class="dropdown-menu"
-                  aria-labelledby="navbarDropdownMenuLink3">
+                  aria-labelledby="navbarDropdownMenuLink3"
+                >
                   <a class="dropdown-item" href="/cosaf">
                     Cosaf
                   </a>
@@ -240,43 +250,45 @@ function Header() {
                   role="button"
                   data-toggle="dropdown"
                   aria-haspopup="true"
-                  aria-expanded="false">
+                  aria-expanded="false"
+                >
                   Community
                 </a>
                 <div
                   class="dropdown-menu"
-                  aria-labelledby="navbarDropdownMenuLink4">
-                  <a class="dropdown-item" href="/">
+                  aria-labelledby="navbarDropdownMenuLink4"
+                >
+                  <a class="dropdown-item" href="/ranipet">
                     Ranipet
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/jolarpet">
                     Jolarpet
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/yercaud">
                     Yercaud
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/chilakaluripet">
                     Chilakaluripet
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/yelagiri">
                     Yelagiri
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/madurai">
                     Madurai
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/thirupattur">
                     Thirupattur
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/perambur">
                     Perambur
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/kanapparu">
                     Kanapparu
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/kadakkal">
                     Kadakkal
                   </a>
-                  <a class="dropdown-item" href="/">
+                  <a class="dropdown-item" href="/perumon">
                     Perumon
                   </a>
                   <a class="dropdown-item" href="/vilathikulam">
@@ -327,12 +339,14 @@ function Header() {
                   role="button"
                   data-toggle="dropdown"
                   aria-haspopup="true"
-                  aria-expanded="false">
+                  aria-expanded="false"
+                >
                   Formation
                 </a>
                 <div
                   class="dropdown-menu"
-                  aria-labelledby="navbarDropdownMenuLink5">
+                  aria-labelledby="navbarDropdownMenuLink5"
+                >
                   <a class="dropdown-item" href="/formation">
                     Formation
                   </a>

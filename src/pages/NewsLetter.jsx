@@ -34,7 +34,7 @@ function NewsLetter() {
                     {pdfLinks.data && pdfLinks.data.length > 0 ? (
                         pdfLinks.data.map((pdf, index) => (
                             <div key={index} className="col-12 col-md-6 col-lg-4 mb-4">
-                                <div className="card">
+                                <div className="card" style={{ border: "1px solid #e4d7c6", boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)", backgroundColor: "#fffcf6" }} >
                                     <div className="card-body">
                                         <i
                                             className="fa fa-file-pdf-o"
