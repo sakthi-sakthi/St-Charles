@@ -5,29 +5,12 @@ import timeGridPlugin from '@fullcalendar/timegrid';
 import listPlugin from '@fullcalendar/list';
 import Footer from '../components/footer';
 import Header from '../components/header';
-import { useLocation } from 'react-router-dom';
-import { Button, Modal } from 'react-bootstrap';
 import axios from 'axios';
 
 function CalendarComponent() {
     const calendarRef = useRef(null);
-    const [showModal, setShowModal] = useState(false);
-    const [eventData, setEventData] = useState({ title: '', date: '' });
-    const location = useLocation();
-    const [eventCalendarData, setEventcalendarData] = useState()
+    const [eventCalendarData, setEventcalendarData] = useState([]);
 
-    useEffect(() => {
-        const searchParams = new URLSearchParams(location.search);
-        const title = searchParams.get('title');
-        const date = searchParams.get('date');
-
-        if (title && date) {
-            setEventData({ title, date });
-            setShowModal(true);
-        } else {
-            setShowModal(false);
-        }
-    }, [location]);
 
 
     useEffect(() => {
@@ -56,9 +39,8 @@ function CalendarComponent() {
                                 eventResizableFromStart: true,
                             };
                         });
-                        setEventcalendarData(events)
+                        setEventcalendarData(events);
                     }
-
                 })
                 .catch(error => {
                     console.error('Error fetching events from API', error);
@@ -66,10 +48,6 @@ function CalendarComponent() {
         }
     }, []);
 
-    const handleCloseModal = () => {
-        setShowModal(false);
-    };
-    
 
     return (
         <>
@@ -89,28 +67,11 @@ function CalendarComponent() {
                             center: 'title',
                             end: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth',
                         }}
-                        eventClick={(info) => {
-                            setShowModal(true);
-                        }}
+                        navLinks={false} // Prevent navigation to event date
                     />
                 </div>
             </div>
             <Footer />
-
-            <Modal show={showModal} onHide={handleCloseModal}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Event Details</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <p>Event Title: {eventData.title}</p>
-                    <p>Event Date: {eventData.date}</p>
-                </Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={handleCloseModal}>
-                        Close
-                    </Button>
-                </Modal.Footer>
-            </Modal>
         </>
     );
 }

@@ -97,13 +97,7 @@ function Upcoming() {
                       <div className="event-content-wrap" id="upcevent">
                         <header className="entry-header d-flex flex-wrap align-items-center">
                           <h3 className="entry-title w-100 m-0">
-                            <a
-                              href={`/calendar?title=${encodeURIComponent(
-                                upcomeevent.title
-                              )}&date=${encodeURIComponent(upcomeevent.date)}`}
-                            >
-                              {upcomeevent.title}
-                            </a>
+                            <a href="/calendar">{upcomeevent.title}</a>
                           </h3>
                           <div className="posted-date">
                             <a href="/">{upcomeevent.date}</a>
@@ -130,7 +124,7 @@ function Upcoming() {
                       <div className="event-content-wrap" id="upcevent">
                         <header className="entry-header d-flex flex-wrap align-items-center">
                           <h3 className="entry-title w-100 m-0">
-                            <a href="/">{event.title}</a>
+                            <a href={"/calendar"}>{event.title}</a>
                           </h3>
                           <div className="posted-date">
                             <a href="/">{event.date}</a>
@@ -185,7 +179,7 @@ function Upcoming() {
                             <header className="entry-header d-flex flex-wrap align-items-center">
                               <h3 className="entry-title w-100 m-0">
                                 <a
-                                  href={`/calendar?title=${item.membername}&date=${item.dob}`}
+                                  href={"/calendar"}
                                   style={{
                                     fontSize: "15px",
                                     fontWeight: "bold",
