@@ -838,7 +838,7 @@ ul.tabs-nav .tab-nav.active {
   color: #6b1d2f;
   text-align: center;
   font-family: "poppins";
-  padding: 20px; /* Padding around the text */
+  padding: 0px; /* Padding around the text */
   border-radius: 10px; /* Rounded corners */
   text-transform: uppercase; /* Uppercase text */
   letter-spacing: 2px; /* Letter spacing */
