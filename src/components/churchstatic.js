@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Tab, Nav } from "react-bootstrap";
 
 const tabImages1 = {
-  Provincial: "images/sisters/Sr-Amali-Anbarasi-.png",
+  Provincial: "images/sisters/Passport size.png",
   "Vice Provincial": "images/sisters/srCelineJoseph_ep.png",
   "Councillor MSP": "images/sisters/srNavamani.png",
   "Councillor ECEP": "images/sisters/srMArgret.png",
