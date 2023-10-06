@@ -44,18 +44,18 @@ function Administration() {
             <div className="row adminpage">
               <h3>SISTERS OF ST. CHARLES BORROMEO - THE DAWN OF A NEW ERA</h3>
               <div className="col-lg-6">
-                <img
-                  src="images/subpage/sunrises.jpg"
+                {/* <img
+                  src="images/subpage/avator.jpg"
                   style={{ borderRadius: " 50%" }}
                   alt=""
-                />
+                /> */}
               </div>
               <div className="col-lg-6">
-                <img
-                  src="images/subpage/sunrises.jpg"
+                {/* <img
+                  src="images/subpage/avator.jpg"
                   style={{ borderRadius: " 50%" }}
                   alt=""
-                />
+                /> */}
               </div>
               <p>
                 &nbsp;&nbsp;&nbsp; Transferring the St. Charles Generalate to
