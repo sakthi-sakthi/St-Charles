@@ -2761,7 +2761,7 @@ div.main-tile-text h2 {
   /* padding: 96px 0; */
 /*   background: url(https://charles-borromeo.pages.dev/images/logos/sisters.jpg) */
   background-color:darkred;
-    no-repeat center;
+
   background-size: cover;
   background-position: center calc(37% + 20px);
 

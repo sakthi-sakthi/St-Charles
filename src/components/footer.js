@@ -118,7 +118,7 @@ function Footer() {
                 </div>
               </div>
             </div>
-            <div>
+            <div style={{marginBottom:"-17px"}}>
               <p
                 className="text-center"
                 style={{ fontSize: "14px", color: "white" }}>

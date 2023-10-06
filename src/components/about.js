@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function About() {
   return (
@@ -21,6 +22,11 @@ function About() {
                   invited three pious girls from Lille to whom he added two
                   young persons of his parish"
                 </div>
+                <Link to="https://stcharlesborromeo.pages.dev/history" target="_blank">
+                  <center>
+                    <button className="btn btn-primary mt-3">Read More</button>
+                  </center>
+                </Link>
               </div>
             </div>
           </div>

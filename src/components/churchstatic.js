@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Tab, Nav } from "react-bootstrap";
 
 const tabImages1 = {
-  Provincial: "images/sisters/Passport size.png",
+  Provincial: "images/sisters/Passportsize.png",
   "Vice Provincial": "images/sisters/srCelineJoseph_ep.png",
   "Councillor MSP": "images/sisters/srNavamani.png",
   "Councillor ECEP": "images/sisters/srMArgret.png",
@@ -31,7 +31,7 @@ const tabContent2 = {
 };
 const imageStyles = {
   width: "212px",
-  height: "250px",
+  height: "219px",
 };
 const boxStyles1 = {
   boxShadow: "0px 7px 16px 0px rgba(172 ,153 ,153, 0.5)",

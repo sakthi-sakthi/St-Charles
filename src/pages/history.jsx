@@ -55,11 +55,11 @@ function History() {
             <div>
               <h2>Provincial Superiors</h2>
               <div className="d-flex">
-                <img
+                {/* <img
                   src="images/subpage/srNavamani_ep.jpg"
                   style={{ width: "200px", height: "200px" }}
                   alt=""
-                />
+                /> */}
                 <p style={{ marginTop: "20px" }}>
                   On January 8, 1983 the installation of <b>Sr. Renee</b> as
                   Provincial as the 1st Provincial of the newly formed Province
@@ -89,20 +89,20 @@ function History() {
                   Villa at Surpattu Main Road Vinaygapuram on January 29th,
                   1998.
                 </p>
-                <img
+                {/* <img
                   src="images/subpage/srNavamani_ep.jpg"
                   style={{ width: "200px", height: "200px" }}
                   alt=""
-                />
+                /> */}
               </div>
             </div>
             <div>
               <div className="d-flex mt-5">
-                <img
+                {/* <img
                   src="images/subpage/srNavamani_ep.jpg"
                   style={{ width: "200px", height: "200px" }}
                   alt=""
-                />
+                /> */}
                 <p style={{ marginTop: "20px" }}>
                   From 2000 to 2006 the Province was headed by{" "}
                   <b> Rev. Sr. Saroj.</b>
@@ -128,20 +128,20 @@ function History() {
                   in bonded labour, the aged, the refugees, dalits, HIV/AIDS
                   patients, terminally ill, the abandoned and the marginalized.
                 </p>
-                <img
+                {/* <img
                   src="images/subpage/srNavamani_ep.jpg"
                   style={{ width: "200px", height: "200px" }}
                   alt=""
-                />
+                /> */}
               </div>
             </div>
             <div>
               <div className="d-flex mt-5">
-                <img
+                {/* <img
                   src="images/subpage/srNavamani_ep.jpg"
                   style={{ width: "200px", height: "200px" }}
                   alt=""
-                />
+                /> */}
                 <p style={{ marginTop: "20px" }}>
                   In 2012 <b>Sr.Virgie</b> was chosen to be provincial superior,
                   <b>
