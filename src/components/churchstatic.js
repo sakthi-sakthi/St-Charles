@@ -30,7 +30,7 @@ const tabContent2 = {
   "Chairperson of Medico": "Sr. Preethy",
 };
 const imageStyles = {
-  width: "250px",
+  width: "212px",
   height: "250px",
 };
 const boxStyles1 = {
