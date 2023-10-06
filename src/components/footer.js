@@ -57,31 +57,31 @@ function Footer() {
                   <ul class="quick-links">
                     <li>
                       <i class="fas fa-history"></i>
-                      <a href="/">History</a>
+                      <a href="/history">History</a>
                     </li>
                     <li>
                       <i class="fas fa-graduation-cap"></i>
-                      <a href="/">Formation</a>
+                      <a href="/formation">Formation</a>
                     </li>
                     <li>
                       <i class="fas fa-bullhorn"></i>
-                      <a href="/">Vocation Promotion</a>
+                      <a href="/vocation-promotion">Vocation Promotion</a>
                     </li>
                     <li>
                       <i class="fas fa-envelope"></i>
-                      <a href="/">Contact</a>
+                      <a href="/contact-us">Contact</a>
                     </li>
                     <li>
                       <i class="fas fa-cogs"></i>
-                      <a href="/">Mother House</a>
+                      <a href="/motherhouse">Mother House</a>
                     </li>
                     <li>
                       <i class="fas fa-images"></i>
-                      <a href="/">Gallery</a>
+                      <a href="/gallery">Gallery</a>
                     </li>
                     <li>
                       <i class="fas fa-users"></i>
-                      <a href="/">Founder</a>
+                      <a href="/founder">Founder</a>
                     </li>
                   </ul>
                 </div>
