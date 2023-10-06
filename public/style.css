@@ -2986,3 +2986,8 @@ div.main-tile-text h2 {
     margin-top: 0px;
   }
 }
+
+.home-mother div {
+  padding: 12px !important;
+}
+
