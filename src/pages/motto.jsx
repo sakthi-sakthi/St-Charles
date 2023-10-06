@@ -41,7 +41,6 @@ function Motto() {
         <div className="row">
           <div className="col-lg-9">
             <div>
-              <h2>The Motto of the Province</h2>
               <div className="M-flex">
                 <img
                   src="images/subpage/sunrises.jpg"
