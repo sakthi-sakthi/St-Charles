@@ -2762,7 +2762,7 @@ div.main-tile-text h2 {
   background: url(https://charles-borromeo.pages.dev/images/logos/sisters.jpg)
     no-repeat center;
   background-size: cover;
-  background-position: center calc(41% + 20px);
+  background-position: center calc(37% + 20px);
 
   z-index: 99;
 }

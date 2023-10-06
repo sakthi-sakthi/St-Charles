@@ -114,11 +114,18 @@ function Contact() {
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kolathur P.O Chennai 600 099
               </li>
               <li>
-                <i class="fa fa-phone"></i>&nbsp;&nbsp;+91 98659 10951
+                <i class="fa fa-phone"></i>&nbsp;&nbsp;
+                <a href="tel:+91 98659 10951" style={{ color: "#6b1d2f" }}>
+                  +91 98659 10951
+                </a>
               </li>
               <li>
                 <i className="fa fa-envelope"></i>&nbsp;&nbsp;
-                scbprovincialatechennai@gmail.com
+                <a
+                  href="mailto:scbprovincialatechennai@gmail.com"
+                  style={{ color: "#6b1d2f" }}>
+                  scbprovincialatechennai@gmail.com
+                </a>
               </li>
             </ul>
           </div>
