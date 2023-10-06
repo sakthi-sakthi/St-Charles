@@ -100,7 +100,7 @@ function Upcoming() {
                             <a href="/calendar">{upcomeevent.title}</a>
                           </h3>
                           <div className="posted-date">
-                            <a href="/">{upcomeevent.date}</a>
+                            <a href="/calendar">{upcomeevent.date}</a>
                           </div>
                         </header>
                       </div>
@@ -127,7 +127,7 @@ function Upcoming() {
                             <a href={"/calendar"}>{event.title}</a>
                           </h3>
                           <div className="posted-date">
-                            <a href="/">{event.date}</a>
+                            <a href="/calendar">{event.date}</a>
                           </div>
                         </header>
                       </div>
@@ -191,7 +191,7 @@ function Upcoming() {
 
                               <div className="posted-date">
                                 <a
-                                  href="/"
+                                  href="/calendar"
                                   style={{
                                     fontSize: "15px",
                                     color: "#6b1d2f",

@@ -134,12 +134,12 @@ function Header() {
             </div>
           </div>
         </section>
-        <nav class="navbar navbar-expand-lg navbar-light" id="test">
+        <nav class="navbar navbar-expand-lg navbar-light">
           <button
             class="navbar-toggler"
             type="button"
             data-toggle="collapse"
-            data-target="/navbarNav"
+            data-target="#navbarNav"
             aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation"
@@ -147,10 +147,10 @@ function Header() {
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav" id="commonNavbar">
+            <ul class="navbar-nav">
               <li class="nav-item active">
                 <a class="nav-link" href="/">
-                  Home
+                  Home <span class="sr-only">(current)</span>
                 </a>
               </li>
               <li class="nav-item dropdown">
@@ -307,7 +307,7 @@ function Header() {
                     Gummidipoondi
                   </a>
                   <a class="dropdown-item" href="/mugandanur">
-                    Mugandanu
+                    Mugandanur
                   </a>
                   <a class="dropdown-item" href="/kizhakkambalam">
                     Kizhakkambalam

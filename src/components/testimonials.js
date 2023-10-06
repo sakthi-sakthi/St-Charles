@@ -4,42 +4,54 @@ import "swiper/swiper-bundle.css";
 import { MDBCard, MDBCardBody, MDBContainer, MDBIcon } from "mdb-react-ui-kit";
 
 export default function App() {
-   const swiperRef = useRef(null);
-   const mySwiperRef = useRef(null); // Create a ref to store the Swiper instance
+  const swiperRef = useRef(null);
+  const mySwiperRef = useRef(null); // Create a ref to store the Swiper instance
+  useEffect(() => {
+    const breakpoints = {
+      320: {
+        slidesPerView: 1, // 1 slide per view for screens smaller than 320px (e.g., mobile phones)
+      },
+      480: {
+        slidesPerView: 2, // 2 slides per view for screens between 320px and 480px (e.g., larger phones)
+      },
+      1200: {
+        slidesPerView: 3, // 3 slides per view for screens larger than 992px (e.g., laptops and desktops)
+      },
+    };
 
-   useEffect(() => {
-     if (swiperRef.current) {
-       mySwiperRef.current = new Swiper(swiperRef.current, {
-         slidesPerView: 3,
-         spaceBetween: 20,
-         autoplay: {
-           delay: 5000,
-         },
-         keyboard: {
-           enabled: true,
-         },
-       });
-     }
+    if (swiperRef.current) {
+      mySwiperRef.current = new Swiper(swiperRef.current, {
+        slidesPerView: 3, // Default to 3 slides per view
+        spaceBetween: 20,
+        autoplay: {
+          delay: 5000,
+        },
+        keyboard: {
+          enabled: true,
+        },
+        breakpoints: breakpoints, // Apply breakpoints
+      });
+    }
 
-     // Clean up the Swiper instance when the component unmounts
-     return () => {
-       if (mySwiperRef.current) {
-         mySwiperRef.current.destroy(true, true);
-       }
-     };
-   }, []);
+    // Clean up the Swiper instance when the component unmounts
+    return () => {
+      if (mySwiperRef.current) {
+        mySwiperRef.current.destroy(true, true);
+      }
+    };
+  }, []);
 
-   const pauseSwiper = () => {
-     if (mySwiperRef.current) {
-       mySwiperRef.current.autoplay.stop();
-     }
-   };
+  const pauseSwiper = () => {
+    if (mySwiperRef.current) {
+      mySwiperRef.current.autoplay.stop();
+    }
+  };
 
-   const resumeSwiper = () => {
-     if (mySwiperRef.current) {
-       mySwiperRef.current.autoplay.start();
-     }
-   };
+  const resumeSwiper = () => {
+    if (mySwiperRef.current) {
+      mySwiperRef.current.autoplay.start();
+    }
+  };
 
   return (
     <MDBContainer className="py-5">
