@@ -49,7 +49,14 @@ import Ponnapally from "./pages/community/ponnapally";
 import Periakottai from "./pages/community/periakottai";
 import Dindigul from "./pages/community/dindigul";
 import Muttom from "./pages/community/muttom";
-
+import Eventscelebrations from "./pages/footerpage/eventscelebrations";
+import Obitury from "./pages/footerpage/obituary";
+import OverseasMission from "./pages/footerpage/overseasmission";
+import SCBAssociates from "./pages/footerpage/scbassociates";
+import Statistics from "./pages/footerpage/statistics";
+import SignificantDates from "./pages/footerpage/significantdates";
+import Location from "./pages/footerpage/location";
+import Videos from "./pages/footerpage/videos";
 
 function App() {
   return (
@@ -102,6 +109,18 @@ function App() {
         <Route path="/periakottai" element={<Periakottai />} />
         <Route path="/dindigul" element={<Dindigul />} />
         <Route path="/muttom" element={<Muttom />} />
+
+        <Route
+          path="/events-and-celebrations"
+          element={<Eventscelebrations />}
+        />
+        <Route path="/obitury" element={<Obitury />} />
+        <Route path="/overseas-mission" element={<OverseasMission />} />
+        <Route path="/scb-associates" element={<SCBAssociates />} />
+        <Route path="/statistics" element={<Statistics />} />
+        <Route path="/significant-dates" element={<SignificantDates />} />
+        <Route path="/location" element={<Location />} />
+        <Route path="/videos" element={<Videos />} />
       </Routes>
     </>
   );
