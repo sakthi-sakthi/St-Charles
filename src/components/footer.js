@@ -35,8 +35,7 @@ function Footer() {
                         color: "white",
                         textAlign: "justify ",
                         fontSize: "14px",
-                      }}
-                    >
+                      }}>
                       "This religious House was founded in 1682 by Adrien Bresy,
                       parish priest of wez. This vigilant pastor, wishing to
                       procure for his parishioners the benefits of a Christian
@@ -48,8 +47,7 @@ function Footer() {
                       color: "white",
                       textAlign: "justify",
                       fontSize: "14px",
-                    }}
-                  >
+                    }}>
                     invited three pious girls from Lille to whom he added two
                     young persons of his parish".
                   </p>
@@ -62,10 +60,6 @@ function Footer() {
                     <h2 className="entry-title">Quick Links</h2>
                   </div>
                   <ul className="quick-links">
-                    <li>
-                      <i className="fas fa-book-dead"></i>
-                      <a href="/obitury">Obituary</a>
-                    </li>
                     <li>
                       <i className="fas fa-graduation-cap"></i>
                       <a href="/events-and-celebrations">
@@ -87,6 +81,10 @@ function Footer() {
                     <li>
                       <i className="fas fa-calendar-alt"></i>
                       <a href="/significant-dates"> Significant Dates</a>
+                    </li>
+                    <li>
+                      <i className="fas fa-book-dead"></i>
+                      <a href="/obitury">Obituary</a>
                     </li>
                     <li>
                       <i className="fas fa-map-marker"></i>
@@ -151,8 +149,7 @@ function Footer() {
             <div style={{ marginBottom: "-17px" }}>
               <p
                 className="text-center"
-                style={{ fontSize: "14px", color: "white" }}
-              >
+                style={{ fontSize: "14px", color: "white" }}>
                 Copyright © 2023 St Charles Borromeo Eastern Province, All
                 rights reserved. Powered by
                 <a
@@ -160,8 +157,7 @@ function Footer() {
                   style={{ color: "#ffd700" }}
                   target="_blank"
                   rel="noreferrer"
-                  href="https://www.boscosofttech.com/"
-                >
+                  href="https://www.boscosofttech.com/">
                   &nbsp;Boscosofttech
                 </a>
               </p>
