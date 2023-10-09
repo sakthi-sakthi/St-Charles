@@ -1,26 +1,7 @@
 import Header from "../../components/header";
 import Footer from "../../components/footer";
-import { useEffect, useState } from "react";
-import ApiUrl from "../../Api/Api";
+
 function Statistics() {
-  const [slider, setslider] = useState([]);
-  const fetchslide = () => {
-    fetch(`${ApiUrl}/get/slidebar`)
-      .then((res) => {
-        return res.json();
-      })
-      .then((resp) => {
-        setslider(resp.data);
-      })
-      .catch((err) => {
-        console.log(err.message);
-      });
-  };
-
-  useEffect(() => {
-    fetchslide();
-  }, []);
-
   return (
     <>
       <Header />
