@@ -8,7 +8,7 @@ function Mhouse() {
       <div className="home-mother">
         <div className="container" style={{ padding: "30px" }}>
           <h3 className="entry-title motherhouse">
-            <a href="/">Mother House</a>
+            <a href="/motherhouse">Mother House</a>
           </h3>
           <div className="brudcrums">
             <a href="/">Home</a>&nbsp;»&nbsp;{" "}

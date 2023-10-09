@@ -42,7 +42,7 @@ function ProvincialCouncil() {
       <div className="home-mother">
         <div className="container" style={{ padding: "30px" }}>
           <h3 className="entry-title motherhouse">
-            <a href="/founder">Provincial Council</a>
+            <a href="/provincial-council">Provincial Council</a>
           </h3>
           <div className="brudcrums">
             <a href="/">Home</a>&nbsp;»&nbsp;{" "}
