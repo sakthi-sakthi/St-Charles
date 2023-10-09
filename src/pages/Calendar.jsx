@@ -35,11 +35,18 @@ function CalendarComponent() {
                             return {
                                 title: item.member_name,
                                 date: date,
-                                editable: true,
-                                eventResizableFromStart: true,
                             };
                         });
-                        setEventcalendarData(events);
+
+
+                        // Filter out past events based on the current date
+                        const currentDate = new Date();
+                        const filteredEvents = events.filter(event => {
+                            const eventDate = new Date(event.date);
+                            return eventDate >= currentDate;
+                        });
+
+                        setEventcalendarData(filteredEvents);
                     }
                 })
                 .catch(error => {
@@ -47,6 +54,7 @@ function CalendarComponent() {
                 });
         }
     }, []);
+
 
 
     return (
@@ -67,7 +75,7 @@ function CalendarComponent() {
                             center: 'title',
                             end: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth',
                         }}
-                        navLinks={false} // Prevent navigation to event date
+                        navLinks={false}
                     />
                 </div>
             </div>

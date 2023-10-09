@@ -1,38 +1,38 @@
-import React from "react";
-// import axios from "axios";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 function Upcoming() {
-  // const [birthdayData, setBirthdayData] = useState([]);
+  const [birthdayData, setBirthdayData] = useState([]);
 
-  // useEffect(() => {
-  //   axios.get("/member/province/birthday/this_month/2").then((response) => {
-  //     if (response?.data?.data != null) {
-  //       const extractedData = response?.data?.data.map((item) => ({
-  //         membername: item.member_name,
-  //         dob: item.dob,
-  //         image: item.image,
-  //       }));
-  //       setBirthdayData(extractedData);
-  //     }
-  //   });
-  // }, []);
+  useEffect(() => {
+    axios.get("/member/province/birthday/this_month/2").then((response) => {
+      if (response?.data?.data != null) {
+        const extractedData = response?.data?.data.map((item) => ({
+          membername: item.member_name,
+          dob: item.dob,
+          image: item.image,
+        }));
+        setBirthdayData(extractedData);
+      }
+    });
+  }, []);
 
-  // const currentDate = new Date();
-  // const currentDay = currentDate.getDate();
-  // const currentMonth = currentDate.toLocaleString("default", { month: "long" });
+  const currentDate = new Date();
+  const currentDay = currentDate.getDate();
+  const currentMonth = currentDate.toLocaleString("default", { month: "long" });
 
-  // // Filter out members with birthdays that have already passed
-  // const upcomingBirthdays = birthdayData.filter((item) => {
-  //   const dobParts = item.dob.split(" - ");
-  //   const dobDay = parseInt(dobParts[0], 10);
-  //   const dobMonth = dobParts[1].trim();
+  // Filter out members with birthdays that have already passed
+  const upcomingBirthdays = birthdayData.filter((item) => {
+    const dobParts = item.dob.split(" - ");
+    const dobDay = parseInt(dobParts[0], 10);
+    const dobMonth = dobParts[1].trim();
 
-  //   // Compare the birthday with the current date
-  //   if (dobMonth === currentMonth) {
-  //     return dobDay >= currentDay;
-  //   }
-  //   return true; // Include all other birthdays
-  // });
+    // Compare the birthday with the current date
+    if (dobMonth === currentMonth) {
+      return dobDay >= currentDay;
+    }
+    return true; // Include all other birthdays
+  });
 
   const eventsData = [
     {
@@ -78,56 +78,56 @@ function Upcoming() {
       imageSrc: "images/event-3.jpg",
     },
   ];
-   const birthData = [
-     {
-       member_name: "N. Sava Sravani",
-       dob: "11 - October",
-       image:
-         "https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-4.png",
-     },
-     {
-       member_name: "Sr. Bincy Mathew Plackil",
-       dob: "14 - October",
-       image:
-         "https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-4.png",
-     },
-     {
-       member_name: "Sr. Sahaya Joseph Amsa",
-       dob: "19 - October",
-       image:
-         "https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-4.png",
-     },
-     {
-       member_name: "Sr. A. Jayaseeli Malar",
-       dob: "20 - October",
-       image:
-         "https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-4.png",
-     },
-     {
-       member_name: "Sr. Mary Amirtham Antony",
-       dob: "20 - October",
-       image:
-         "https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-4.png",
-     },
-     {
-       member_name: "Sr. Mary Amirtham Antony",
-       dob: "22 - October",
-       image:
-         "https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-4.png",
-     },
-     {
-       member_name: "Sr. Christy Sarojini Amaladass",
-       dob: "27 - October",
-       image:
-         "https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-4.png",
-     },
-     {
-       member_name: "Sr. Gracy Julian Mendonca",
-       dob: "29 - October",
-       image:
-         "https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-4.png",
-     },
-   ];
+  //  const birthData = [
+  //    {
+  //      member_name: "N. Sava Sravani",
+  //      dob: "11 - October",
+  //      image:
+  //        "https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-4.png",
+  //    },
+  //    {
+  //      member_name: "Sr. Bincy Mathew Plackil",
+  //      dob: "14 - October",
+  //      image:
+  //        "https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-4.png",
+  //    },
+  //    {
+  //      member_name: "Sr. Sahaya Joseph Amsa",
+  //      dob: "19 - October",
+  //      image:
+  //        "https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-4.png",
+  //    },
+  //    {
+  //      member_name: "Sr. A. Jayaseeli Malar",
+  //      dob: "20 - October",
+  //      image:
+  //        "https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-4.png",
+  //    },
+  //    {
+  //      member_name: "Sr. Mary Amirtham Antony",
+  //      dob: "20 - October",
+  //      image:
+  //        "https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-4.png",
+  //    },
+  //    {
+  //      member_name: "Sr. Mary Amirtham Antony",
+  //      dob: "22 - October",
+  //      image:
+  //        "https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-4.png",
+  //    },
+  //    {
+  //      member_name: "Sr. Christy Sarojini Amaladass",
+  //      dob: "27 - October",
+  //      image:
+  //        "https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-4.png",
+  //    },
+  //    {
+  //      member_name: "Sr. Gracy Julian Mendonca",
+  //      dob: "29 - October",
+  //      image:
+  //        "https://www.freeiconspng.com/thumbs/no-image-icon/no-image-icon-4.png",
+  //    },
+  //  ];
   return (
     <>
       <div className="home-page-events">
@@ -187,7 +187,7 @@ function Upcoming() {
               </div>
             </div>
 
-            <div className="col-12 col-md-6 col-lg-4">
+            {/* <div className="col-12 col-md-6 col-lg-4">
               <div className="upcoming-events">
                 <div className="section-heading">
                   <h2 className="entry-title">Birthday / Feast</h2>
@@ -212,9 +212,9 @@ function Upcoming() {
                   ))}
                 </div>
               </div>
-            </div>
+            </div> */}
 
-            {/* <div className="col-12 col-md-6 col-lg-4">
+            <div className="col-12 col-md-6 col-lg-4">
               <div className="upcoming-events">
                 <div className="section-heading">
                   <h2 className="entry-title">Birthday / Feast</h2>
@@ -222,19 +222,14 @@ function Upcoming() {
                 <div className="scrollable-content" id="birthfeast">
                   {upcomingBirthdays.length > 0 ? (
                     upcomingBirthdays.map((item, index) => {
-                      // Extract the day and month from the 'dob' field
                       const dobParts = item.dob.split(" - ");
                       const dobDay = parseInt(dobParts[0], 10);
-                      const dobMonth = dobParts[1].trim(); // Remove leading/trailing spaces
-
-                      // Check if it's the member's birthday today
+                      const dobMonth = dobParts[1].trim();
                       const isBirthdayToday =
                         dobDay === currentDay && dobMonth === currentMonth;
-
-                      // Define the image source based on API data or static image
                       const imageSrc = item.image
                         ? item.image
-                        : "/images/sisters/NoImage.png";
+                        : "/images/logos/sisters1.png";
 
                       return (
                         <div
@@ -291,12 +286,12 @@ function Upcoming() {
                     })
                   ) : (
                     <p style={{ color: "black", fontWeight: "bold" }}>
-                      No birthday wishes available
+                      No Birthday Wishes Available
                     </p>
                   )}
                 </div>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
