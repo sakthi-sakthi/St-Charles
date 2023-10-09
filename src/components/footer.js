@@ -57,31 +57,37 @@ function Footer() {
                   <ul class="quick-links">
                     <li>
                       <i class="fas fa-history"></i>
-                      <a href="/history">History</a>
+                      <a href="/obitury">Obituary</a>
                     </li>
                     <li>
                       <i class="fas fa-graduation-cap"></i>
-                      <a href="/formation">Formation</a>
+                      <a href="/events-and-celebrations">
+                        Events & Celebration
+                      </a>
                     </li>
                     <li>
                       <i class="fas fa-bullhorn"></i>
-                      <a href="/vocation-promotion">Vocation Promotion</a>
+                      <a href="/overseas-mission">Overseas Mission</a>
                     </li>
                     <li>
                       <i class="fas fa-envelope"></i>
-                      <a href="/contact-us">Contact</a>
+                      <a href="/scb-associates"> SCB Associates</a>
                     </li>
                     <li>
                       <i class="fas fa-cogs"></i>
-                      <a href="/motherhouse">Mother House</a>
+                      <a href="/statistics"> Statistics</a>
                     </li>
                     <li>
                       <i class="fas fa-images"></i>
-                      <a href="/gallery">Gallery</a>
+                      <a href="/significant-dates"> Significant Dates</a>
                     </li>
                     <li>
                       <i class="fas fa-users"></i>
-                      <a href="/founder">Founder</a>
+                      <a href="/location">Location</a>
+                    </li>
+                    <li>
+                      <i class="fas fa-users"></i>
+                      <a href="/videos"> Videos</a>
                     </li>
                   </ul>
                 </div>
@@ -118,7 +124,7 @@ function Footer() {
                 </div>
               </div>
             </div>
-            <div style={{marginBottom:"-17px"}}>
+            <div style={{ marginBottom: "-17px" }}>
               <p
                 className="text-center"
                 style={{ fontSize: "14px", color: "white" }}>
@@ -127,6 +133,7 @@ function Footer() {
                 <a
                   class="tech"
                   style={{ color: "#ffd700" }}
+                  target="_blank"
                   href="https://www.boscosofttech.com/">
                   &nbsp;Boscosofttech
                 </a>

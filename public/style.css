@@ -2759,8 +2759,8 @@ div.main-tile-text h2 {
 .home-mother {
   position: relative;
   /* padding: 96px 0; */
-/*   background: url(https://charles-borromeo.pages.dev/images/logos/sisters.jpg) */
-  background-color:darkred;
+  /*   background: url(https://charles-borromeo.pages.dev/images/logos/sisters.jpg) */
+  background-color: darkred;
 
   background-size: cover;
   background-position: center calc(37% + 20px);
@@ -2787,7 +2787,17 @@ div.main-tile-text h2 {
   color: #b69000 !important;
 }
 .brudcrums {
+  font-size: 28px;
+  color: #f2e7c8;
+}
+.brudcrums a {
   font-size: 18px;
+}
+.brudcrums span {
+  font-size: 18px;
+}
+.justify {
+  text-align: justify;
 }
 .pagename {
   color: white;
@@ -2990,4 +3000,3 @@ div.main-tile-text h2 {
 .home-mother div {
   padding: 12px !important;
 }
-
