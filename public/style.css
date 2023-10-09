@@ -812,7 +812,7 @@ ul.tabs-nav .tab-nav.active {
 --------------------------------*/
 .home-page-welcome {
   position: relative;
-  padding: 96px 0;
+  padding: 50px 0;
   background: url("https://charles-borromeo.pages.dev/images/logos/sisters.jpg")
     no-repeat center;
   background-size: cover;
@@ -2966,6 +2966,10 @@ div.main-tile-text h2 {
   border-radius: 7%;
   margin: 4px 2px;
 }
+.vedio {
+  width: 820px;
+  height: 470px;
+}
 @media (max-width: 600px) {
   td {
     text-align: center;
@@ -2995,8 +2999,12 @@ div.main-tile-text h2 {
     text-align: center;
     margin-top: 0px;
   }
+  .vedio {
+    width: 300px;
+    height: 270px;
+  }
 }
 
 .home-mother div {
-  padding: 12px !important;
+  padding: 2px !important;
 }

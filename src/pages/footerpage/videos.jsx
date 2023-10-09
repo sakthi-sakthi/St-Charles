@@ -44,8 +44,7 @@ function Videos() {
               <h5>Videos/Pdf</h5>
               <iframe
                 src="//www.youtube.com/embed/JgRNH5FqY-0"
-                width="820"
-                height="470"
+                className="vedio"
                 title="videos"
                 allowfullscreen="allowfullscreen"></iframe>
             </div>

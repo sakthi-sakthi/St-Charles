@@ -41,11 +41,15 @@ function Location() {
         <div className="row">
           <div className="col-lg-9">
             <div>
-              <div className="bs-exercis mt-5">
-                <p style={{ marginTop: "20px" }}>
-                  <h4 className="text-center">Under Construction</h4>
-                </p>
-              </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.346704331074!2d80.19785467428956!3d13.140517211153979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526490ea28d1db%3A0xb566a6a8834544cf!2sThe%20Sisters%20of%20St.%20Charles%20Borromeo%20%E2%80%93%20Eastern%20Province!5e0!3m2!1sen!2sin!4v1696483173673!5m2!1sen!2sin"
+                height={550}
+                style={{ border: 0, width: " 100%" }}
+                allowFullScreen
+                title="st charles"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
 
