@@ -124,19 +124,35 @@ function Footer() {
                           Chennai 600 099
                         </p>
                         <li>
-                          <a href="https://twitter.com/share?url=https://stcharleschennai.com/index.php/events-and-celebrations&text=Events%20and%20Celebrations">
+                          <a
+                            href="https://twitter.com/share?url=https://stcharleschennai.com/index.php/events-and-celebrations&text=Events%20and%20Celebrations"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
                             <i className="fab fa-twitter mr-2" />
                           </a>
                           &nbsp;
-                          <a href="https://plus.google.com/share?url=https://stcharleschennai.com/index.php/events-and-celebrations">
+                          <a
+                            href="https://plus.google.com/share?url=https://stcharleschennai.com/index.php/events-and-celebrations"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
                             <i className="fab fa-google-plus mr-2" />
                           </a>
                           &nbsp;
-                          <a href="https://www.facebook.com/sharer.php?u=https://stcharleschennai.com/index.php/events-and-celebrations">
+                          <a
+                            href="https://www.facebook.com/sharer.php?u=https://stcharleschennai.com/index.php/events-and-celebrations"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
                             <i className="fab fa-facebook mr-2" />
                           </a>
                           &nbsp;
-                          <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://stcharleschennai.com/index.php/events-and-celebrations">
+                          <a
+                            href="http://www.linkedin.com/shareArticle?mini=true&url=https://stcharleschennai.com/index.php/events-and-celebrations"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
                             <i className="fab fa-linkedin" />
                           </a>
                         </li>

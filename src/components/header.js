@@ -32,17 +32,25 @@ function Header() {
               <div className="col-12 col-lg-4 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
                 <div className="social-icons">
                   <div className="social-icon">
-                    <a href="/">
+                    <a
+                      href="https://www.facebook.com/sharer.php?u=https://stcharleschennai.com/index.php/events-and-celebrations"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <i className="fab fa-facebook" />
                     </a>
                   </div>
                   <div className="social-icon">
-                    <a href="/">
+                    <a
+                      href="https://youtu.be/JgRNH5FqY-0"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <i className="fab fa-youtube" />
                     </a>
                   </div>
                   <div className="social-icon">
-                    <a href="/">
+                    <a href="/" target="_blank" rel="noreferrer">
                       <i className="fab fa-instagram" />
                     </a>
                   </div>

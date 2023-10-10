@@ -22,11 +22,15 @@ function About() {
                   invited three pious girls from Lille to whom he added two
                   young persons of his parish"
                 </div>
-                <Link to="https://stcharlesborromeo.pages.dev/history" target="_blank">
-                  <center>
+
+                <center>
+                  <Link
+                    to="https://stcharlesborromeo.pages.dev/history"
+                    target="_blank"
+                  >
                     <button className="btn btn-primary mt-3">Read More</button>
-                  </center>
-                </Link>
+                  </Link>
+                </center>
               </div>
             </div>
           </div>
