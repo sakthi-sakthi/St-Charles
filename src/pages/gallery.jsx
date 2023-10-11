@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import ApiUrl from "../Api/Api";
 function Gallery() {
   const [slider, setslider] = useState([]);
+  const [galleryData, setGalleryData] = useState([]);
+  const [selectedImage, setSelectedImage] = useState(null);
   const fetchslide = () => {
     fetch(`${ApiUrl}/get/slidebar`)
       .then((res) => {
@@ -16,11 +18,30 @@ function Gallery() {
         console.log(err.message);
       });
   };
-
+  const fatchGallery = () => {
+    fetch(`${ApiUrl}/get/gallery_images`)
+      .then((res) => {
+        return res.json();
+      })
+      .then((resp) => {
+        setGalleryData(resp.data);
+        console.log(resp.data);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
   useEffect(() => {
     fetchslide();
+    fatchGallery();
   }, []);
+  const openImagePopup = (image) => {
+    setSelectedImage(image);
+  };
 
+  const closeImagePopup = () => {
+    setSelectedImage(null);
+  };
   return (
     <>
       <Header />
@@ -61,6 +82,45 @@ function Gallery() {
               </div>
             ))}
           </div>
+        </div>
+        <div className="container">
+          <div className="row">
+            {galleryData.map((item) => (
+              <div key={item.id} className="col-lg-4">
+                <div
+                  className="gallery-item"
+                  onClick={() => openImagePopup(item.image)}>
+                  <img
+                    src={item.image}
+                    style={{
+                      width: "400px",
+                      height: "300px",
+                      cursor: "pointer",
+                    }}
+                    alt={item.alt_tag || "Image"}
+                  />
+                  <div className="image-details">
+                    <p>
+                      <b>{item.title || "Untitled"}</b>
+                    </p>
+                    <p>
+                      <b>{item.date}</b>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          {selectedImage && (
+            <div className="image-popup-overlay">
+              <span className="close-icon" onClick={closeImagePopup}>
+                &times;
+              </span>
+              <div className="image-popup">
+                <img src={selectedImage} alt="Popup Image" />
+              </div>
+            </div>
+          )}
         </div>
       </div>
       <Footer />
