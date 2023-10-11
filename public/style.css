@@ -2575,7 +2575,7 @@ div.main-tile-text h2 {
 }
 
 #birthfeast {
-  max-height: 400px;
+  max-height: 392px;
   overflow-y: hidden;
 }
 
@@ -2584,7 +2584,7 @@ div.main-tile-text h2 {
 }
 
 #provincialprog {
-  max-height: 400px;
+  max-height: 374px;
   overflow-y: hidden;
 }
 
@@ -2593,7 +2593,7 @@ div.main-tile-text h2 {
 }
 
 #provinceprog {
-  max-height: 400px;
+  max-height: 374px;
   overflow-y: hidden;
 }
 
@@ -2878,7 +2878,7 @@ div.main-tile-text h2 {
 .birthday-gif {
   max-width: 40%;
   margin-left: 186px;
-  margin-top: -5rem;
+  margin-top: -3rem;
 }
 .adminpage img {
   height: 200px;

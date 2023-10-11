@@ -11,25 +11,18 @@ function CalendarComponent() {
     const calendarRef = useRef(null);
     const [eventCalendarData, setEventcalendarData] = useState([]);
 
-
-
     useEffect(() => {
         if (calendarRef.current) {
-            axios.get('/member/province/birthday/this_month/2')
+            axios.get('http://172.104.57.118:7025/api/member/province/birthday/this_month/2')
                 .then(response => {
                     const data = response.data;
                     if (Array.isArray(data?.data)) {
                         const events = data?.data?.map(item => {
-                            // Parse the "04 - October" format date
                             const parts = item.dob.split(' - ');
                             const day = parts[0];
                             const monthName = parts[1];
-
-                            // Convert month name to month number (1-based index)
                             const monthNumber = new Date(Date.parse(monthName + ' 1, 2000')).getMonth() + 1;
-
-                            // Create a date string in "yyyy-mm-dd" format
-                            const year = new Date().getFullYear(); // You may need to replace this with the actual year
+                            const year = new Date().getFullYear();
                             const date = `${year}-${monthNumber.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
 
                             return {
@@ -38,15 +31,7 @@ function CalendarComponent() {
                             };
                         });
 
-
-                        // Filter out past events based on the current date
-                        const currentDate = new Date();
-                        const filteredEvents = events.filter(event => {
-                            const eventDate = new Date(event.date);
-                            return eventDate >= currentDate;
-                        });
-
-                        setEventcalendarData(filteredEvents);
+                        setEventcalendarData(events);
                     }
                 })
                 .catch(error => {
@@ -54,8 +39,11 @@ function CalendarComponent() {
                 });
         }
     }, []);
-
-
+    const isCurrentDate = (dateStr) => {
+        const currentDate = new Date();
+        const eventDate = new Date(dateStr);
+        return currentDate.toDateString() === eventDate.toDateString();
+    };
 
     return (
         <>
@@ -76,9 +64,33 @@ function CalendarComponent() {
                             end: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth',
                         }}
                         navLinks={false}
+                        dayMaxEventRows={2}
+                        eventContent={(arg) => {
+                            if (isCurrentDate(arg.event.start)) {
+                                return (
+                                    <>
+                                        <div className="event-title"><center>{arg.event.title}</center></div>
+                                        <div className="event-image">
+                                            <img
+                                                src="/images/sisters/graphics-happy-birthday.gif"
+                                                alt="Birthday GIF"
+                                                style={{ width: '100px', height: '57px', marginLeft: '26px' }}
+                                            />
+                                        </div>
+                                    </>
+                                );
+                            } else {
+                                return (
+                                    <>
+                                        <div className="event-title"><center>{arg.event.title}</center></div>
+                                    </>
+                                );
+                            }
+                        }}
                     />
                 </div>
             </div>
+            <br/>
             <Footer />
         </>
     );

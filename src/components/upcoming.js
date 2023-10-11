@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 function Upcoming() {
+  // birthday api start
+
   const [birthdayData, setBirthdayData] = useState([]);
 
   useEffect(() => {
@@ -24,8 +26,6 @@ function Upcoming() {
   const currentDate = new Date();
   const currentDay = currentDate.getDate();
   const currentMonth = currentDate.toLocaleString("default", { month: "long" });
-
-  // Filter out members with birthdays that have already passed
   const upcomingBirthdays = birthdayData.filter((item) => {
     const dobParts = item.dob.split(" - ");
     const dobDay = parseInt(dobParts[0], 10);
@@ -38,28 +38,25 @@ function Upcoming() {
     return true; // Include all other birthdays
   });
 
-  const eventsData = [
-    {
-      title: "Fundraiser for Kids",
-      date: "Aug 25, 2018",
-      imageSrc: "images/event-1.jpg",
-    },
-    {
-      title: "Bring water to the children",
-      date: "Aug 25, 2018",
-      imageSrc: "images/event-2.jpg",
-    },
-    {
-      title: "Another Event",
-      date: "Aug 25, 2018",
-      imageSrc: "images/event-3.jpg",
-    },
-    {
-      title: "Another Event",
-      date: "Aug 25, 2018",
-      imageSrc: "images/event-3.jpg",
-    },
-  ];
+  // events api start
+
+  const [eventsData, setEventsData] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://testscb.cristolive.org/api/news/province/2")
+      .then((response) => {
+        if (Array.isArray(response.data)) {
+        }
+        setEventsData(response.data.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data from API:", error);
+      });
+  }, []);
+
+  // upcoming events api start
+
   const upcomeData = [
     {
       title: "Fundraiser for Kids",
@@ -120,18 +117,21 @@ function Upcoming() {
                   <h2 className="entry-title">Provincial Program</h2>
                 </div>
                 <div className="scrollable-content" id="provincialprog">
-                  {eventsData.map((event, index) => (
-                    <div className="event-wrap d-flex flex-wrap justify-content-between">
+                  {eventsData?.map((event, index) => (
+                    <div
+                      className="event-wrap d-flex flex-wrap justify-content-between"
+                      key={index}
+                    >
                       <figure className="m-0" id="upcome">
-                        <img src={event.imageSrc} alt="" />
+                        <img src={"images/event-1.jpg"} alt="" />
                       </figure>
                       <div className="event-content-wrap" id="upcevent">
                         <header className="entry-header d-flex flex-wrap align-items-center">
                           <h3 className="entry-title w-100 m-0">
-                            <a href={"/calendar"}>{event.title}</a>
+                            <a href="/calendar">{event?.name}</a>
                           </h3>
                           <div className="posted-date">
-                            <a href="/calendar">{event.date}</a>
+                            <a href="/calendar">{event?.date}</a>
                           </div>
                         </header>
                       </div>
@@ -198,14 +198,14 @@ function Upcoming() {
                                 >
                                   {item.dob}
                                 </a>
-                                {isBirthdayToday && (
-                                  <img
-                                    src="/images/sisters/graphics-happy-birthday.gif"
-                                    alt="Happy Birthday GIF"
-                                    className="birthday-gif"
-                                  />
-                                )}
                               </div>
+                              {isBirthdayToday && (
+                                <img
+                                  src="/images/sisters/graphics-happy-birthday.gif"
+                                  alt="Happy Birthday GIF"
+                                  className="birthday-gif"
+                                />
+                              )}
                             </header>
                           </div>
                         </div>
