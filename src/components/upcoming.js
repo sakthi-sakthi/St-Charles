@@ -55,11 +55,11 @@ function Upcoming() {
       });
   }, []);
 
-    eventsData.sort((a, b) => {
-      const dateA = new Date(a.date);
-      const dateB = new Date(b.date);
-      return dateB - dateA;
-    });
+  eventsData.sort((a, b) => {
+    const dateA = new Date(a.date);
+    const dateB = new Date(b.date);
+    return dateB - dateA;
+  });
   // upcoming events api start
 
   const upcomeData = [
@@ -122,8 +122,7 @@ function Upcoming() {
                                 style={{
                                   fontSize: "14px",
                                   fontWeight: "bold",
-                                }}
-                              >
+                                }}>
                                 {upcomeevent.title}
                               </a>
                             </h3>
@@ -133,8 +132,7 @@ function Upcoming() {
                                 style={{
                                   fontSize: "14px",
                                   color: "#6b1d2f",
-                                }}
-                              >
+                                }}>
                                 {upcomeevent.date}
                               </a>
                             </div>
@@ -161,8 +159,7 @@ function Upcoming() {
                     eventsData.map((event, index) => (
                       <div
                         className="event-wrap d-flex flex-wrap justify-content-between"
-                        key={index}
-                      >
+                        key={index}>
                         <figure className="m-0" id="upccome">
                           <img
                             src={
@@ -184,8 +181,7 @@ function Upcoming() {
                                 style={{
                                   fontSize: "14px",
                                   fontWeight: "bold",
-                                }}
-                              >
+                                }}>
                                 {event?.name}
                               </a>
                             </h3>
@@ -195,8 +191,7 @@ function Upcoming() {
                                 style={{
                                   fontSize: "14px",
                                   color: "#6b1d2f",
-                                }}
-                              >
+                                }}>
                                 {event?.date}
                               </a>
                             </div>
@@ -215,8 +210,10 @@ function Upcoming() {
 
             <div className="col-12 col-md-6 col-lg-4">
               <div className="upcoming-events">
-                <div className="section-heading">
-                  <h2 className="entry-title">Birthday / Feast</h2>
+                <div id="birthday-section-heading" class="section-heading">
+                  <h2 id="birthday-entry-title" class="entry-title">
+                    Birthday / Feast
+                  </h2>
                 </div>
                 <div className="scrollable-content" id="birthfeast">
                   {upcomingBirthdays.length > 0 ? (
@@ -233,8 +230,7 @@ function Upcoming() {
                       return (
                         <div
                           className="event-wrap d-flex flex-wrap justify-content-flex-start"
-                          key={index}
-                        >
+                          key={index}>
                           <figure className="m-0" id="upcome">
                             <img
                               style={{
@@ -254,8 +250,7 @@ function Upcoming() {
                                   style={{
                                     fontSize: "15px",
                                     fontWeight: "bold",
-                                  }}
-                                >
+                                  }}>
                                   {item.membername}
                                 </a>
                               </h3>
@@ -266,8 +261,7 @@ function Upcoming() {
                                   style={{
                                     fontSize: "15px",
                                     color: "#6b1d2f",
-                                  }}
-                                >
+                                  }}>
                                   {item.dob}
                                 </a>
                               </div>

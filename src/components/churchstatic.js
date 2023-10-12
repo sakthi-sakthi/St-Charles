@@ -115,9 +115,13 @@ const VerticalTabs2 = () => {
                     marginTop: "10px",
                     fontWeight: "bold",
                   }}>
-                  {tabContent1[activeTab1]}
+                  <span style={{ fontSize: "19px", color: "black" }}>
+                    {tabContent1[activeTab1]}
+                  </span>
                   <br />
-                  {activeTab1}
+                  <span style={{ fontSize: "15px", color: "red" }}>
+                    {activeTab1}
+                  </span>
                 </p>
               </div>
             </div>
@@ -176,9 +180,13 @@ const VerticalTabs2 = () => {
                     marginTop: "10px",
                     fontWeight: "bold",
                   }}>
-                  {tabContent2[activeTab2]}
+                  <span style={{ fontSize: "19px", color: "black" }}>
+                    {tabContent2[activeTab2]}
+                  </span>
                   <br />
-                  {activeTab2}
+                  <span style={{ fontSize: "15px", color: "red" }}>
+                    {activeTab2}
+                  </span>
                 </p>
               </div>
             </div>
@@ -201,4 +209,3 @@ const VerticalTabs2 = () => {
 };
 
 export default VerticalTabs2;
-

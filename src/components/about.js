@@ -24,10 +24,7 @@ function About() {
                 </div>
 
                 <center>
-                  <Link
-                    to="https://stcharlesborromeo.pages.dev/history"
-                    target="_blank"
-                  >
+                  <Link to="https://stcharlesborromeo.pages.dev/history">
                     <button className="btn btn-primary mt-3">Read More</button>
                   </Link>
                 </center>

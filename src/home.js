@@ -28,7 +28,8 @@ function Home() {
     <div>
       <Header />
       <Slider />
-      {isMobile ? null : <Scrollbar />}
+      {/* {isMobile ? null : <Scrollbar />} */}
+      <Scrollbar />
       <About />
       <Ourstatic />
       {isMobile ? null : <Churchstatic />}

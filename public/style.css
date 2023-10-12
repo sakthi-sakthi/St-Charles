@@ -2271,6 +2271,7 @@ ul.tabs-nav .tab-nav.active {
   background-size: inherit;
   background-attachment: scroll;
   background-position: 0 0;
+  height: 36px;
 }
 
 .marqueenews {
@@ -2321,16 +2322,17 @@ div.main-tile-text h2 {
     text-align: center;
   }
   div.main-tile-text h1 {
-    font-size: 29px !important;
+    font-size: 27px !important;
     letter-spacing: -1px;
     line-height: 42px;
+    margin-top: -1rem;
   }
   div.main-tile-text h2 {
     font-size: 15px;
   }
   div.sp-column img {
     max-width: 83px;
-    margin-left: 7rem !important;
+    /* margin-left: 7rem !important; */
   }
 
   #sp-section-2 {
@@ -2720,7 +2722,7 @@ div.main-tile-text h2 {
 }
 
 .marquee p {
-  margin-top: 5px;
+  margin-top: -10px;
   animation: marquee-scroll 40s linear infinite;
 }
 .marquee p:hover {
@@ -3030,6 +3032,7 @@ div.main-tile-text h2 {
   font-weight: bold;
   text-transform: uppercase;
   margin-right: 23px;
+  margin-bottom: 30px;
 }
 .ripple {
   position: relative;
@@ -3144,4 +3147,103 @@ div.main-tile-text h2 {
 
 .dropdown-menu .active {
   background-color: #e0ab08 !important;
+}
+
+@media screen and (max-width: 600px) {
+  .table th,
+  .table td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .table_header {
+    display: none;
+  }
+}
+/* Add these styles for mobile responsiveness */
+@media (max-width: 768px) {
+  #mySlider {
+    height: 210px; /* Set your desired height for mobile view */
+  }
+
+  #mySlider .swiper-slide img {
+    width: 100%; /* Make images responsive */
+    height: 100%; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the entire image is visible */
+  }
+}
+@media (max-width: 768px) {
+  .welcome-content .entry-title {
+    font-size: 30px; /* Adjust font size for smaller screens */
+    padding-bottom: 16px; /* Adjust padding */
+  }
+}
+@media (max-width: 768px) {
+  .welcome-content .entry-content {
+    font-size: 18px; /* Adjust font size for smaller screens */
+    padding: 10px; /* Adjust padding */
+  }
+}
+
+/* Original styles for larger screens */
+#sp-section-2 {
+  background-color: #f8f8f8; /* Add your original background color */
+}
+
+.main-tile-text h1 {
+  font-size: 36px; /* Adjust the font size for smaller screens */
+}
+
+.main-tile-text h2 {
+  font-size: 18px; /* Adjust the font size for smaller screens */
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  #sp-section-2 {
+    padding: 20px 0; /* Adjust padding for smaller screens */
+  }
+
+  #sp-right-logo {
+    display: none; /* Hide the right logo on smaller screens */
+  }
+
+  #sp-left-logo {
+    max-width: 100%; /* Allow left logo to take full width */
+    text-align: center; /* Center the left logo */
+  }
+
+  .main-tile-text {
+    text-align: center; /* Center text on smaller screens */
+  }
+
+  .main-tile-text h1 {
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
+
+  .main-tile-text h2 {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .site-description {
+    display: block; /* Display address text */
+    font-size: 14px; /* Adjust font size for smaller screens */
+    margin-top: 10px; /* Add space between h2 and address text */
+  }
+}
+@media (max-width: 768px) {
+  #birthday-section-heading {
+    margin-top: 2rem; /* Adjust margin for smaller screens */
+  }
+
+  #birthday-entry-title {
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+}
+@media (max-width: 768px) {
+  #birthfeast {
+    max-height: 466px; /* Remove max-height on smaller screens */
+    overflow-y: hidden; /* Allow content to be visible on smaller screens */
+  }
 }

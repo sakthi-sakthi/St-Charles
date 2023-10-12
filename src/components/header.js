@@ -327,25 +327,25 @@ function Header() {
                     to="/cosaf"
                     className="dropdown-item"
                     activeClassName="active">
-                    Cosaf
+                    COSAF
                   </NavLink>
                   <NavLink
                     to="/fac"
                     className="dropdown-item"
                     activeClassName="active">
-                    Fac
+                    FAC
                   </NavLink>
                   <NavLink
                     to="/msp"
                     className="dropdown-item"
                     activeClassName="active">
-                    Msp
+                    MSP
                   </NavLink>
                   <NavLink
                     to="/ecep"
                     className="dropdown-item"
                     activeClassName="active">
-                    Ecep
+                    ECEP
                   </NavLink>
                   {/* Add more NavLink items for other commission links */}
                 </div>

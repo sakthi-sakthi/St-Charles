@@ -2,8 +2,8 @@ import React, { useEffect, useRef } from "react";
 import Swiper from "swiper";
 
 function Slider() {
+  const sliderId = "mySlider"; // Set your desired id
   const slideshowRef = useRef(null);
-  // const [currentSlide, setCurrentSlide] = useState(0);
 
   const data = [
     {
@@ -30,9 +30,7 @@ function Slider() {
   ];
 
   useEffect(() => {
-    // const slides = slideshowRef.current.querySelectorAll(".swiper-slide");
-
-    const swiper = new Swiper(slideshowRef.current, {
+    const swiper = new Swiper(`#${sliderId}`, {
       loop: true,
       navigation: {
         nextEl: ".swiper-button-next",
@@ -42,7 +40,7 @@ function Slider() {
       spaceBetween: 20,
       on: {
         slideChange: () => {
-          // setCurrentSlide(swiper.realIndex);
+          // Handle slide change if needed
         },
       },
     });
@@ -55,10 +53,13 @@ function Slider() {
       clearInterval(interval);
       swiper.destroy();
     };
-  }, []);
+  }, [sliderId]);
 
   return (
-    <div className="swiper-container hero-slider" ref={slideshowRef}>
+    <div
+      id={sliderId}
+      className="swiper-container hero-slider"
+      ref={slideshowRef}>
       <div className="swiper-wrapper">
         {data?.map((data) => (
           <div className="swiper-slide hero-content-wrap" key={data.id}>
