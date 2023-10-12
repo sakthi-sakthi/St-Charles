@@ -3138,3 +3138,10 @@ div.main-tile-text h2 {
   color: #fff;
   cursor: pointer;
 }
+.nav-item.active {
+  background-color: #e0ab08;
+}
+
+.dropdown-menu .active {
+  background-color: #e0ab08 !important;
+}

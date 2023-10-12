@@ -1,6 +1,54 @@
 import React from "react";
-
+import { Link, NavLink, useLocation } from "react-router-dom";
 function Header() {
+  const location = useLocation();
+  const Foundation = {
+    motherhouse: "/motherhouse",
+    founder: "/founder",
+  };
+  const Eastern = {
+    "provincial-council": "/provincial-council",
+    history: "/history",
+    "the-motto-of-the-province": "/the-motto-of-the-province",
+    newsletter: "/newsletter",
+  };
+  const commission = {
+    cosaf: "/cosaf",
+    fac: "/fac",
+    msp: "/msp",
+    ecep: "/ecep",
+  };
+  const formationdata = {
+    formation: "/formation",
+    candidacy: "/candidacy",
+    postulancy: "/postulancy",
+    novitiate: "/novitiate",
+    juniorate: "/juniorate",
+  };
+  const Community = {
+    ranipet: "/ranipet",
+    jolarpet: "/jolarpet",
+    yercaud: "/yercaud",
+    chilakaluripet: "/chilakaluripet",
+    yelagiri: "/yelagiri",
+    madurai: "/madurai",
+    thirupattur: "/thirupattur",
+    perambur: "/perambur",
+    kanapparu: "/kanapparu",
+    kadakkal: "/kadakkal",
+    perumon: "/perumon",
+    vilathikulam: "/vilathikulam",
+    vinayagapuram: "/vinayagapuram",
+    ammoor: "/ammoor",
+    puliampatty: "/puliampatty",
+    gummidipoondi: "/gummidipoondi",
+    mugandanur: "/mugandanur",
+    kizhakkambalam: "/kizhakkambalam",
+    ponnapally: "/ponnapally",
+    periakottai: "/periakottai",
+    dindigul: "/dindigul",
+    muttom: "/muttom",
+  };
   return (
     <>
       <header className="site-header">
@@ -35,8 +83,7 @@ function Header() {
                     <a
                       href="https://www.facebook.com/sharer.php?u=https://stcharleschennai.com/index.php/events-and-celebrations"
                       target="_blank"
-                      rel="noreferrer"
-                    >
+                      rel="noreferrer">
                       <i className="fab fa-facebook" />
                     </a>
                   </div>
@@ -44,8 +91,7 @@ function Header() {
                     <a
                       href="https://youtu.be/JgRNH5FqY-0"
                       target="_blank"
-                      rel="noreferrer"
-                    >
+                      rel="noreferrer">
                       <i className="fab fa-youtube" />
                     </a>
                   </div>
@@ -152,180 +198,325 @@ function Header() {
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="/">
-                  Home <span class="sr-only">(current)</span>
-                </a>
+              <li
+                className={`nav-item ${
+                  location.pathname === "/" ? "active" : ""
+                }`}>
+                <Link to="/" className="nav-link">
+                  Home
+                </Link>
               </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="/"
+              <li
+                className={`nav-item dropdown ${
+                  Object.values(Foundation).some((value) =>
+                    location.pathname.includes(value)
+                  )
+                    ? "active"
+                    : ""
+                }`}>
+                <NavLink
+                  to="/"
+                  className="nav-link dropdown-toggle"
                   id="navbarDropdownMenuLink"
                   role="button"
                   data-toggle="dropdown"
                   aria-haspopup="true"
                   aria-expanded="false">
                   Foundation
-                </a>
+                </NavLink>
                 <div
-                  class="dropdown-menu"
+                  className="dropdown-menu"
                   aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="/motherhouse">
+                  <NavLink
+                    to="/motherhouse"
+                    className="dropdown-item"
+                    activeClassName="active">
                     Mother House
-                  </a>
-                  <a class="dropdown-item" href="/founder">
+                  </NavLink>
+                  <NavLink
+                    to="/founder"
+                    className="dropdown-item"
+                    activeClassName="active">
                     Founder
-                  </a>
+                  </NavLink>
+                  {/* Add more NavLink items for other Foundation links */}
                 </div>
               </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="/history"
+              <li
+                className={`nav-item dropdown ${
+                  Object.values(Eastern).some((value) =>
+                    location.pathname.includes(value)
+                  )
+                    ? "active"
+                    : ""
+                }`}>
+                <NavLink
+                  to="/history"
+                  className="nav-link dropdown-toggle"
                   id="navbarDropdownMenuLink2"
                   role="button"
                   data-toggle="dropdown"
                   aria-haspopup="true"
                   aria-expanded="false">
                   Eastern Province
-                </a>
+                </NavLink>
                 <div
-                  class="dropdown-menu"
+                  className="dropdown-menu"
                   aria-labelledby="navbarDropdownMenuLink2">
-                  <a class="dropdown-item" href="/provincial-council">
+                  <NavLink
+                    to="/provincial-council"
+                    className="dropdown-item"
+                    activeClassName="active">
                     Provincial Council
-                  </a>
-                  <a class="dropdown-item" href="/history">
+                  </NavLink>
+                  <NavLink
+                    to="/history"
+                    className="dropdown-item"
+                    activeClassName="active">
                     History
-                  </a>
-                  <a class="dropdown-item" href="/the-motto-of-the-province">
+                  </NavLink>
+                  <NavLink
+                    to="/the-motto-of-the-province"
+                    className="dropdown-item"
+                    activeClassName="active">
                     The Motto of the Province
-                  </a>
-                  <a class="dropdown-item" href="/newsletter">
+                  </NavLink>
+                  <NavLink
+                    to="/newsletter"
+                    className="dropdown-item"
+                    activeClassName="active">
                     News Letter / Circular
-                  </a>
+                  </NavLink>
+                  {/* Add more NavLink items for other Eastern Province links */}
                 </div>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/general-administration">
+
+              <li
+                className={`nav-item ${
+                  location.pathname === "/general-administration"
+                    ? "active"
+                    : ""
+                }`}>
+                <Link to="/general-administration" className="nav-link">
                   General Administration
-                </a>
+                </Link>
               </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="/"
+
+              <li
+                className={`nav-item dropdown ${
+                  Object.values(commission).some((value) =>
+                    location.pathname.includes(value)
+                  )
+                    ? "active"
+                    : ""
+                }`}>
+                <NavLink
+                  to="/"
+                  className="nav-link dropdown-toggle"
                   id="navbarDropdownMenuLink3"
                   role="button"
                   data-toggle="dropdown"
                   aria-haspopup="true"
                   aria-expanded="false">
                   Commission
-                </a>
+                </NavLink>
                 <div
-                  class="dropdown-menu"
+                  className="dropdown-menu"
                   aria-labelledby="navbarDropdownMenuLink3">
-                  <a class="dropdown-item" href="/cosaf">
+                  <NavLink
+                    to="/cosaf"
+                    className="dropdown-item"
+                    activeClassName="active">
                     Cosaf
-                  </a>
-                  <a class="dropdown-item" href="/fac">
+                  </NavLink>
+                  <NavLink
+                    to="/fac"
+                    className="dropdown-item"
+                    activeClassName="active">
                     Fac
-                  </a>
-                  <a class="dropdown-item" href="/msp">
+                  </NavLink>
+                  <NavLink
+                    to="/msp"
+                    className="dropdown-item"
+                    activeClassName="active">
                     Msp
-                  </a>
-                  <a class="dropdown-item" href="/ecep">
+                  </NavLink>
+                  <NavLink
+                    to="/ecep"
+                    className="dropdown-item"
+                    activeClassName="active">
                     Ecep
-                  </a>
+                  </NavLink>
+                  {/* Add more NavLink items for other commission links */}
                 </div>
               </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle community"
-                  href="/"
+
+              <li
+                className={`nav-item dropdown ${
+                  Object.values(Community).some((value) =>
+                    location.pathname.includes(value)
+                  )
+                    ? "active"
+                    : ""
+                }`}>
+                <NavLink
+                  to="/"
+                  className="nav-link dropdown-toggle community"
                   id="navbarDropdownMenuLink4"
                   role="button"
                   data-toggle="dropdown"
                   aria-haspopup="true"
                   aria-expanded="false">
                   Community
-                </a>
+                </NavLink>
                 <div
-                  class="dropdown-menu"
+                  className="dropdown-menu"
                   aria-labelledby="navbarDropdownMenuLink4">
-                  <a class="dropdown-item" href="/ranipet">
+                  <NavLink
+                    to="/ranipet"
+                    className="dropdown-item"
+                    activeClassName="active">
                     Ranipet
-                  </a>
-                  <a class="dropdown-item" href="/jolarpet">
+                  </NavLink>
+                  <NavLink
+                    to="/jolarpet"
+                    className="dropdown-item"
+                    activeClassName="active">
                     Jolarpet
-                  </a>
-                  <a class="dropdown-item" href="/yercaud">
+                  </NavLink>
+                  <NavLink
+                    to="/yercaud"
+                    className="dropdown-item"
+                    activeClassName="active">
                     Yercaud
-                  </a>
-                  <a class="dropdown-item" href="/chilakaluripet">
+                  </NavLink>
+                  <NavLink
+                    to="/chilakaluripet"
+                    className="dropdown-item"
+                    activeClassName="active">
                     Chilakaluripet
-                  </a>
-                  <a class="dropdown-item" href="/yelagiri">
+                  </NavLink>
+                  <NavLink
+                    to="/yelagiri"
+                    className="dropdown-item"
+                    activeClassName="active">
                     Yelagiri
-                  </a>
-                  <a class="dropdown-item" href="/madurai">
+                  </NavLink>
+                  <NavLink
+                    to="/madurai"
+                    className="dropdown-item"
+                    activeClassName="active">
                     Madurai
-                  </a>
-                  <a class="dropdown-item" href="/thirupattur">
+                  </NavLink>
+                  <NavLink
+                    to="/thirupattur"
+                    className="dropdown-item"
+                    activeClassName="active">
                     Thirupattur
-                  </a>
-                  <a class="dropdown-item" href="/perambur">
+                  </NavLink>
+                  <NavLink
+                    to="/perambur"
+                    className="dropdown-item"
+                    activeClassName="active">
                     Perambur
-                  </a>
-                  <a class="dropdown-item" href="/kanapparu">
+                  </NavLink>
+                  <NavLink
+                    to="/kanapparu"
+                    className="dropdown-item"
+                    activeClassName="active">
                     Kanapparu
-                  </a>
-                  <a class="dropdown-item" href="/kadakkal">
+                  </NavLink>
+                  <NavLink
+                    to="/kadakkal"
+                    className="dropdown-item"
+                    activeClassName="active">
                     Kadakkal
-                  </a>
-                  <a class="dropdown-item" href="/perumon">
+                  </NavLink>
+                  <NavLink
+                    to="/perumon"
+                    className="dropdown-item"
+                    activeClassName="active">
                     Perumon
-                  </a>
-                  <a class="dropdown-item" href="/vilathikulam">
+                  </NavLink>
+                  <NavLink
+                    to="/vilathikulam"
+                    className="dropdown-item"
+                    activeClassName="active">
                     Vilathikulam
-                  </a>
-                  <a class="dropdown-item" href="/vinayagapuram">
+                  </NavLink>
+                  <NavLink
+                    to="/vinayagapuram"
+                    className="dropdown-item"
+                    activeClassName="active">
                     Vinayagapuram
-                  </a>
-                  <a class="dropdown-item" href="/ammoor">
+                  </NavLink>
+                  <NavLink
+                    to="/ammoor"
+                    className="dropdown-item"
+                    activeClassName="active">
                     Ammoor
-                  </a>
-                  <a class="dropdown-item" href="/puliampatty">
+                  </NavLink>
+                  <NavLink
+                    to="/puliampatty"
+                    className="dropdown-item"
+                    activeClassName="active">
                     Puliyampatty
-                  </a>
-                  <a class="dropdown-item" href="/gummidipoondi">
+                  </NavLink>
+                  <NavLink
+                    to="/gummidipoondi"
+                    className="dropdown-item"
+                    activeClassName="active">
                     Gummidipoondi
-                  </a>
-                  <a class="dropdown-item" href="/mugandanur">
+                  </NavLink>
+                  <NavLink
+                    to="/mugandanur"
+                    className="dropdown-item"
+                    activeClassName="active">
                     Mugandanur
-                  </a>
-                  <a class="dropdown-item" href="/kizhakkambalam">
+                  </NavLink>
+                  <NavLink
+                    to="/kizhakkambalam"
+                    className="dropdown-item"
+                    activeClassName="active">
                     Kizhakkambalam
-                  </a>
-                  <a class="dropdown-item" href="/ponnapally">
+                  </NavLink>
+                  <NavLink
+                    to="/ponnapally"
+                    className="dropdown-item"
+                    activeClassName="active">
                     Ponnapally
-                  </a>
-                  <a class="dropdown-item" href="/periakottai">
+                  </NavLink>
+                  <NavLink
+                    to="/periakottai"
+                    className="dropdown-item"
+                    activeClassName="active">
                     Periakottai
-                  </a>
-                  <a class="dropdown-item" href="/dindigul">
+                  </NavLink>
+                  <NavLink
+                    to="/dindigul"
+                    className="dropdown-item"
+                    activeClassName="active">
                     Dindigul
-                  </a>
-                  <a class="dropdown-item" href="/muttom">
+                  </NavLink>
+                  <NavLink
+                    to="/muttom"
+                    className="dropdown-item"
+                    activeClassName="active">
                     Muttom
-                  </a>
+                  </NavLink>
                 </div>
               </li>
 
-              <li class="nav-item dropdown">
+              <li
+                className={`nav-item dropdown ${
+                  Object.values(formationdata).some((value) =>
+                    location.pathname.includes(value)
+                  )
+                    ? "active"
+                    : ""
+                }`}>
                 <a
-                  class="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle"
                   href="/"
                   id="navbarDropdownMenuLink5"
                   role="button"
@@ -335,39 +526,48 @@ function Header() {
                   Formation
                 </a>
                 <div
-                  class="dropdown-menu"
+                  className="dropdown-menu"
                   aria-labelledby="navbarDropdownMenuLink5">
-                  <a class="dropdown-item" href="/formation">
+                  <NavLink to="/formation" className="dropdown-item">
                     Formation
-                  </a>
-                  <a class="dropdown-item" href="/candidacy">
+                  </NavLink>
+                  <NavLink to="/candidacy" className="dropdown-item">
                     Candidacy
-                  </a>
-                  <a class="dropdown-item" href="/postulancy">
-                    Posultancy
-                  </a>
-                  <a class="dropdown-item" href="/novitiate">
+                  </NavLink>
+                  <NavLink to="/postulancy" className="dropdown-item">
+                    Postulancy
+                  </NavLink>
+                  <NavLink to="/novitiate" className="dropdown-item">
                     Novitiate
-                  </a>
-                  <a class="dropdown-item" href="/juniorate">
+                  </NavLink>
+                  <NavLink to="/juniorate" className="dropdown-item">
                     Juniorate
-                  </a>
+                  </NavLink>
                 </div>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/vocation-promotion">
+              <li
+                className={`nav-item ${
+                  location.pathname === "/vocation-promotion" ? "active" : ""
+                }`}>
+                <Link to="/vocation-promotion" className="nav-link">
                   Vocation Promotion
-                </a>
+                </Link>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/gallery">
-                  Gallery
-                </a>
+              <li
+                className={`nav-item ${
+                  location.pathname === "/gallery" ? "active" : ""
+                }`}>
+                <Link to="/gallery" className="nav-link">
+                  Gallery Us
+                </Link>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/contact-us">
+              <li
+                className={`nav-item ${
+                  location.pathname === "/contact-us" ? "active" : ""
+                }`}>
+                <Link to="/contact-us" className="nav-link">
                   Contact Us
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
