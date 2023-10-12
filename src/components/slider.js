@@ -1,25 +1,37 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import Swiper from "swiper";
-import axios from "axios";
 
 function Slider() {
   const slideshowRef = useRef(null);
-  const [sliderData, setSliderData] = useState([]); // Initialize as an empty array
+  // const [currentSlide, setCurrentSlide] = useState(0);
+
+  const data = [
+    {
+      id: 1,
+      img: "images/logos/s1.jpg",
+      title: "Bring water to the children 1",
+      content:
+        "  Lorem ipsum dolor sit amet, consectetur adipiscingelit. Mauris tempus vestibulum mauris.",
+    },
+    {
+      id: 2,
+      img: "images/logos/s2.png",
+      title: "Bring water to the children 2",
+      content:
+        "  Lorem ipsum dolor sit amet, consectetur adipiscingelit. Mauris tempus vestibulum mauris.",
+    },
+    {
+      id: 3,
+      img: "images/logos/s3.png",
+      title: "Bring water to the children 3",
+      content:
+        "  Lorem ipsum dolor sit amet, consectetur adipiscingelit. Mauris tempus vestibulum mauris.",
+    },
+  ];
 
   useEffect(() => {
-    // Fetch data from your API
-    axios
-      .get("http://127.0.0.1:8000/api/get/slider")
-      .then((response) => {
-        setSliderData(response.data.data);
-        initializeSlider();
-      })
-      .catch((error) => {
-        console.error("Error fetching slider data:", error);
-      });
-  }, []);
+    // const slides = slideshowRef.current.querySelectorAll(".swiper-slide");
 
-  const initializeSlider = () => {
     const swiper = new Swiper(slideshowRef.current, {
       loop: true,
       navigation: {
@@ -28,26 +40,31 @@ function Slider() {
       },
       slidesPerView: 1,
       spaceBetween: 20,
+      on: {
+        slideChange: () => {
+          // setCurrentSlide(swiper.realIndex);
+        },
+      },
     });
 
     const interval = setInterval(() => {
       swiper.slideNext();
-    }, 8000);
+    }, 5000);
 
     return () => {
       clearInterval(interval);
       swiper.destroy();
     };
-  };
+  }, []);
 
   return (
     <div className="swiper-container hero-slider" ref={slideshowRef}>
       <div className="swiper-wrapper">
-        {sliderData?.map((item, index) => (
-          <div className="swiper-slide hero-content-wrap" key={index}>
-            <img src={item?.image} alt={`Slide ${index + 1}`} />
+        {data?.map((data) => (
+          <div className="swiper-slide hero-content-wrap" key={data.id}>
+            <img src={data.img} alt="Bring water to the children" />
             <div className="hero-content-overlay position-absolute w-100 h-100">
-              <div className="container h-100"></div>
+              <div className="container h-100"> </div>
             </div>
           </div>
         ))}
