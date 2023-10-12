@@ -924,7 +924,13 @@ ul.tabs-nav .tab-nav.active {
 }
 
 #upcevent {
-  width: calc(100% - 122px);
+  width: calc(113% - 122px);
+  margin-top: -13px;
+  color: #000;
+}
+
+#upccevent {
+  width: calc(114% - 121px);
   margin-top: -13px;
   color: #000;
 }
@@ -2435,6 +2441,10 @@ div.main-tile-text h2 {
   width: 72px;
 }
 #upcome {
+  width: 72px;
+  color: #000;
+}
+#upccome {
   width: 72px;
   color: #000;
 }

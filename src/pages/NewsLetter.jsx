@@ -23,15 +23,19 @@ function NewsLetter() {
     return (
         <>
             <Header />
-            <div className="container">
-                <div className="row">
-                    <div className="col-12">
-                        <div className="section-heading">
-                            <h2 className="entry-title">Newsletter / Circular</h2>
-                        </div>
+            <div className="home-mother">
+                <div className="container" style={{ padding: "30px" }}>
+                    <h3 className="entry-title motherhouse">
+                        <a href="/newsletter">Newsletter / Circular</a>
+                    </h3>
+                    <div className="brudcrums">
+                        <a href="/">Home</a>&nbsp;»&nbsp;{" "}
+                        <span className="pagename">Newsletter / Circular</span>
                     </div>
                 </div>
-
+            </div>
+            <div className="container">
+                <br/>
                 <div className="row">
                     {pdfLinks.length > 0 ? (
                         pdfLinks.map((pdf, index) => (

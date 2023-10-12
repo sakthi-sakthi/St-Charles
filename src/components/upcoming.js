@@ -55,30 +55,40 @@ function Upcoming() {
       });
   }, []);
 
+    eventsData.sort((a, b) => {
+      const dateA = new Date(a.date);
+      const dateB = new Date(b.date);
+      return dateB - dateA;
+    });
   // upcoming events api start
 
   const upcomeData = [
     {
-      title: "Fundraiser for Kids",
+      title: "WELCOME TO THE SISTERS OF ST. CHARLES BORROMEO",
       date: "sept 25, 2018",
-      imageSrc: "images/event-1.jpg",
+      imageSrc: "https://cdn-icons-png.flaticon.com/512/3364/3364789.png",
     },
     {
-      title: "Bring water to the children",
-      date: "Aug 25, 2018",
-      imageSrc: "images/event-2.jpg",
+      title: "WELCOME TO THE SISTERS OF ST. CHARLES BORROMEO",
+      date: "Aug 25, 2023",
+      imageSrc: "https://cdn-icons-png.flaticon.com/512/3364/3364789.png",
     },
     {
-      title: "Another Event",
-      date: "Aug 25, 2018",
-      imageSrc: "images/event-3.jpg",
+      title: "WELCOME TO THE SISTERS OF ST. CHARLES BORROMEO",
+      date: "Oct 25, 2023",
+      imageSrc: "https://cdn-icons-png.flaticon.com/512/3364/3364789.png",
     },
     {
-      title: "Another Event",
-      date: "Aug 25, 2018",
-      imageSrc: "images/event-3.jpg",
+      title: "WELCOME TO THE SISTERS OF ST. CHARLES BORROMEO",
+      date: "Dec 25, 2022",
+      imageSrc: "https://cdn-icons-png.flaticon.com/512/3364/3364789.png",
     },
   ];
+  upcomeData.sort((a, b) => {
+    const dateA = new Date(a.date);
+    const dateB = new Date(b.date);
+    return dateB - dateA;
+  });
   return (
     <>
       <div className="home-page-events">
@@ -90,23 +100,53 @@ function Upcoming() {
                   <h2 className="entry-title">News & Events</h2>
                 </div>
                 <div className="scrollable-content" id="provinceprog">
-                  {upcomeData.map((upcomeevent, index) => (
-                    <div className="event-wrap d-flex flex-wrap justify-content-between">
-                      <figure className="m-0" id="upcome">
-                        <img src={upcomeevent.imageSrc} alt="" />
-                      </figure>
-                      <div className="event-content-wrap" id="upcevent">
-                        <header className="entry-header d-flex flex-wrap align-items-center">
-                          <h3 className="entry-title w-100 m-0">
-                            <a href="/calendar">{upcomeevent.title}</a>
-                          </h3>
-                          <div className="posted-date">
-                            <a href="/calendar">{upcomeevent.date}</a>
-                          </div>
-                        </header>
+                  {upcomeData.length > 0 ? (
+                    upcomeData.map((upcomeevent, index) => (
+                      <div className="event-wrap d-flex flex-wrap justify-content-between">
+                        <figure className="m-0" id="upcome">
+                          <img
+                            src={upcomeevent.imageSrc}
+                            style={{
+                              borderRadius: "50%",
+                              width: "48px",
+                              height: "48px",
+                            }}
+                            alt=""
+                          />
+                        </figure>
+                        <div className="event-content-wrap" id="upcevent">
+                          <header className="entry-header d-flex flex-wrap align-items-center">
+                            <h3 className="entry-title w-100 m-0">
+                              <a
+                                href="/calendar"
+                                style={{
+                                  fontSize: "14px",
+                                  fontWeight: "bold",
+                                }}
+                              >
+                                {upcomeevent.title}
+                              </a>
+                            </h3>
+                            <div className="posted-date">
+                              <a
+                                href="/calendar"
+                                style={{
+                                  fontSize: "14px",
+                                  color: "#6b1d2f",
+                                }}
+                              >
+                                {upcomeevent.date}
+                              </a>
+                            </div>
+                          </header>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))
+                  ) : (
+                    <p style={{ color: "black", fontWeight: "bold" }}>
+                      No News Available
+                    </p>
+                  )}
                 </div>
               </div>
             </div>
@@ -117,26 +157,58 @@ function Upcoming() {
                   <h2 className="entry-title">Provincial Program</h2>
                 </div>
                 <div className="scrollable-content" id="provincialprog">
-                  {eventsData?.map((event, index) => (
-                    <div
-                      className="event-wrap d-flex flex-wrap justify-content-between"
-                      key={index}
-                    >
-                      <figure className="m-0" id="upcome">
-                        <img src={"images/event-1.jpg"} alt="" />
-                      </figure>
-                      <div className="event-content-wrap" id="upcevent">
-                        <header className="entry-header d-flex flex-wrap align-items-center">
-                          <h3 className="entry-title w-100 m-0">
-                            <a href="/calendar">{event?.name}</a>
-                          </h3>
-                          <div className="posted-date">
-                            <a href="/calendar">{event?.date}</a>
-                          </div>
-                        </header>
+                  {eventsData?.length > 0 ? (
+                    eventsData.map((event, index) => (
+                      <div
+                        className="event-wrap d-flex flex-wrap justify-content-between"
+                        key={index}
+                      >
+                        <figure className="m-0" id="upccome">
+                          <img
+                            src={
+                              "https://www.clipartkey.com/mpngs/m/294-2947450_music-festival-icon-png.png"
+                            }
+                            style={{
+                              borderRadius: "50%",
+                              width: "48px",
+                              height: "48px",
+                            }}
+                            alt=""
+                          />
+                        </figure>
+                        <div className="event-content-wrap" id="upccevent">
+                          <header className="entry-header d-flex flex-wrap align-items-center">
+                            <h3 className="entry-title w-100 m-0">
+                              <a
+                                href="/calendar"
+                                style={{
+                                  fontSize: "14px",
+                                  fontWeight: "bold",
+                                }}
+                              >
+                                {event?.name}
+                              </a>
+                            </h3>
+                            <div className="posted-date">
+                              <a
+                                href="/calendar"
+                                style={{
+                                  fontSize: "14px",
+                                  color: "#6b1d2f",
+                                }}
+                              >
+                                {event?.date}
+                              </a>
+                            </div>
+                          </header>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))
+                  ) : (
+                    <p style={{ color: "black", fontWeight: "bold" }}>
+                      No Provincial Program Available
+                    </p>
+                  )}
                 </div>
               </div>
             </div>
