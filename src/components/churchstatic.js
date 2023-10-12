@@ -16,14 +16,14 @@ const tabContent1 = {
   "Councillor FAC": "Sr. Samboorna Mary",
 };
 const tabImages2 = {
-  SuperiorGeneral: "images/sisters/Sr.Alena.png",
+  "Superior General": "images/sisters/Sr.Alena.png",
   "Assistant Superior General": "images/sisters/Sr.Christine.png",
   "Chairperson of Spirituality": "images/sisters/Sr.Virgy.png",
   "Chairperson of Financial": "images/sisters/Sr.josephine.png",
   "Chairperson of Medico": "images/sisters/Sr.preethy.png",
 };
 const tabContent2 = {
-  SuperiorGeneral: "Sr. Alena",
+  "Superior General": "Sr. Alena",
   "Assistant Superior General": "Sr. Christine",
   "Chairperson of Spirituality": "Sr. Virgy",
   "Chairperson of Financial": "Sr. Josephine",
@@ -70,7 +70,7 @@ const VerticalTabs2 = () => {
   useEffect(() => {
     // Set the default tab for both boxes when the component mounts
     setActiveTab1("Provincial");
-    setActiveTab2("SuperiorGeneral");
+    setActiveTab2("Superior General");
   }, []);
 
   return (
@@ -96,9 +96,7 @@ const VerticalTabs2 = () => {
                           fontSize: "16px",
                           fontWeight: "bold",
                           transition: "color 0.3s ease",
-                        }}
-
-                      >
+                        }}>
                         {key}
                       </Nav.Link>
                     </Nav.Item>
@@ -116,9 +114,10 @@ const VerticalTabs2 = () => {
                     textAlign: "center",
                     marginTop: "10px",
                     fontWeight: "bold",
-                  }}
-                >
-                  {tabContent1[activeTab1]} {/* Display the name */}
+                  }}>
+                  {tabContent1[activeTab1]}
+                  <br />
+                  {activeTab1}
                 </p>
               </div>
             </div>
@@ -129,8 +128,7 @@ const VerticalTabs2 = () => {
                 eventKey={key}
                 key={key}
                 className="tab-pane fade"
-                id={key}
-              >
+                id={key}>
                 {tabContent1[key]}
               </Tab.Pane>
             ))}
@@ -159,8 +157,7 @@ const VerticalTabs2 = () => {
                           fontSize: "16px",
                           fontWeight: "bold",
                           transition: "color 0.3s ease",
-                        }}
-                      >
+                        }}>
                         {key}
                       </Nav.Link>
                     </Nav.Item>
@@ -178,9 +175,10 @@ const VerticalTabs2 = () => {
                     textAlign: "center",
                     marginTop: "10px",
                     fontWeight: "bold",
-                  }}
-                >
-                  {tabContent2[activeTab2]} {/* Display the name */}
+                  }}>
+                  {tabContent2[activeTab2]}
+                  <br />
+                  {activeTab2}
                 </p>
               </div>
             </div>
@@ -191,8 +189,7 @@ const VerticalTabs2 = () => {
                 eventKey={key}
                 key={key}
                 className="tab-pane fade"
-                id={key}
-              >
+                id={key}>
                 {tabContent2[key]}
               </Tab.Pane>
             ))}

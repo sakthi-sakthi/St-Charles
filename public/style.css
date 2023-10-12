@@ -2710,8 +2710,11 @@ div.main-tile-text h2 {
 }
 
 .marquee p {
-  margin-top: 10px;
+  margin-top: 5px;
   animation: marquee-scroll 40s linear infinite;
+}
+.marquee p:hover {
+  animation-play-state: paused;
 }
 
 @keyframes marquee-scroll {
