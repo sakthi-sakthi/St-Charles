@@ -117,7 +117,7 @@ function Gallery() {
                 &times;
               </span>
               <div className="image-popup">
-                <img src={selectedImage} alt="Popup Image" />
+                <img src={selectedImage} alt="Popup" />
               </div>
             </div>
           )}

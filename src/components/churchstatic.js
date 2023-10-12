@@ -201,3 +201,4 @@ const VerticalTabs2 = () => {
 };
 
 export default VerticalTabs2;
+
