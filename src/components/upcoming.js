@@ -60,35 +60,29 @@ function Upcoming() {
     const dateB = new Date(b.date);
     return dateB - dateA;
   });
-  // upcoming events api start
 
-  const upcomeData = [
-    {
-      title: "WELCOME TO THE SISTERS OF ST. CHARLES BORROMEO",
-      date: "sept 25, 2018",
-      imageSrc: "https://cdn-icons-png.flaticon.com/512/3364/3364789.png",
-    },
-    {
-      title: "WELCOME TO THE SISTERS OF ST. CHARLES BORROMEO",
-      date: "Aug 25, 2023",
-      imageSrc: "https://cdn-icons-png.flaticon.com/512/3364/3364789.png",
-    },
-    {
-      title: "WELCOME TO THE SISTERS OF ST. CHARLES BORROMEO",
-      date: "Oct 25, 2023",
-      imageSrc: "https://cdn-icons-png.flaticon.com/512/3364/3364789.png",
-    },
-    {
-      title: "WELCOME TO THE SISTERS OF ST. CHARLES BORROMEO",
-      date: "Dec 25, 2022",
-      imageSrc: "https://cdn-icons-png.flaticon.com/512/3364/3364789.png",
-    },
-  ];
+  // upcoming events api start
+  const [upcomeData, setUpcomeData] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://testscb.cristolive.org/api/news/province/2")
+      .then((response) => {
+        if (Array.isArray(response.data)) {
+        }
+        setUpcomeData(response.data.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data from API:", error);
+      });
+  }, []);
+
   upcomeData.sort((a, b) => {
     const dateA = new Date(a.date);
     const dateB = new Date(b.date);
     return dateB - dateA;
   });
+
   return (
     <>
       <div className="home-page-events">
@@ -105,7 +99,7 @@ function Upcoming() {
                       <div className="event-wrap d-flex flex-wrap justify-content-between">
                         <figure className="m-0" id="upcome">
                           <img
-                            src={upcomeevent.imageSrc}
+                            src="https://cdn-icons-png.flaticon.com/512/3364/3364789.png"
                             style={{
                               borderRadius: "50%",
                               width: "48px",
@@ -120,10 +114,10 @@ function Upcoming() {
                               <a
                                 href="/calendar"
                                 style={{
-                                  fontSize: "14px",
+                                  fontSize: "13px",
                                   fontWeight: "bold",
                                 }}>
-                                {upcomeevent.title}
+                                {upcomeevent.name}
                               </a>
                             </h3>
                             <div className="posted-date">
@@ -179,7 +173,7 @@ function Upcoming() {
                               <a
                                 href="/calendar"
                                 style={{
-                                  fontSize: "14px",
+                                  fontSize: "13px",
                                   fontWeight: "bold",
                                 }}>
                                 {event?.name}

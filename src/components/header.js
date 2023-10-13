@@ -558,7 +558,7 @@ function Header() {
                   location.pathname === "/gallery" ? "active" : ""
                 }`}>
                 <Link to="/gallery" className="nav-link">
-                  Gallery Us
+                  Gallery
                 </Link>
               </li>
               <li
@@ -566,7 +566,15 @@ function Header() {
                   location.pathname === "/contact-us" ? "active" : ""
                 }`}>
                 <Link to="/contact-us" className="nav-link">
-                  Contact Us
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="http://epdata.stcharleschennai.com/web/login"
+                  className="nav-link"
+                  target="_blank">
+                  Login
                 </Link>
               </li>
             </ul>
