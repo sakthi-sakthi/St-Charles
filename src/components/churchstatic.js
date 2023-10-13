@@ -37,22 +37,6 @@ const boxStyles1 = {
   boxShadow: "0px 7px 16px 0px rgba(172 ,153 ,153, 0.5)",
   padding: "7px 25px 9px 22px",
   backgroundColor: "#f7f7f7",
-  maxWidth: "800px",
-  marginBottom: "20px",
-  // marginRight: "4rem",
-};
-const boxStyles2 = {
-  boxShadow: "0px 7px 16px 0px rgba(172 ,153 ,153, 0.5)",
-  padding: "7px 25px 9px 22px",
-  backgroundColor: "#f7f7f7",
-  maxWidth: "800px",
-  marginBottom: "20px",
-};
-const containerStyles = {
-  display: "flex",
-  justifyContent: "center", // Center align horizontally
-  gap: "2rem",
-  flexDirection: "row",
 };
 
 const VerticalTabs2 = () => {
@@ -74,135 +58,155 @@ const VerticalTabs2 = () => {
   }, []);
 
   return (
-    <div style={containerStyles}>
-      <div style={boxStyles1}>
-        <Tab.Container activeKey={activeTab1} onSelect={handleTabSelect1}>
-          <div className="section-heading">
-            <h2 className="entry-title">Provincial Council</h2>
-          </div>
-          <div className="entry-content">
-            <div className="d-flex">
-              <div style={{ flex: 1 }}>
-                <Nav variant="pills" className="flex-column">
+    <div
+      className="container-fluid py-3"
+      style={{ backgroundColor: "#f3f3f3" }}
+    >
+      <div className="container">
+        <div className="row">
+          <div className="col-md-6 col-12">
+            <div style={boxStyles1}>
+              <Tab.Container activeKey={activeTab1} onSelect={handleTabSelect1}>
+                <div className="section-heading">
+                  <h2 className="entry-title">Provincial Council</h2>
+                </div>
+                <div className="entry-content">
+                  <div className="row">
+                    <div className="col-md-7 col-lg-6">
+                      <Nav variant="pills" className="flex-column">
+                        {Object.keys(tabContent1).map((key) => (
+                          <Nav.Item key={key}>
+                            <Nav.Link
+                              eventKey={key}
+                              className={`nav-link mb-3 p-3 shadow ${
+                                activeTab1 === key ? "active" : ""
+                              }`}
+                              style={{
+                                fontFamily: "Arial, sans-serif",
+                                fontSize: "16px",
+                                fontWeight: "bold",
+                                transition: "color 0.3s ease",
+                              }}
+                            >
+                              {key}
+                            </Nav.Link>
+                          </Nav.Item>
+                        ))}
+                      </Nav>
+                    </div>
+                    <div className="col-md-5 col-lg-6">
+                      <div className="tab-image">
+                        <img
+                          src={tabImages1[activeTab1]}
+                          alt={`${activeTab1}`}
+                          style={imageStyles}
+                        />
+                        <p
+                          style={{
+                            textAlign: "center",
+                            marginTop: "10px",
+                            fontWeight: "bold",
+                          }}
+                        >
+                          <span style={{ fontSize: "19px", color: "black" }}>
+                            {tabContent1[activeTab1]}
+                          </span>
+                          <br />
+                          <span style={{ fontSize: "15px", color: "red" }}>
+                            {activeTab1}
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <Tab.Content>
                   {Object.keys(tabContent1).map((key) => (
-                    <Nav.Item key={key}>
-                      <Nav.Link
-                        eventKey={key}
-                        className={`nav-link mb-3 p-3 shadow ${
-                          activeTab1 === key ? "active" : ""
-                        }`}
-                        style={{
-                          fontFamily: "Arial, sans-serif",
-                          fontSize: "16px",
-                          fontWeight: "bold",
-                          transition: "color 0.3s ease",
-                        }}>
-                        {key}
-                      </Nav.Link>
-                    </Nav.Item>
+                    <Tab.Pane
+                      eventKey={key}
+                      key={key}
+                      className="tab-pane fade"
+                      id={key}
+                    >
+                      {tabContent1[key]}
+                    </Tab.Pane>
                   ))}
-                </Nav>
-              </div>
-              <div className="tab-image" style={{ marginLeft: "3rem" }}>
-                <img
-                  src={tabImages1[activeTab1]}
-                  alt={`${activeTab1}`}
-                  style={imageStyles}
-                />
-                <p
-                  style={{
-                    textAlign: "center",
-                    marginTop: "10px",
-                    fontWeight: "bold",
-                  }}>
-                  <span style={{ fontSize: "19px", color: "black" }}>
-                    {tabContent1[activeTab1]}
-                  </span>
-                  <br />
-                  <span style={{ fontSize: "15px", color: "red" }}>
-                    {activeTab1}
-                  </span>
-                </p>
-              </div>
+                </Tab.Content>
+              </Tab.Container>
             </div>
           </div>
-          <Tab.Content>
-            {Object.keys(tabContent1).map((key) => (
-              <Tab.Pane
-                eventKey={key}
-                key={key}
-                className="tab-pane fade"
-                id={key}>
-                {tabContent1[key]}
-              </Tab.Pane>
-            ))}
-          </Tab.Content>
-        </Tab.Container>
-      </div>
-
-      <div style={boxStyles2}>
-        <Tab.Container activeKey={activeTab2} onSelect={handleTabSelect2}>
-          <div className="section-heading">
-            <h2 className="entry-title">General Administration</h2>
-          </div>
-          <div className="entry-content">
-            <div className="d-flex">
-              <div style={{ flex: 1 }}>
-                <Nav variant="pills" className="flex-column">
+          <div className="col-md-6 col-12">
+            <div style={boxStyles1}>
+              <Tab.Container activeKey={activeTab2} onSelect={handleTabSelect2}>
+                <div className="section-heading">
+                  <h2 className="entry-title">General Administration</h2>
+                </div>
+                <div className="entry-content">
+                  <div className="row">
+                    <div className="col-md-7 col-lg-7">
+                      <Nav variant="pills" className="flex-column">
+                        {Object.keys(tabContent2).map((key) => (
+                          <Nav.Item key={key}>
+                            <Nav.Link
+                              eventKey={key}
+                              className={`nav-link mb-3 p-3 shadow ${
+                                activeTab2 === key ? "active" : ""
+                              }`}
+                              style={{
+                                fontFamily: "Arial, sans-serif",
+                                fontSize: "16px",
+                                fontWeight: "bold",
+                                transition: "color 0.3s ease",
+                              }}
+                            >
+                              {key}
+                            </Nav.Link>
+                          </Nav.Item>
+                        ))}
+                      </Nav>
+                    </div>
+                    <div className="col-md-5 col-lg-5">
+                      <div className="tab-image">
+                        <img
+                          src={tabImages2[activeTab2]}
+                          alt={`${activeTab2}`}
+                          style={imageStyles}
+                        />
+                        <p
+                          style={{
+                            textAlign: "center",
+                            marginTop: "10px",
+                            fontWeight: "bold",
+                          }}
+                        >
+                          <span style={{ fontSize: "19px", color: "black" }}>
+                            {tabContent2[activeTab2]}
+                          </span>
+                          <br />
+                          <span style={{ fontSize: "15px", color: "red" }}>
+                            {activeTab2}
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <Tab.Content>
                   {Object.keys(tabContent2).map((key) => (
-                    <Nav.Item key={key}>
-                      <Nav.Link
-                        eventKey={key}
-                        className={`nav-link mb-3 p-3 shadow ${
-                          activeTab2 === key ? "active" : ""
-                        }`}
-                        style={{
-                          fontFamily: "Arial, sans-serif",
-                          fontSize: "16px",
-                          fontWeight: "bold",
-                          transition: "color 0.3s ease",
-                        }}>
-                        {key}
-                      </Nav.Link>
-                    </Nav.Item>
+                    <Tab.Pane
+                      eventKey={key}
+                      key={key}
+                      className="tab-pane fade"
+                      id={key}
+                    >
+                      {tabContent2[key]}
+                    </Tab.Pane>
                   ))}
-                </Nav>
-              </div>
-              <div className="tab-image" style={{ marginLeft: "3rem" }}>
-                <img
-                  src={tabImages2[activeTab2]}
-                  alt={`${activeTab2}`}
-                  style={imageStyles}
-                />
-                <p
-                  style={{
-                    textAlign: "center",
-                    marginTop: "10px",
-                    fontWeight: "bold",
-                  }}>
-                  <span style={{ fontSize: "19px", color: "black" }}>
-                    {tabContent2[activeTab2]}
-                  </span>
-                  <br />
-                  <span style={{ fontSize: "15px", color: "red" }}>
-                    {activeTab2}
-                  </span>
-                </p>
-              </div>
+                </Tab.Content>
+              </Tab.Container>
             </div>
           </div>
-          <Tab.Content>
-            {Object.keys(tabContent2).map((key) => (
-              <Tab.Pane
-                eventKey={key}
-                key={key}
-                className="tab-pane fade"
-                id={key}>
-                {tabContent2[key]}
-              </Tab.Pane>
-            ))}
-          </Tab.Content>
-        </Tab.Container>
+        </div>
       </div>
     </div>
   );

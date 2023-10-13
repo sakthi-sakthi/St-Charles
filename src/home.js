@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import About from "./components/about";
 import Churchstatic from "./components/churchstatic";
 import Footer from "./components/footer";
@@ -10,29 +9,14 @@ import Testimonials from "./components/testimonials";
 import Upcoming from "./components/upcoming";
 
 function Home() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
     <div>
       <Header />
       <Slider />
-      {/* {isMobile ? null : <Scrollbar />} */}
       <Scrollbar />
       <About />
       <Ourstatic />
-      {isMobile ? null : <Churchstatic />}
+      <Churchstatic />
       <Upcoming />
       <Testimonials />
       <Footer />
