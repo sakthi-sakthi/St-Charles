@@ -924,13 +924,13 @@ ul.tabs-nav .tab-nav.active {
 }
 
 #upcevent {
-  width: calc(113% - 122px);
+  width: calc(114% - 122px);
   margin-top: -13px;
   color: #000;
 }
 
 #upccevent {
-  width: calc(114% - 121px);
+  width: calc(114% - 122px);
   margin-top: -13px;
   color: #000;
 }
@@ -2596,7 +2596,7 @@ div.main-tile-text h2 {
 }
 
 #provincialprog {
-  max-height: 374px;
+  max-height: 377px;
   overflow-y: hidden;
 }
 
@@ -2604,8 +2604,17 @@ div.main-tile-text h2 {
   overflow-y: auto;
 }
 
+#calendarbody {
+  max-height: 700px;
+  overflow-y: hidden;
+}
+
+#calendarbody:hover {
+  overflow-y: auto;
+}
+
 #provinceprog {
-  max-height: 374px;
+  max-height: 377px;
   overflow-y: hidden;
 }
 
@@ -2654,6 +2663,29 @@ div.main-tile-text h2 {
 
 /* Handle on hover */
 #provincialprog::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* calandar Scroll */
+
+/* Hide the default scrollbar */
+#calendarbody::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track styles */
+#calendarbody::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle styles */
+#calendarbody::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+#calendarbody::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
 
@@ -3238,6 +3270,11 @@ div.main-tile-text h2 {
 
   #birthday-entry-title {
     font-size: 20px; /* Adjust font size for smaller screens */
+  }
+}
+@media (max-width: 768px) {
+  #province-section-heading {
+    margin-top: 2rem;
   }
 }
 @media (max-width: 768px) {

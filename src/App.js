@@ -57,6 +57,7 @@ import Statistics from "./pages/footerpage/statistics";
 import SignificantDates from "./pages/footerpage/significantdates";
 import Location from "./pages/footerpage/location";
 import Videos from "./pages/footerpage/videos";
+import NewsEvents from "./pages/NewsEvents";
 
 function App() {
   return (
@@ -121,6 +122,7 @@ function App() {
         <Route path="/significant-dates" element={<SignificantDates />} />
         <Route path="/location" element={<Location />} />
         <Route path="/videos" element={<Videos />} />
+        <Route path="/news-events" element={<NewsEvents />} />
       </Routes>
     </>
   );

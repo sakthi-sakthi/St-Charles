@@ -123,15 +123,6 @@ function Header() {
                             src="images/logos/leftlogo.png"
                             alt=""
                           />
-                          <img
-                            style={{
-                              display: "block",
-                              marginLeft: "auto",
-                              marginRight: "auto",
-                            }}
-                            src="/images/logo-2.png"
-                            alt=""
-                          />
                         </p>
                       </div>
                     </div>

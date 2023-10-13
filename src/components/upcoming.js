@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Upcoming() {
   // birthday api start
@@ -30,39 +31,38 @@ function Upcoming() {
     const dobParts = item.dob.split(" - ");
     const dobDay = parseInt(dobParts[0], 10);
     const dobMonth = dobParts[1].trim();
-
-    // Compare the birthday with the current date
     if (dobMonth === currentMonth) {
       return dobDay >= currentDay;
     }
-    return true; // Include all other birthdays
+    return true;
   });
 
-  // events api start
+  // provincial program api start
 
   const [eventsData, setEventsData] = useState([]);
-
+  const hasMoreEventData = eventsData.length > 0;
   useEffect(() => {
     axios
       .get("http://testscb.cristolive.org/api/news/province/2")
       .then((response) => {
         if (Array.isArray(response.data)) {
         }
-        setEventsData(response.data.data);
+        const data = response.data.data;
+        data.sort((a, b) => {
+          const dateA = new Date(a.date);
+          const dateB = new Date(b.date);
+          return dateB - dateA;
+        });
+        setEventsData(data.reverse());
       })
       .catch((error) => {
         console.error("Error fetching data from API:", error);
       });
   }, []);
 
-  eventsData.sort((a, b) => {
-    const dateA = new Date(a.date);
-    const dateB = new Date(b.date);
-    return dateB - dateA;
-  });
-
-  // upcoming events api start
+  // News and Events api start
   const [upcomeData, setUpcomeData] = useState([]);
+  const hasMoreData = upcomeData.length > 0;
 
   useEffect(() => {
     axios
@@ -70,18 +70,39 @@ function Upcoming() {
       .then((response) => {
         if (Array.isArray(response.data)) {
         }
-        setUpcomeData(response.data.data);
+        const data = response.data.data;
+        data.sort((a, b) => {
+          const dateA = new Date(a.date);
+          const dateB = new Date(b.date);
+          return dateB - dateA;
+        });
+        setUpcomeData(data.reverse());
       })
       .catch((error) => {
         console.error("Error fetching data from API:", error);
       });
   }, []);
 
-  upcomeData.sort((a, b) => {
-    const dateA = new Date(a.date);
-    const dateB = new Date(b.date);
-    return dateB - dateA;
-  });
+  function formatEventName(name, maxLength) {
+    if (name.length <= maxLength) {
+      return capitalizeEveryWord(name);
+    } else {
+      const truncatedName = name.slice(0, maxLength);
+      return capitalizeEveryWord(truncatedName) + "...";
+    }
+  }
+
+  function capitalizeEveryWord(str) {
+    const words = str.split(" ");
+    const capitalizedWords = words.map((word) => {
+      // Handle empty words
+      if (word.length === 0) {
+        return word;
+      }
+      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    });
+    return capitalizedWords.join(" ");
+  }
 
   return (
     <>
@@ -111,24 +132,26 @@ function Upcoming() {
                         <div className="event-content-wrap" id="upcevent">
                           <header className="entry-header d-flex flex-wrap align-items-center">
                             <h3 className="entry-title w-100 m-0">
-                              <a
-                                href="/calendar"
+                              <Link
+                                to="/calendar?Iscal"
                                 style={{
-                                  fontSize: "13px",
+                                  fontSize: "15px",
                                   fontWeight: "bold",
-                                }}>
-                                {upcomeevent.name}
-                              </a>
+                                }}
+                              >
+                                {formatEventName(upcomeevent.name, 69)}
+                              </Link>
                             </h3>
                             <div className="posted-date">
-                              <a
-                                href="/calendar"
+                              <Link
+                                to="/calendar?Iscal"
                                 style={{
                                   fontSize: "14px",
                                   color: "#6b1d2f",
-                                }}>
+                                }}
+                              >
                                 {upcomeevent.date}
-                              </a>
+                              </Link>
                             </div>
                           </header>
                         </div>
@@ -139,13 +162,24 @@ function Upcoming() {
                       No News Available
                     </p>
                   )}
+                  {hasMoreData && (
+                    <div className="d-flex justify-content-center mt-4">
+                      <Link
+                        to="/nextpage"
+                        className="btn btn-primary"
+                        style={{ color: "white" }}
+                      >
+                        View More
+                      </Link>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
 
             <div className="col-12 col-md-6 col-lg-4">
               <div className="upcoming-events">
-                <div className="section-heading">
+                <div className="section-heading" id="province-section-heading">
                   <h2 className="entry-title">Provincial Program</h2>
                 </div>
                 <div className="scrollable-content" id="provincialprog">
@@ -153,12 +187,11 @@ function Upcoming() {
                     eventsData.map((event, index) => (
                       <div
                         className="event-wrap d-flex flex-wrap justify-content-between"
-                        key={index}>
+                        key={index}
+                      >
                         <figure className="m-0" id="upccome">
                           <img
-                            src={
-                              "https://www.clipartkey.com/mpngs/m/294-2947450_music-festival-icon-png.png"
-                            }
+                            src="https://www.clipartkey.com/mpngs/m/294-2947450_music-festival-icon-png.png"
                             style={{
                               borderRadius: "50%",
                               width: "48px",
@@ -170,24 +203,26 @@ function Upcoming() {
                         <div className="event-content-wrap" id="upccevent">
                           <header className="entry-header d-flex flex-wrap align-items-center">
                             <h3 className="entry-title w-100 m-0">
-                              <a
-                                href="/calendar"
+                              <Link
+                                to="/calendar?Iscal"
                                 style={{
-                                  fontSize: "13px",
+                                  fontSize: "15px",
                                   fontWeight: "bold",
-                                }}>
-                                {event?.name}
-                              </a>
+                                }}
+                              >
+                                {formatEventName(event.name, 69)}
+                              </Link>
                             </h3>
                             <div className="posted-date">
-                              <a
-                                href="/calendar"
+                              <Link
+                                to="/calendar?Iscal"
                                 style={{
                                   fontSize: "14px",
                                   color: "#6b1d2f",
-                                }}>
-                                {event?.date}
-                              </a>
+                                }}
+                              >
+                                {event.date}
+                              </Link>
                             </div>
                           </header>
                         </div>
@@ -197,6 +232,17 @@ function Upcoming() {
                     <p style={{ color: "black", fontWeight: "bold" }}>
                       No Provincial Program Available
                     </p>
+                  )}
+                  {hasMoreEventData && (
+                    <div className="d-flex justify-content-center mt-4">
+                      <Link
+                        to="/nextpage"
+                        className="btn btn-primary"
+                        style={{ color: "white" }}
+                      >
+                        View More
+                      </Link>
+                    </div>
                   )}
                 </div>
               </div>
@@ -224,7 +270,8 @@ function Upcoming() {
                       return (
                         <div
                           className="event-wrap d-flex flex-wrap justify-content-flex-start"
-                          key={index}>
+                          key={index}
+                        >
                           <figure className="m-0" id="upcome">
                             <img
                               style={{
@@ -244,7 +291,8 @@ function Upcoming() {
                                   style={{
                                     fontSize: "15px",
                                     fontWeight: "bold",
-                                  }}>
+                                  }}
+                                >
                                   {item.membername}
                                 </a>
                               </h3>
@@ -255,7 +303,8 @@ function Upcoming() {
                                   style={{
                                     fontSize: "15px",
                                     color: "#6b1d2f",
-                                  }}>
+                                  }}
+                                >
                                   {item.dob}
                                 </a>
                               </div>
