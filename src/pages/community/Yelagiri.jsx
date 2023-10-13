@@ -40,14 +40,10 @@ function Yelagiri() {
         <h3 className="heading">Yelagiri</h3>
         <div className="row">
           <div className="col-lg-9">
+            <div id="uniqueImageContainer">
+              <img src="images/logos/welcomebg.jpg" alt="" />
+            </div>
             <div>
-              <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <img
-                  src="images/logos/welcomebg.jpg"
-                  alt=""
-                  style={{ width: "100%", height: "31rem" }}
-                />
-              </div>
               <br />
               <div className="bs-objective">
                 <p>

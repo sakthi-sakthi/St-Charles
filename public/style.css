@@ -3247,3 +3247,50 @@ div.main-tile-text h2 {
     overflow-y: hidden; /* Allow content to be visible on smaller screens */
   }
 }
+
+/* community sub pages */
+#imageContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+#imageContainer img {
+  width: 25rem;
+  height: 14rem;
+}
+
+/* Media query for mobile responsiveness */
+@media only screen and (max-width: 600px) {
+  #imageContainer {
+    flex-direction: column; /* Stack images vertically on small screens */
+  }
+
+  #imageContainer img {
+    width: 100%; /* Make images take full width */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 1rem; /* Add some spacing between images */
+  }
+}
+#uniqueImageContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+#uniqueImageContainer img {
+  width: 51rem;
+  height: 25rem;
+}
+
+/* Media query for mobile responsiveness */
+@media only screen and (max-width: 600px) {
+  #uniqueImageContainer {
+    flex-direction: column; /* Stack image vertically on small screens */
+  }
+
+  #uniqueImageContainer img {
+    width: 100%; /* Make the image take full width */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+/*  */
