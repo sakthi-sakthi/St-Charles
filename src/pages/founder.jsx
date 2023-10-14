@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Footer from "../components/footer";
 import Header from "../components/header";
 
@@ -11,7 +12,7 @@ function Founder() {
             <a href="/founder">Founder</a>
           </h3>
           <div className="brudcrums">
-            <a href="/">Home</a>&nbsp;»&nbsp;{" "}
+            <Link to={"/"}>Home &nbsp;»&nbsp;{" "}</Link>
             <span className="pagename">Founder</span>
           </div>
         </div>

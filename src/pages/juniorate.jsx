@@ -2,6 +2,7 @@ import Footer from "../components/footer";
 import Header from "../components/header";
 import { useEffect, useState } from "react";
 import ApiUrl from "../Api/Api";
+import { Link } from "react-router-dom";
 function Juniorate() {
   const [slider, setslider] = useState([]);
   const fetchslide = () => {
@@ -30,7 +31,7 @@ function Juniorate() {
             <a href="/juniorate">Juniorate</a>
           </h3>
           <div className="brudcrums">
-            <a href="/">Home</a>&nbsp;»&nbsp;{" "}
+            <Link to={"/"}>Home &nbsp;»&nbsp;{" "}</Link>
             <span className="pagename">Juniorate</span>
           </div>
         </div>

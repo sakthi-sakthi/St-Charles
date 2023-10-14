@@ -5,7 +5,7 @@ import ApiUrl from "../Api/Api";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 function Contact() {
   const {
     register,
@@ -65,7 +65,7 @@ function Contact() {
             <a href="/contact-us">Contact Us</a>
           </h3>
           <div className="brudcrums">
-            <a href="/">Home</a>&nbsp;»&nbsp;{" "}
+            <Link to={"/"}>Home &nbsp;»&nbsp;{" "}</Link>
             <span className="pagename">Contact Us</span>
           </div>
         </div>

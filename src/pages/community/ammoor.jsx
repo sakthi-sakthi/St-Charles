@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ApiUrl from "../../Api/Api";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
+import { Link } from "react-router-dom";
 function Ammoor() {
   const [slider, setslider] = useState([]);
   const fetchslide = () => {
@@ -30,7 +31,7 @@ function Ammoor() {
             <a href="/ammoor">Ammoor</a>
           </h3>
           <div className="brudcrums">
-            <a href="/">Home</a>&nbsp;»&nbsp;{" "}
+            <Link to={"/"}>Home &nbsp;»&nbsp;{" "}</Link>
             <span className="pagename">Ammoor</span>
           </div>
         </div>

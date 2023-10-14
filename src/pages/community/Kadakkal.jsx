@@ -2,6 +2,7 @@ import Header from "../../components/header";
 import Footer from "../../components/footer";
 import { useEffect, useState } from "react";
 import ApiUrl from "../../Api/Api";
+import { Link } from "react-router-dom";
 function Kadakkal() {
   const [slider, setslider] = useState([]);
   const fetchslide = () => {
@@ -30,7 +31,7 @@ function Kadakkal() {
             <a href="/kadakkal">Kadakkal</a>
           </h3>
           <div className="brudcrums">
-            <a href="/">Home</a>&nbsp;»&nbsp;{" "}
+            <Link to={"/"}>Home &nbsp;»&nbsp;{" "}</Link>
             <span className="pagename">Kadakkal</span>
           </div>
         </div>

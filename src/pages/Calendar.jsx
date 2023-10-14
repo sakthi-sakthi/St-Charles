@@ -22,22 +22,18 @@ function CalendarComponent() {
     const modaltitle = IsCalendar[1] === "Iscal" ? "Event Details" : "Birthday Details";
 
     const handleEventClick = (eventId) => {
-        // Merge the two arrays
         const mergedData = [...eventCalendarData, ...newsEvents];
-        // Find the event with the given ID
         const foundEvent = mergedData?.find((event) => event?.id === parseInt(eventId));
-        // Update the selected event state
         setSelectedEvent(foundEvent);
         setShowModal(true);
     };
 
     useEffect(() => {
-
-        if (calendarRef.current) {
-            if (IsCalendar[1] !== "Iscal") {
-
-                axios.get('http://172.104.57.118:7025/api/member/province/birthday/this_month/2')
-                    .then(response => {
+        async function fetchData() {
+            if (calendarRef.current) {
+                if (IsCalendar[1] !== "Iscal") {
+                    try {
+                        const response = await axios.get('http://172.104.57.118:7025/api/member/province/birthday/this_month/2');
                         const data = response.data;
                         if (Array.isArray(data?.data)) {
                             const events = data?.data?.map(item => {
@@ -57,14 +53,13 @@ function CalendarComponent() {
 
                             setEventCalendarData(events);
                         }
-                    })
-                    .catch(error => {
+                    } catch (error) {
                         console.error('Error fetching events from API', error);
-                    });
-            }
-            if (IsCalendar[1] === "Iscal") {
-                axios.get('http://testscb.cristolive.org/api/news/province/2')
-                    .then(response => {
+                    }
+                }
+                if (IsCalendar[1] === "Iscal") {
+                    try {
+                        const response = await axios.get('http://testscb.cristolive.org/api/news/province/2');
                         const data = response.data.data;
                         if (Array.isArray(data)) {
                             const events = data.map(item => {
@@ -91,13 +86,16 @@ function CalendarComponent() {
                             const validEvents = events.filter(event => event !== null);
                             setNewsEvents(validEvents);
                         }
-                    })
-                    .catch(error => {
+                    } catch (error) {
                         console.error('Error fetching news events from API', error);
-                    });
+                    }
+                }
             }
         }
+
+        fetchData();
     }, [IsCalendar]);
+
 
     const isCurrentDate = (dateStr) => {
         const currentDate = new Date();
@@ -132,36 +130,61 @@ function CalendarComponent() {
                         navLinks={false}
                         dayMaxEventRows={2}
                         eventContent={(arg) => {
-                            if (isCurrentDate(arg.event.start)) {
-                                return (
-                                    <>
-                                        <div className="event-title"><center>{arg.event.title}</center></div>
-                                        <div className="event-image">
-                                            <img
-                                                src="/images/sisters/graphics-happy-birthday.gif"
-                                                alt="Birthday GIF"
-                                                style={{ width: '100px', height: '57px', marginLeft: '26px' }}
-                                            />
-                                        </div>
-                                    </>
-                                );
+                            const maxTitleLength = 25; 
+                            if (arg.event.title.length > maxTitleLength) {
+                                const truncatedTitle = arg.event.title.slice(0, maxTitleLength) + '...';
+
+                                if (isCurrentDate(arg.event.start) && IsCalendar[1] !== "Iscal") {
+                                    return (
+                                        <>
+                                            <div className="event-title"><center>{truncatedTitle}</center></div>
+                                            <div className="event-image">
+                                                <img
+                                                    src="/images/sisters/graphics-happy-birthday.gif"
+                                                    alt="Birthday GIF"
+                                                    style={{ width: '100px', height: '57px', marginLeft: '26px' }}
+                                                />
+                                            </div>
+                                        </>
+                                    );
+                                } else {
+                                    return (
+                                        <>
+                                            <div className="event-title"><center>{truncatedTitle}</center></div>
+                                        </>
+                                    );
+                                }
                             } else {
-                                return (
-                                    <>
-                                        <div className="event-title"><center>{arg.event.title}</center></div>
-                                    </>
-                                );
+                                if (isCurrentDate(arg.event.start) && IsCalendar[1] !== "Iscal") {
+                                    return (
+                                        <>
+                                            <div className="event-title"><center>{arg.event.title}</center></div>
+                                            <div className="event-image">
+                                                <img
+                                                    src="/images/sisters/graphics-happy-birthday.gif"
+                                                    alt="Birthday GIF"
+                                                    style={{ width: '100px', height: '57px', marginLeft: '26px' }}
+                                                />
+                                            </div>
+                                        </>
+                                    );
+                                } else {
+                                    return (
+                                        <>
+                                            <div className="event-title"><center>{arg.event.title}</center></div>
+                                        </>
+                                    );
+                                }
                             }
                         }}
                         editable={true}
                         eventResizable={true}
                         eventClick={(arg) => {
-                            // Access the event id using arg.event.id
                             const eventId = arg?.event?.id;
-                            // You can perform any other actions with the event ID here
-                            handleEventClick(eventId); // Call your custom event click handler with the ID
+                            handleEventClick(eventId);
                         }}
                     />
+
                     <Modal show={showModal} onHide={() => setShowModal(false)} size={size}>
                         <Modal.Header closeButton>
                             <Modal.Title>{modaltitle}</Modal.Title>
@@ -170,17 +193,17 @@ function CalendarComponent() {
                             <div className="scrollable-content" id="calendarbody">
                                 {selectedEvent?.title && (
                                     <p>
-                                        <strong>Title:</strong> {selectedEvent?.title}
+                                        <strong>Title :</strong> {selectedEvent?.title}
                                     </p>
                                 )}
                                 {selectedEvent?.date && (
                                     <p>
-                                        <strong>Date:</strong> {formatDate(selectedEvent.date)}
+                                        <strong>Date :</strong> {formatDate(selectedEvent.date)}
                                     </p>
                                 )}
                                 {selectedEvent?.description && (
                                     <>
-                                        <strong>Description:</strong>
+                                        <strong>Description :</strong>
                                         <div dangerouslySetInnerHTML={{ __html: selectedEvent?.description }} />
                                     </>
                                 )}

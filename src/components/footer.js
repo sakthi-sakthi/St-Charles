@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Cookies from "js-cookie";
+import { Link } from "react-router-dom";
 
 function Footer() {
   useEffect(() => {
@@ -35,7 +36,8 @@ function Footer() {
                         color: "white",
                         textAlign: "justify ",
                         fontSize: "14px",
-                      }}>
+                      }}
+                    >
                       "This religious House was founded in 1682 by Adrien Bresy,
                       parish priest of wez. This vigilant pastor, wishing to
                       procure for his parishioners the benefits of a Christian
@@ -47,7 +49,8 @@ function Footer() {
                       color: "white",
                       textAlign: "justify",
                       fontSize: "14px",
-                    }}>
+                    }}
+                  >
                     invited three pious girls from Lille to whom he added two
                     young persons of his parish".
                   </p>
@@ -62,37 +65,37 @@ function Footer() {
                   <ul className="quick-links">
                     <li>
                       <i className="fas fa-graduation-cap"></i>
-                      <a href="/events-and-celebrations">
+                      <Link to={"/events-and-celebrations"}>
                         Events & Celebration
-                      </a>
+                      </Link>
                     </li>
                     <li>
                       <i className="fas fa-bullhorn"></i>
-                      <a href="/overseas-mission">Overseas Mission</a>
+                      <Link to={"/overseas-mission"}>Overseas Mission</Link>
                     </li>
                     <li>
                       <i className="fas fa-users"></i>
-                      <a href="/scb-associates"> SCB Associates</a>
+                      <Link to={"/scb-associates"}>SCB Associates</Link>
                     </li>
                     <li>
                       <i className="fas fa-chart-bar"></i>
-                      <a href="/statistics"> Statistics</a>
+                      <Link to={"/statistics"}>Statistics</Link>
                     </li>
                     <li>
                       <i className="fas fa-calendar-alt"></i>
-                      <a href="/significant-dates"> Significant Dates</a>
+                      <Link to={"/significant-dates"}>Significant Dates</Link>
                     </li>
                     <li>
                       <i className="fas fa-book-dead"></i>
-                      <a href="/obitury">Obituary</a>
+                      <Link to={"/obitury"}>Obituary</Link>
                     </li>
                     <li>
                       <i className="fas fa-map-marker"></i>
-                      <a href="/location">Location</a>
+                      <Link to={"/location"}>Location</Link>
                     </li>
                     <li>
                       <i className="fas fa-video-camera"></i>
-                      <a href="/videos"> Videos</a>
+                      <Link to={"/videos"}>Videos</Link>
                     </li>
                   </ul>
                 </div>
@@ -106,13 +109,13 @@ function Footer() {
                   <ul>
                     <li>
                       <i className="fa fa-phone mr-2" />
-                      <a href="tel:+919865910951">+91 98659 10951</a>
+                      <Link to={"tel:+919865910951"}>+91 98659 10951</Link>
                     </li>
                     <li>
                       <i className="fa fa-envelope mr-2" />
-                      <a href="mailto:scbprovincialatechennai@gmail.com">
+                      <Link to={"mailto:scbprovincialatechennai@gmail.com"}>
                         scbprovincialatechennai@gmail.com
-                      </a>
+                      </Link>
                     </li>
                     <li>
                       <i className="fa fa-map-marker mr-2" />
@@ -165,7 +168,8 @@ function Footer() {
             <div style={{ marginBottom: "-17px" }}>
               <p
                 className="text-center"
-                style={{ fontSize: "14px", color: "white" }}>
+                style={{ fontSize: "14px", color: "white" }}
+              >
                 Copyright © 2023 St Charles Borromeo Eastern Province, All
                 rights reserved. Powered by
                 <a
@@ -173,7 +177,8 @@ function Footer() {
                   style={{ color: "#ffd700" }}
                   target="_blank"
                   rel="noreferrer"
-                  href="https://www.boscosofttech.com/">
+                  href="https://www.boscosofttech.com/"
+                >
                   &nbsp;Boscosofttech
                 </a>
               </p>

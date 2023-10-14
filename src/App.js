@@ -58,6 +58,7 @@ import SignificantDates from "./pages/footerpage/significantdates";
 import Location from "./pages/footerpage/location";
 import Videos from "./pages/footerpage/videos";
 import NewsEvents from "./pages/NewsEvents";
+import ProvincialProgram from "./pages/ProvincialProgram";
 
 function App() {
   return (
@@ -123,6 +124,7 @@ function App() {
         <Route path="/location" element={<Location />} />
         <Route path="/videos" element={<Videos />} />
         <Route path="/news-events" element={<NewsEvents />} />
+        <Route path="/provincial-programs" element={<ProvincialProgram />} />
       </Routes>
     </>
   );

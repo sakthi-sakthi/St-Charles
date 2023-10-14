@@ -2,6 +2,7 @@ import Footer from "../components/footer";
 import Header from "../components/header";
 import { useEffect, useState } from "react";
 import ApiUrl from "../Api/Api";
+import { Link } from "react-router-dom";
 function Postulancy() {
   const [slider, setslider] = useState([]);
   const fetchslide = () => {
@@ -30,7 +31,7 @@ function Postulancy() {
             <a href="/postulancy">Postulancy</a>
           </h3>
           <div className="brudcrums">
-            <a href="/">Home</a>&nbsp;»&nbsp;{" "}
+            <Link to={"/"}>Home &nbsp;»&nbsp;{" "}</Link>
             <span className="pagename">Postulancy</span>
           </div>
         </div>

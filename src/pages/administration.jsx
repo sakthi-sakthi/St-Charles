@@ -2,6 +2,7 @@ import Footer from "../components/footer";
 import Header from "../components/header";
 import { useEffect, useState } from "react";
 import ApiUrl from "../Api/Api";
+import { Link } from "react-router-dom";
 function Administration() {
   const [slider, setslider] = useState([]);
   const fetchslide = () => {
@@ -31,7 +32,7 @@ function Administration() {
             <a href="/general-administration">General Administration</a>
           </h3>
           <div className="brudcrums">
-            <a href="/">Home</a>&nbsp;»&nbsp;{" "}
+            <Link to={"/"}>Home &nbsp;»&nbsp;{" "}</Link>
             <span className="pagename">General Administration</span>
           </div>
         </div>

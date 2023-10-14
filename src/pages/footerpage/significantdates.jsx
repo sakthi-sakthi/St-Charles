@@ -1,5 +1,6 @@
 import Header from "../../components/header";
 import Footer from "../../components/footer";
+import { Link } from "react-router-dom";
 
 function SignificantDates() {
   return (
@@ -11,7 +12,7 @@ function SignificantDates() {
             <a href="/significant-dates">Significant Dates</a>
           </h3>
           <div className="brudcrums">
-            <a href="/">Home</a>&nbsp;»&nbsp;{" "}
+            <Link to={"/"}>Home &nbsp;»&nbsp;{" "}</Link>
             <span className="pagename">Significant Dates</span>
           </div>
         </div>

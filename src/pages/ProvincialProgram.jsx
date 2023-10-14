@@ -8,8 +8,7 @@ import axios from 'axios';
 import DOMPurify from 'dompurify';
 import { Link } from 'react-router-dom';
 
-
-function NewsEvents() {
+function ProvincialProgram() {
     const [newsEvents, setNewsEvents] = useState([]);
     useEffect(() => {
         axios
@@ -59,17 +58,17 @@ function NewsEvents() {
             <div className="home-mother">
                 <div className="container" style={{ padding: "30px" }}>
                     <h3 className="entry-title motherhouse">
-                        <a href="/news-events">News & Events</a>
+                        <a href="/provincial-programs">Provincial Program</a>
                     </h3>
                     <div className="brudcrums">
                         <Link to={"/"}>Home &nbsp;»&nbsp;{" "}</Link>
-                        <span className="pagename">News & Events</span>
+                        <span className="pagename">Provincial Program</span>
                     </div>
                 </div>
             </div>
             <div className="container">
                 <div className="section-heading">
-                    <h1 className="entry-title" style={{ fontSize: "33px" }}>News & Events</h1>
+                    <h1 className="entry-title" style={{ fontSize: "33px" }}>Provincial Programs</h1>
                 </div>
                 <br />
                 {currentNews.map((event, index) => (
@@ -111,6 +110,7 @@ function NewsEvents() {
             <Footer />
         </>
     );
+
 }
 
-export default NewsEvents;
+export default ProvincialProgram

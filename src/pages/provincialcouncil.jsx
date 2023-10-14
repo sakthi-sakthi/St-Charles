@@ -2,6 +2,7 @@ import Footer from "../components/footer";
 import Header from "../components/header";
 import { useEffect, useState } from "react";
 import ApiUrl from "../Api/Api";
+import { Link } from "react-router-dom";
 function ProvincialCouncil() {
   const [Provincial, setProvincialData] = useState([]);
   const [slider, setslider] = useState([]);
@@ -45,7 +46,7 @@ function ProvincialCouncil() {
             <a href="/provincial-council">Provincial Council</a>
           </h3>
           <div className="brudcrums">
-            <a href="/">Home</a>&nbsp;»&nbsp;{" "}
+            <Link to={"/"}>Home &nbsp;»&nbsp;{" "}</Link>
             <span className="pagename">Provincial Council</span>
           </div>
         </div>

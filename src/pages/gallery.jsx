@@ -2,6 +2,7 @@ import Footer from "../components/footer";
 import Header from "../components/header";
 import { useEffect, useState } from "react";
 import ApiUrl from "../Api/Api";
+import { Link } from "react-router-dom";
 function Gallery() {
   const [slider, setslider] = useState([]);
   const [galleryData, setGalleryData] = useState([]);
@@ -51,7 +52,7 @@ function Gallery() {
             <a href="/gallery">Gallery</a>
           </h3>
           <div className="brudcrums">
-            <a href="/">Home</a>&nbsp;»&nbsp;{" "}
+            <Link to={"/"}>Home &nbsp;»&nbsp;{" "}</Link>
             <span className="pagename">Gallery</span>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import Header from "../../components/header";
 import Footer from "../../components/footer";
+import { Link } from "react-router-dom";
 
 function Statistics() {
   return (
@@ -11,7 +12,7 @@ function Statistics() {
             <a href="/statistics">Statistics</a>
           </h3>
           <div className="brudcrums">
-            <a href="/">Home</a>&nbsp;»&nbsp;{" "}
+            <Link to={"/"}>Home &nbsp;»&nbsp;{" "}</Link>
             <span className="pagename">Statistics</span>
           </div>
         </div>

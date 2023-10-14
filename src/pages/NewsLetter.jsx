@@ -3,6 +3,7 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import axios from "axios";
 import ApiUrl from "../Api/Api";
+import { Link } from "react-router-dom";
 
 function NewsLetter() {
   const [pdfLinks, setPdfLinks] = useState([]);
@@ -28,7 +29,7 @@ function NewsLetter() {
             <a href="/newsletter">Newsletter / Circular</a>
           </h3>
           <div className="brudcrums">
-            <a href="/">Home</a>&nbsp;»&nbsp;{" "}
+            <Link to={"/"}>Home &nbsp;»&nbsp;{" "}</Link>
             <span className="pagename">Newsletter / Circular</span>
           </div>
         </div>
