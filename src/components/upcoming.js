@@ -166,13 +166,13 @@ function Upcoming() {
 
                   {upcomeData.length > 5 && (
                     <div className="d-flex justify-content-center mt-4">
-                      <a
-                        href="/news-events"
+                      <Link
+                        to={"/news-events"}
                         className="btn btn-primary"
                         style={{ color: "white" }}
                       >
                         View More
-                      </a>
+                      </Link>
                     </div>
                   )}
                 </div>
@@ -238,13 +238,13 @@ function Upcoming() {
 
                   {eventsData.length > 5 && (
                     <div className="d-flex justify-content-center mt-4">
-                      <a
-                        href="/provincial-programs"
+                      <Link
+                        to={"/provincial-programs"}
                         className="btn btn-primary"
                         style={{ color: "white" }}
                       >
                         View More
-                      </a>
+                      </Link>
                     </div>
                   )}
                 </div>
@@ -289,27 +289,27 @@ function Upcoming() {
                           <div className="event-content-wrap" id="bfevent">
                             <header className="entry-header d-flex flex-wrap align-items-center">
                               <h3 className="entry-title w-100 m-0">
-                                <a
-                                  href={"/calendar"}
+                                <Link
+                                  to={"/calendar"}
                                   style={{
                                     fontSize: "15px",
                                     fontWeight: "bold",
                                   }}
                                 >
                                   {item.membername}
-                                </a>
+                                </Link>
                               </h3>
 
                               <div className="posted-date">
-                                <a
-                                  href="/calendar"
+                                <Link
+                                  to={"/calendar"}
                                   style={{
                                     fontSize: "15px",
                                     color: "#6b1d2f",
                                   }}
                                 >
                                   {item.dob}
-                                </a>
+                                </Link>
                               </div>
                               {isBirthdayToday && (
                                 <img
