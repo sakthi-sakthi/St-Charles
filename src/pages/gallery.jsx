@@ -52,7 +52,7 @@ function Gallery() {
             <a href="/gallery">Gallery</a>
           </h3>
           <div className="brudcrums">
-            <Link to={"/"}>Home &nbsp;»&nbsp;{" "}</Link>
+            <Link to={"/"}>Home &nbsp;»&nbsp; </Link>
             <span className="pagename">Gallery</span>
           </div>
         </div>
@@ -88,9 +88,7 @@ function Gallery() {
           <div className="row">
             {galleryData.map((item) => (
               <div key={item.id} className="col-lg-4">
-                <div
-                  className="gallery-item"
-                  onClick={() => openImagePopup(item.image)}>
+                <div className="gallery-item">
                   <img
                     src={item.image}
                     style={{
@@ -98,6 +96,7 @@ function Gallery() {
                       height: "300px",
                       cursor: "pointer",
                     }}
+                    onClick={() => openImagePopup(item.image)}
                     alt={item.alt_tag || "Image"}
                   />
                   <div className="image-details">
