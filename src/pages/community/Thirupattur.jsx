@@ -32,7 +32,7 @@ function Thirupattur() {
             <a href="/thirupattur">Thirupattur</a>
           </h3>
           <div className="brudcrums">
-            <Link to={"/"}>Home &nbsp;»&nbsp;{" "}</Link>
+            <Link to={"/"}>Home &nbsp;»&nbsp; </Link>
             <span className="pagename">Thirupattur</span>
           </div>
         </div>
@@ -81,8 +81,16 @@ function Thirupattur() {
                 priest cut the ribbon and declared it open.
               </p>
               <div id="uniqueImageContainer">
-                <img src="images/subpage/8.jpg" alt="" />
-                <img src="images/subpage/71.jpg" alt="" />
+                <img
+                  src="images/subpage/8.jpg"
+                  style={{ height: "17rem" }}
+                  alt=""
+                />
+                <img
+                  src="images/subpage/71.jpg"
+                  style={{ height: "17rem" }}
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -134,8 +142,16 @@ function Thirupattur() {
               blessed the corner stone of the chapel and work commenced on it.
             </p>
             <div id="uniqueImageContainer">
-              <img src="images/subpage/61.jpg" alt="" />
-              <img src="images/subpage/51.jpg" alt="" />
+              <img
+                src="images/subpage/61.jpg"
+                style={{ height: "20rem" }}
+                alt=""
+              />
+              <img
+                src="images/subpage/51.jpg"
+                style={{ height: "20rem" }}
+                alt=""
+              />
             </div>
             <p>
               The long awaited chapel was blessed by Rev.Fr.A.T.James, S.D.B.,

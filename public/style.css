@@ -3313,7 +3313,7 @@ div.main-tile-text h2 {
 }
 
 #uniqueImageContainer img {
-  width: 51rem;
+  width: 100%;
   height: 25rem;
 }
 
